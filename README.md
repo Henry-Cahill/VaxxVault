@@ -1,6 +1,6 @@
 # VaxxVault
 
-Welcome to **VaxxVault**, your personal guardian for vaccine management. We're here to simplify the way you track, store, and access your vaccination records. No more digging through files or second-guessing dates—VaxxVault puts your health information right at your fingertips.
+Welcome to **VaxxVault**, your personal guardian for vaccine management. We're here to simplify how you track, store, and access your vaccination records. No more digging through files or second-guessing dates—VaxxVault puts your health information at your fingertips.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ Welcome to **VaxxVault**, your personal guardian for vaccine management. We're h
 
 ## Why VaxxVault?
 
-In a world where staying up-to-date with vaccinations is more crucial than ever, managing your records shouldn't be a hurdle. VaxxVault exists to make vaccine management effortless, secure, and accessible.
+Managing your records shouldn't be a hurdle in a world where staying up-to-date with vaccinations is more crucial than ever. VaxxVault exists to make vaccine management effortless, secure, and accessible.
 
 - **Centralized Records**: Keep all your vaccination information in one secure location.
 - **Timely Reminders**: Get notifications for upcoming vaccines and booster shots.
@@ -23,49 +23,22 @@ In a world where staying up-to-date with vaccinations is more crucial than ever,
 - **Privacy Focused**: Your data is encrypted and stored securely—your health information stays with you.
 
 ## Features
-
-### Unified Dashboard
-
-A sleek, intuitive interface that displays your vaccination history and upcoming vaccines at a glance.
-
-- **Visual Timeline**: See your vaccination journey over time.
-- **Status Indicators**: Know which vaccines are up-to-date or pending.
-
-### Smart Notifications
-
-Stay ahead with reminders tailored to your schedule.
-
-- **Custom Alerts**: Set your preferences for email or in-app notifications.
-- **Calendar Sync**: Integrate with your favorite calendar app.
-
-### Secure Sharing
-
-Need to provide proof of vaccination? Share your records safely.
-
-- **One-Time Links**: Generate secure links that expire after use.
-- **QR Codes**: Quick scanning for instant verification.
-
-### Analytics & Insights
-
-Understand more about your health with personalized insights.
-
-- **Recommendations**: Get suggestions based on your vaccination history.
-- **Global Data**: See how your records compare with regional and global statistics.
-
-### Multilingual Support
-
-Health has no language barriers.
-
-- **Language Options**: Use the app in English, Spanish, French, and more.
-- **Cultural Adaptability**: Regional vaccine names and schedules.
+| OS-CPU | Description | Support | 
+| --------| ---------------------------| ---|
+| WIN-x64 | Windows - 64-bit processor | ✅ |
+| WIN-x86 | Windows - Complex Instruction Set Computer (CISC) | ✅ |
+| WIN-Arm64	| Windows - Reduced Instruction Set Computing (RISC) | ✅ |
+| OSX-xArm64 |Apple's operating system runs on Macintosh computers. - It is binary and can contain both the classic Arm64 code and Arm64EC code together. | ✅ |
+| OSX-x64 | Apple's operating system that runs on Macintosh computers - 64-bit processor | ✅ |
+| Linux-x64	| Open-Source Unix-like operating systems - 64-bit processor | ✅ |
+| Linux-Arm64 | Open-Source Unix-like operating systems - Reduced Instruction Set Computing (RISC) | ✅ |
+| Linux-Arm	| Open-Source Unix-like operating systems - Advanced Reduced Instruction Set Computing (RISC) Machine	| ✅ |
 
 ## Getting Started
 
 ### Prerequisites
 
-- **Node.js** (v14.0 or higher)
-- **npm** (v6.0 or higher)
-- **MongoDB** installed locally or accessible remotely
+- **git** (v2.48.1)
 
 ### Installation
 
@@ -81,53 +54,11 @@ Health has no language barriers.
    cd VaxxVault
    ```
 
-3. **Install Dependencies**
-
-   ```bash
-   npm install
-   ```
-
-4. **Configure Environment Variables**
-
-   Create a `.env` file in the root directory with the following:
-
-   ```env
-   PORT=3000
-   MONGODB_URI=your_mongodb_uri
-   JWT_SECRET=your_secret_key
-   ```
-
-5. **Run the Application**
-
-   ```bash
-   npm start
-   ```
-
-6. **Access VaxxVault**
-
-   Open your browser and go to `http://localhost:3000`
-
 ## Usage
-
-### Register an Account
-
-- **Sign Up**: Provide your email and create a password.
-- **Verify Email**: Confirm your account through the verification link sent to your email.
 
 ### Add Vaccination Records
 
 - **Manual Entry**: Input vaccine details like name, date, and provider.
-- **Upload Documents**: Scan or upload images of your vaccination cards.
-
-### Set Up Reminders
-
-- **Customize Alerts**: Choose how and when you receive notifications.
-- **Schedule View**: See upcoming vaccines in a calendar format.
-
-### Share Your Records
-
-- **Generate Links**: Create secure, shareable links for specific records.
-- **Manage Permissions**: Control who can view your information and for how long.
 
 ## Contributing
 
@@ -172,23 +103,48 @@ We're committed to continuous improvement. Here's what's on the horizon:
 - **Family Accounts**: Manage multiple profiles under a single account.
 - **Blockchain Security**: Implement blockchain technology for enhanced data security.
 - **AI Recommendations**: Personalized health suggestions using machine learning.
+- **Unified Dashboard**: This is a sleek, intuitive interface that displays your vaccination history and upcoming vaccines at a glance.
+   1. ***Visual Timeline***: See your vaccination journey over time.
+   2. ***Status Indicators***: Know which vaccines are up-to-date or pending.
+- **Smart Notifications**: Stay ahead with reminders tailored to your schedule.
+   1. **Custom Alerts**: Set your email or in-app notification preferences.
+   2. **Calendar Sync**: Integrate with your favorite calendar app.
+- **Secure Sharing**: Need to provide proof of vaccination? Share your records safely.
+   1. **One-Time Links**: Generate secure links that expire after use.
+   2. **QR Codes**: Quick scanning for instant verification.
+- **Analytics & Insights**: Understand more about your health with personalized insights.
+   1. **Recommendations**: Get suggestions based on your vaccination history.
+   2. **Global Data**: See how your records compare with regional and global statistics.
+- **Multilingual Support**: Health has no language barriers.
+   1. **Language Options**: Use the app in English, Spanish, French, and more.
+   2. **Cultural Adaptability**: Regional vaccine names and schedules.
+- **Share Your Records**
+   1. **Generate Links**: Create secure, shareable links for specific records.
+   2. **Manage Permissions**: Control who can view your information and for how long.
+- **Register an Account**
+   1. **Sign Up**: Provide your email and create a password.
+   2. **Verify Email**: Confirm your account through the verification link sent to your email.
+- **Set Up Reminders**
+   1. **Customize Alerts**: Choose how and when you receive notifications.
+   2. **Schedule View**: See upcoming vaccines in a calendar format.
+- **Upload Documents**: Scan or upload images of your vaccination cards.
 
 ## License
 
-This project is licensed under the terms of the MIT license.
+This solution is the exclusive intellectual property of Henry Lawrence Cahill. However, it is free to redistribute, share, and encourage collaboration, fostering a community of innovation and growth.
 
 ## Contact
 
 We're excited to hear from you!
 
 - **Project Lead**: Henry Cahill
-- **Email**: [henry@vaxxvault.com](mailto:henry@vaxxvault.com)
+- **Email**: [henry.lawrence.cahill@howtoosoftware.com](mailto:henry.lawrence.cahill@howtoosoftware.com)
 - **GitHub**: [Henry-Cahill](https://github.com/Henry-Cahill)
-- **Website**: [www.vaxxvault.com](https://www.vaxxvault.com)
+- **Website**: [www.HowTooSoftware.com](www.blog.howtoosoftware.com)
 
 ---
 
-**Join us in making vaccine management seamless and secure for everyone. Your health journey matters, and VaxxVault is here to support it every step of the way.**
+**Join us in making vaccine management seamless and secure for everyone. Your health journey matters and VaxxVault is here to support you every step of the way.**
 
 *Did you know? The concept of vaccination dates back to the 18th century, when Dr. Edward Jenner discovered that exposure to cowpox could protect against smallpox. This groundbreaking work laid the foundation for modern immunology and has saved countless lives since.*
 
