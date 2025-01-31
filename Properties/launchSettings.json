@@ -2,7 +2,7 @@
   "profiles": {
     "VaxxVault_V0002": {
       "commandName": "Project",
-      "workingDirectory": "A:\\New.New\\VaxxVault_V0002",
+      "workingDirectory": "A:\\New.New\\VaxxVault",
       "sqlDebugging": true,
       "nativeDebugging": true
     }

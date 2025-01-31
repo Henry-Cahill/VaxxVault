@@ -13,7 +13,7 @@ namespace VaxxVault_V0002.Dir.Python_
          string pythonExePath = @"A:\New.New\Python3.9.13\python.exe";
 
          // Path to the Python script
-         string scriptPath = @"A:\New.New\VaxxVault_V0002\Dir\Python_\Python3_Vaccine_Cholera.py";
+         string scriptPath = @"A:\New.New\VaxxVault\Dir\Python_\Python3_Vaccine_Cholera.py";
 
          // Create a new process to run the Python script
          ProcessStartInfo start = new ProcessStartInfo

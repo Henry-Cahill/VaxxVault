@@ -67,13 +67,22 @@ python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 ```
 
-## Install the Required Packages
+### Install the Required Packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Contribution Guidelines
+
+### Running Tests
+
+Before submitting your changes, ensure that all tests pass:
+
+```bash
+pytest
+```
+
+### Contribution Guidelines
 
 We appreciate all forms of contributions, from code to documentation. Here's how to make your contributions count.
 
@@ -175,7 +184,7 @@ Don't hesitate to reach out if you have questions:
 
 ---
 
-## Join the Conversation
+## Join the Conversation (To be Implemented)
 
 Collaboration is at the heart of VaxVault. Here are ways to stay connected:
 

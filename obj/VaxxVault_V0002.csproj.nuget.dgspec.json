@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\New.New\\VaxxVault_V0002\\VaxxVault_V0002.csproj": {}
+    "A:\\New.New\\VaxxVault\\VaxxVault_V0002.csproj": {}
   },
   "projects": {
-    "A:\\New.New\\VaxxVault_V0002\\VaxxVault_V0002.csproj": {
-      "version": "0.0.2",
+    "A:\\New.New\\VaxxVault\\VaxxVault_V0002.csproj": {
+      "version": "0.0.3",
       "restore": {
-        "projectUniqueName": "A:\\New.New\\VaxxVault_V0002\\VaxxVault_V0002.csproj",
+        "projectUniqueName": "A:\\New.New\\VaxxVault\\VaxxVault_V0002.csproj",
         "projectName": "VaxxVault_V0002",
-        "projectPath": "A:\\New.New\\VaxxVault_V0002\\VaxxVault_V0002.csproj",
+        "projectPath": "A:\\New.New\\VaxxVault\\VaxxVault_V0002.csproj",
         "packagesPath": "C:\\Users\\hlcma\\.nuget\\packages\\",
-        "outputPath": "A:\\New.New\\VaxxVault_V0002\\obj\\",
+        "outputPath": "A:\\New.New\\VaxxVault\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -47,8 +47,8 @@
         "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "EntityFramework": {
               "target": "Package",

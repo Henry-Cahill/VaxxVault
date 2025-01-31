@@ -2,17 +2,18 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<ApplicationIcon>Dir\Images_\simplified VaxxVault logo.ico</ApplicationIcon>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-		<Version>0.0.0002</Version>
+		<Version>0.0.0003</Version>
 		<PackageIcon>Adobe Express - Vaccine.png</PackageIcon>
 		<RepositoryUrl></RepositoryUrl>
 		<PackageProjectUrl>https://github.com/Henry-Cahill/VaxxVault</PackageProjectUrl>
 		<NuGetAuditMode>all</NuGetAuditMode>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -67,6 +68,10 @@
 	    <PackagePath>\</PackagePath>
 	  </None>
 	  <None Update="Dir\Images_\simplified VaxxVault logo.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="README.md">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>

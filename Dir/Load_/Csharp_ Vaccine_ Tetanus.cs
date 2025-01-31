@@ -7,8 +7,8 @@ namespace VaxxVault_V0002.Dir.Load_
 {
    internal class Vaccine_TetanusL
    {
-      private const string LogFilePath = "A:\\New.New\\VaxxVault_V0002\\Dir\\temp\\sql_log.txt";
-      private const string ErrorLogFilePath = "A:\\New.New\\VaxxVault_V0002\\Dir\\temp\\error_log.txt";
+      private const string LogFilePath = "A:\\New.New\\VaxxVault\\Dir\\temp\\sql_log.txt";
+      private const string ErrorLogFilePath = "A:\\New.New\\VaxxVault\\Dir\\temp\\error_log.txt";
 
       private static void DisplayLegalDisclaimer()
       {
@@ -40,10 +40,10 @@ namespace VaxxVault_V0002.Dir.Load_
 
          string filePath = version switch
          {
-            "4.60" => @"A:\New.New\VaxxVault_V0002\Import\Version 4.60 - 508\XML\AntigenSupportingData- Tetanus-508.xml",
-            "4.59" => @"A:\New.New\VaxxVault_V0002\Import\Version 4.59 - 508\XML\AntigenSupportingData- Tetanus-508.xml",
-            "4.58" => @"A:\New.New\VaxxVault_V0002\Import\Version 4.58 - 508\XML\AntigenSupportingData- Tetanus-508.xml",
-            "4.57" => @"A:\New.New\VaxxVault_V0002\Import\Version 4.57 - 508\XML\AntigenSupportingData- Tetanus-508.xml",
+            "4.60" => @"A:\New.New\VaxxVault\Import\Version 4.60 - 508\XML\AntigenSupportingData- Tetanus-508.xml",
+            "4.59" => @"A:\New.New\VaxxVault\Import\Version 4.59 - 508\XML\AntigenSupportingData- Tetanus-508.xml",
+            "4.58" => @"A:\New.New\VaxxVault\Import\Version 4.58 - 508\XML\AntigenSupportingData- Tetanus-508.xml",
+            "4.57" => @"A:\New.New\VaxxVault\Import\Version 4.57 - 508\XML\AntigenSupportingData- Tetanus-508.xml",
             _ => null
          };
 
