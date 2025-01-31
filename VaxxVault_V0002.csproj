@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<ApplicationIcon>Dir\Images_\simplified VaxxVault logo.ico</ApplicationIcon>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+		<Version>0.0.0002</Version>
+		<PackageIcon>Adobe Express - Vaccine.png</PackageIcon>
+		<RepositoryUrl></RepositoryUrl>
+		<PackageProjectUrl>https://github.com/Henry-Cahill/VaxxVault</PackageProjectUrl>
+		<NuGetAuditMode>all</NuGetAuditMode>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Dir\FixedStatements\**" />
+		<Compile Remove="Import\supporting-data-4.57-508\**" />
+		<Compile Remove="Import\supporting-data-4.58-508\**" />
+		<Compile Remove="Import\supporting-data-4.59-508\**" />
+		<Compile Remove="Import\supporting-data-4.60-508\**" />
+		<EmbeddedResource Remove="Dir\FixedStatements\**" />
+		<EmbeddedResource Remove="Import\supporting-data-4.57-508\**" />
+		<EmbeddedResource Remove="Import\supporting-data-4.58-508\**" />
+		<EmbeddedResource Remove="Import\supporting-data-4.59-508\**" />
+		<EmbeddedResource Remove="Import\supporting-data-4.60-508\**" />
+		<None Remove="Dir\FixedStatements\**" />
+		<None Remove="Import\supporting-data-4.57-508\**" />
+		<None Remove="Import\supporting-data-4.58-508\**" />
+		<None Remove="Import\supporting-data-4.59-508\**" />
+		<None Remove="Import\supporting-data-4.60-508\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Dir\Images_\simplified VaxxVault logo.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EntityFramework" Version="6.5.1" />
+		<PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.4" />
+		<PackageReference Include="Microsoft.NETCore.Targets" Version="5.0.0" />
+		<PackageReference Include="Python.Runtime" Version="2.7.9" />
+		<PackageReference Include="pythonnet" Version="3.0.5" />
+		<PackageReference Include="runtime.native.System.Data.SqlClient.sni" Version="4.7.0" />
+		<PackageReference Include="System.CodeDom" Version="9.0.1" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.1" />
+		<PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+		<PackageReference Include="System.Data.SQLite" Version="1.0.119" />
+		<PackageReference Include="System.Drawing.Common" Version="9.0.1" />
+		<PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
+		<PackageReference Include="System.Windows.Extensions" Version="9.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Dir\temp\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="Dir\Review_\Csharp_ Vaccine_ JE.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Dir\Images_\Adobe Express - Vaccine.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="Dir\Images_\simplified VaxxVault logo.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+</Project>

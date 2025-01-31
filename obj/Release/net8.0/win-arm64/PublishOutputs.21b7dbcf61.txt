@@ -1,0 +1,4 @@
+A:\Archive\WIN-Arm64\V0002\FILES\VaxxVault_V0002.pdb
+A:\Archive\WIN-Arm64\V0002\FILES\sni.dll
+A:\Archive\WIN-Arm64\V0002\FILES\VaxxVault_V0002.xml
+A:\Archive\WIN-Arm64\V0002\FILES\VaxxVault_V0002.exe
