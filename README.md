@@ -140,7 +140,7 @@ We're excited to hear from you!
 - **Project Lead**: Henry Cahill
 - **Email**: [henry.lawrence.cahill@howtoosoftware.com](mailto:henry.lawrence.cahill@howtoosoftware.com)
 - **GitHub**: [Henry-Cahill](https://github.com/Henry-Cahill)
-- **Website**: [www.HowTooSoftware.com](www.blog.howtoosoftware.com)
+- **Website**: [www.HowTooSoftware.com](https://blog.howtoosoftware.com)
 
 ---
 
