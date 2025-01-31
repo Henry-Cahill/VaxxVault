@@ -1,0 +1,3 @@
+A:\Deploy.Console.VaxxVault.net8.0.osx-xarm64\VaxxVault.pdb
+A:\Deploy.Console.VaxxVault.net8.0.osx-xarm64\VaxxVault.cs
+A:\Deploy.Console.VaxxVault.net8.0.osx-xarm64\VaxxVault

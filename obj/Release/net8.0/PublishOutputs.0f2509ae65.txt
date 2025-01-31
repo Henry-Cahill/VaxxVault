@@ -1,0 +1,11 @@
+A:\Test\VaxVault.exe
+A:\Test\VaxVault.dll
+A:\Test\VaxVault.deps.json
+A:\Test\VaxVault.runtimeconfig.json
+A:\Test\VaxVault.pdb
+A:\Test\System.Data.SqlClient.dll
+A:\Test\runtimes\win-arm64\native\sni.dll
+A:\Test\runtimes\win-x64\native\sni.dll
+A:\Test\runtimes\win-x86\native\sni.dll
+A:\Test\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+A:\Test\runtimes\win\lib\net8.0\System.Data.SqlClient.dll

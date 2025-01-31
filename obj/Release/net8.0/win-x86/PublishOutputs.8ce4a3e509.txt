@@ -1,0 +1,4 @@
+A:\Deploy.Console.VaxxVault.net8.0.win-x86\VaxxVault.pdb
+A:\Deploy.Console.VaxxVault.net8.0.win-x86\VaxxVault.cs
+A:\Deploy.Console.VaxxVault.net8.0.win-x86\sni.dll
+A:\Deploy.Console.VaxxVault.net8.0.win-x86\VaxxVault.exe

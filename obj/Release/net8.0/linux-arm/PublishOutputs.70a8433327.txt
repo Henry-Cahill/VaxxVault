@@ -1,0 +1,3 @@
+A:\Deploy.Console.VaxxVault.net8.0.linux-arm\VaxxVault.pdb
+A:\Deploy.Console.VaxxVault.net8.0.linux-arm\VaxxVault.cs
+A:\Deploy.Console.VaxxVault.net8.0.linux-arm\VaxxVault
