@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>VaxxVault_V0002</id>
+    <version>1.0.0</version>
+    <authors>VaxxVault_V0002</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Python.Runtime" version="2.7.9" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SQLite" version="1.0.119" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SqlClient" version="4.9.0" exclude="Build,Analyzers" />
+        <dependency id="pythonnet" version="3.0.5" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="A:\New.New\VaxxVault_V0002\bin\Debug\net8.0\VaxxVault_V0002.runtimeconfig.json" target="lib\net8.0\VaxxVault_V0002.runtimeconfig.json" />
+    <file src="A:\New.New\VaxxVault_V0002\bin\Debug\net8.0\VaxxVault_V0002.dll" target="lib\net8.0\VaxxVault_V0002.dll" />
+  </files>
+</package>

@@ -1,0 +1,4 @@
+C:\Users\hlcma\OneDrive\Desktop\💉✅💉\Cholera-508\VaxxVault_V0002.pdb
+C:\Users\hlcma\OneDrive\Desktop\💉✅💉\Cholera-508\sni.dll
+C:\Users\hlcma\OneDrive\Desktop\💉✅💉\Cholera-508\SQLite.Interop.dll
+C:\Users\hlcma\OneDrive\Desktop\💉✅💉\Cholera-508\VaxxVault_V0002.exe

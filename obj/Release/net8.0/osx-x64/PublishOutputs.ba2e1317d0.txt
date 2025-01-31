@@ -1,0 +1,3 @@
+A:\Archive\OSX-xArm64\V0002\FILES\VaxxVault_V0002.pdb
+A:\Archive\OSX-xArm64\V0002\FILES\SQLite.Interop.dll
+A:\Archive\OSX-xArm64\V0002\FILES\VaxxVault_V0002

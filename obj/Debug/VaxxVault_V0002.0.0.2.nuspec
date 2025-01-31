@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>VaxxVault_V0002</id>
+    <version>0.0.2</version>
+    <authors>VaxxVault_V0002</authors>
+    <icon>Adobe Express - Vaccine.png</icon>
+    <projectUrl>https://github.com/Henry-Cahill/VaxxVault</projectUrl>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Python.Runtime" version="2.7.9" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SQLite" version="1.0.119" exclude="Build,Analyzers" />
+        <dependency id="System.Data.SqlClient" version="4.9.0" exclude="Build,Analyzers" />
+        <dependency id="pythonnet" version="3.0.5" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/net8.0/Dir/Images_/simplified VaxxVault logo.ico" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="A:\New.New\VaxxVault_V0002\bin\Debug\net8.0\VaxxVault_V0002.runtimeconfig.json" target="lib\net8.0\VaxxVault_V0002.runtimeconfig.json" />
+    <file src="A:\New.New\VaxxVault_V0002\bin\Debug\net8.0\VaxxVault_V0002.dll" target="lib\net8.0\VaxxVault_V0002.dll" />
+    <file src="A:\New.New\VaxxVault_V0002\bin\Debug\net8.0\VaxxVault_V0002.xml" target="lib\net8.0\VaxxVault_V0002.xml" />
+    <file src="A:\New.New\VaxxVault_V0002\Dir\Images_\simplified VaxxVault logo.ico" target="content\Dir\Images_\simplified VaxxVault logo.ico" />
+    <file src="A:\New.New\VaxxVault_V0002\Dir\Images_\simplified VaxxVault logo.ico" target="contentFiles\any\net8.0\Dir\Images_\simplified VaxxVault logo.ico" />
+    <file src="A:\New.New\VaxxVault_V0002\Dir\Images_\Adobe Express - Vaccine.png" target="\Dir\Images_\Adobe Express - Vaccine.png" />
+    <file src="A:\New.New\VaxxVault_V0002\Dir\Images_\simplified VaxxVault logo.png" target="\Dir\Images_\simplified VaxxVault logo.png" />
+  </files>
+</package>

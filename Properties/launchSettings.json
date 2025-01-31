@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "VaxxVault_V0002": {
+      "commandName": "Project",
+      "workingDirectory": "A:\\New.New\\VaxxVault_V0002",
+      "sqlDebugging": true,
+      "nativeDebugging": true
+    }
+  }
+}
