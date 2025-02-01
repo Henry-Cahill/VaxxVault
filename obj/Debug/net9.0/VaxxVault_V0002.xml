@@ -4,5 +4,25 @@
         <name>VaxxVault_V0002</name>
     </assembly>
     <members>
+        <member name="T:VaxxVault_V0002.Dir.Python_.Vaccine_Py_Select">
+            <summary>
+            Class to handle the selection of vaccines using a Python script.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Python_.Vaccine_Py_Select.Python">
+            <summary>
+            Executes the Python script for vaccine selection and logs the process.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Python_.Vaccine_Py_Select.AnotherTask">
+            <summary>
+            Another method to handle a different task.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Python_.Vaccine_Py_Select.Main(System.String[])">
+            <summary>
+            Main method to execute the appropriate method based on arguments.
+            </summary>
+        </member>
     </members>
 </doc>

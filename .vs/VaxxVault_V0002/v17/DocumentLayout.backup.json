@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "A:\\New.New\\VaxxVault\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0002.csproj|a:\\new.new\\vaxxvault\\dir\\python_\\csharp_ vaccine_ select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0002.csproj|solutionrelative:dir\\python_\\csharp_ vaccine_ select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0002.csproj|a:\\new.new\\vaxxvault\\dir\\handle_\\anaconda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0002.csproj|solutionrelative:dir\\handle_\\anaconda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0002.csproj|a:\\new.new\\vaxxvault\\dir\\handle_\\csharp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0002.csproj|solutionrelative:dir\\handle_\\csharp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0002.csproj|a:\\new.new\\vaxxvault\\dir\\handle_\\maintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0002.csproj|solutionrelative:dir\\handle_\\maintenance.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +35,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Csharp_ Vaccine_ Select.cs",
+              "DocumentMoniker": "A:\\New.New\\VaxxVault\\Dir\\Python_\\Csharp_ Vaccine_ Select.cs",
+              "RelativeDocumentMoniker": "Dir\\Python_\\Csharp_ Vaccine_ Select.cs",
+              "ToolTip": "A:\\New.New\\VaxxVault\\Dir\\Python_\\Csharp_ Vaccine_ Select.cs",
+              "RelativeToolTip": "Dir\\Python_\\Csharp_ Vaccine_ Select.cs",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAANMAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T06:53:43.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Maintenance.cs",
+              "DocumentMoniker": "A:\\New.New\\VaxxVault\\Dir\\Handle_\\Maintenance.cs",
+              "RelativeDocumentMoniker": "Dir\\Handle_\\Maintenance.cs",
+              "ToolTip": "A:\\New.New\\VaxxVault\\Dir\\Handle_\\Maintenance.cs",
+              "RelativeToolTip": "Dir\\Handle_\\Maintenance.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T06:51:02.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Csharp.cs",
+              "DocumentMoniker": "A:\\New.New\\VaxxVault\\Dir\\Handle_\\Csharp.cs",
+              "RelativeDocumentMoniker": "Dir\\Handle_\\Csharp.cs",
+              "ToolTip": "A:\\New.New\\VaxxVault\\Dir\\Handle_\\Csharp.cs",
+              "RelativeToolTip": "Dir\\Handle_\\Csharp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T06:15:26.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Anaconda.cs",
+              "DocumentMoniker": "A:\\New.New\\VaxxVault\\Dir\\Handle_\\Anaconda.cs",
+              "RelativeDocumentMoniker": "Dir\\Handle_\\Anaconda.cs",
+              "ToolTip": "A:\\New.New\\VaxxVault\\Dir\\Handle_\\Anaconda.cs",
+              "RelativeToolTip": "Dir\\Handle_\\Anaconda.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T05:43:48.757Z",
+              "EditorCaption": ""
             }
           ]
         }

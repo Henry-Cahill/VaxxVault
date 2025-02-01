@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VaxxVault_V0002.Dir.Handle_;
 
 namespace VaxxVault_V0002.Dir.Handle
 {
@@ -13,19 +14,16 @@ namespace VaxxVault_V0002.Dir.Handle
          Console.WriteLine("Select One of the Following Options:");
          Console.WriteLine("-------------------------------------");
          Console.WriteLine("   1. XML");
-         Console.WriteLine("   2. Database");
-         Console.WriteLine("   3. Tables");
-         Console.WriteLine("   4. Privacy");
-         Console.WriteLine("   5. System");
+         Console.WriteLine("   2. Tables");
+         Console.WriteLine("   3. Privacy");
+         Console.WriteLine("   4. System");
 
          switch (Console.ReadLine())
          {
             case "XML":
                XML.Handle();
                break;
-            case "2":
-
-               break;
+           
             default:
                Console.WriteLine("Invalid choice. Please select a valid option.");
                break;
