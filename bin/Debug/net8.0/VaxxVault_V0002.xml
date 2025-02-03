@@ -4,5 +4,47 @@
         <name>VaxxVault_V0002</name>
     </assembly>
     <members>
+        <member name="T:VaxxVault_V0002.Dir.Handle.PythonExecutor">
+            <summary>
+            Provides functionality to execute Python scripts.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.PythonExecutor.ExecuteScriptFromFile(System.String)">
+            <summary>
+            Executes a Python script from a file.
+            </summary>
+            <param name="filePath">The path to the Python script file.</param>
+            <returns>The output of the Python script.</returns>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.PythonExecutor.ExecuteScriptFromString(System.String)">
+            <summary>
+            Executes a Python script from a string.
+            </summary>
+            <param name="script">The Python script as a string.</param>
+            <returns>The output of the Python script.</returns>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.PythonExecutor.ExecuteSpecificPythonScript">
+            <summary>
+            Executes the specific Python script located at A:\New.New\VaxxVault\VaxxVault_Pi\Python_\VaxxVault_Pi.py.
+            </summary>
+            <returns>The output of the Python script.</returns>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.PythonExecutor.ExecutePythonCommand(System.String)">
+            <summary>
+            Executes a Python command and returns the output.
+            </summary>
+            <param name="arguments">The arguments to pass to the Python interpreter.</param>
+            <returns>The output of the Python command.</returns>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Main_.MainRails.HandleAnotherTask">
+            <summary>
+            Handles another task.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Main_.Vaccine_Main.ExecutePythonScriptAsync">
+            <summary>
+            Executes a Python script asynchronously in a new process.
+            </summary>
+        </member>
     </members>
 </doc>

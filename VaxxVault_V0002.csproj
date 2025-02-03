@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<ApplicationIcon>Dir\Images_\simplified VaxxVault logo.ico</ApplicationIcon>
@@ -14,6 +14,7 @@
 		<PackageProjectUrl>https://github.com/Henry-Cahill/VaxxVault</PackageProjectUrl>
 		<NuGetAuditMode>all</NuGetAuditMode>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<StartupObject></StartupObject>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -55,6 +56,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Folder Include="Dir\Handle_\Switchs_\" />
 		<Folder Include="Dir\temp\" />
 	</ItemGroup>
 
@@ -71,7 +73,7 @@
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
-	  <None Update="README.md">
+	  <None Update="Dir\Aministrative_\README.md">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>

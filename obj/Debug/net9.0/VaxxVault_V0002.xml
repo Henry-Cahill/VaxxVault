@@ -4,24 +4,46 @@
         <name>VaxxVault_V0002</name>
     </assembly>
     <members>
-        <member name="T:VaxxVault_V0002.Dir.Python_.Vaccine_Py_Select">
+        <member name="T:VaxxVault_V0002.Dir.Handle.PythonExecutor">
             <summary>
-            Class to handle the selection of vaccines using a Python script.
+            Provides functionality to execute Python scripts.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0002.Dir.Python_.Vaccine_Py_Select.Python">
+        <member name="M:VaxxVault_V0002.Dir.Handle.PythonExecutor.ExecuteScriptFromFile(System.String)">
             <summary>
-            Executes the Python script for vaccine selection and logs the process.
+            Executes a Python script from a file.
+            </summary>
+            <param name="filePath">The path to the Python script file.</param>
+            <returns>The output of the Python script.</returns>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.PythonExecutor.ExecuteScriptFromString(System.String)">
+            <summary>
+            Executes a Python script from a string.
+            </summary>
+            <param name="script">The Python script as a string.</param>
+            <returns>The output of the Python script.</returns>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.PythonExecutor.ExecuteSpecificPythonScript">
+            <summary>
+            Executes the specific Python script located at A:\New.New\VaxxVault\VaxxVault_Pi\Python_\VaxxVault_Pi.py.
+            </summary>
+            <returns>The output of the Python script.</returns>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.PythonExecutor.ExecutePythonCommand(System.String)">
+            <summary>
+            Executes a Python command and returns the output.
+            </summary>
+            <param name="arguments">The arguments to pass to the Python interpreter.</param>
+            <returns>The output of the Python command.</returns>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Main_.MainRails.HandleAnotherTask">
+            <summary>
+            Handles another task.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0002.Dir.Python_.Vaccine_Py_Select.AnotherTask">
+        <member name="M:VaxxVault_V0002.Dir.Main_.Vaccine_Main.ExecutePythonScriptAsync">
             <summary>
-            Another method to handle a different task.
-            </summary>
-        </member>
-        <member name="M:VaxxVault_V0002.Dir.Python_.Vaccine_Py_Select.Main(System.String[])">
-            <summary>
-            Main method to execute the appropriate method based on arguments.
+            Executes a Python script asynchronously in a new process.
             </summary>
         </member>
     </members>

@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "VaxxVault_V0002/0.0.0002": {
+      "VaxxVault_V0002/0.0.0003": {
         "dependencies": {
           "EntityFramework": "6.5.1",
           "Microsoft.NETCore.Platforms": "7.0.4",
@@ -274,7 +274,7 @@
     }
   },
   "libraries": {
-    "VaxxVault_V0002/0.0.0002": {
+    "VaxxVault_V0002/0.0.0003": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
