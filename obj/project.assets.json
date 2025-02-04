@@ -1127,9 +1127,9 @@
   "project": {
     "version": "0.0.3",
     "restore": {
-      "projectUniqueName": "A:\\New.New\\VaxxVault\\VaxxVault_V0002.csproj",
-      "projectName": "VaxxVault_V0002",
-      "projectPath": "A:\\New.New\\VaxxVault\\VaxxVault_V0002.csproj",
+      "projectUniqueName": "A:\\New.New\\VaxxVault\\VaxxVault_V0003.csproj",
+      "projectName": "VaxxVault_V0003",
+      "projectPath": "A:\\New.New\\VaxxVault\\VaxxVault_V0003.csproj",
       "packagesPath": "C:\\Users\\hlcma\\.nuget\\packages\\",
       "outputPath": "A:\\New.New\\VaxxVault\\obj\\",
       "projectStyle": "PackageReference",

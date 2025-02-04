@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaxxVault_V0002", "VaxxVault_V0002.csproj", "{D1D5AC72-CD82-45AB-B135-A85630CC82C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VaxxVault_V0003", "VaxxVault_V0003.csproj", "{D1D5AC72-CD82-45AB-B135-A85630CC82C3}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "VaxxVault_Pi", "VaxxVault_Pi\VaxxVault_Pi.pyproj", "{C64D88B4-2783-4654-A874-9B066BE807EE}"
 EndProject

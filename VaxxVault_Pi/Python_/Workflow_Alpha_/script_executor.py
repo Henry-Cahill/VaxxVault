@@ -1,44 +1,24 @@
 import os
-import sys
 import logging
-import subprocess
+import time
 from typing import Dict
+from logging_config import configure_logging
+from script_executor import execute_script
 
-# Configure logging to write to both console and file
+# Configure logging
 log_file_path = r'A:\New.New\VaxxVault\Dir\temp\error_log.txt'
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[
-    logging.FileHandler(log_file_path),
-    logging.StreamHandler(sys.stdout)
-])
+configure_logging(log_file_path)
+
+# Set environment variable to suppress GIL warning
+os.environ['PYTHON_GIL'] = '0'
 
 # Define the file paths for the scripts
 file_paths: Dict[str, str] = {
-    '1': 'Python3_Vaccine_Select.py',
+    '1': 'Select_/Python3_Vaccine_Select.py',
     '2': 'Python3_Vaccine_Definition.py',
     '3': 'Python3_DataFrame.py',
     '4': 'Python3_Validation.py'
 }
-
-def execute_script(script_file: str) -> None:
-    # Construct the full path to the script
-    script_path = os.path.join(os.path.dirname(__file__), script_file)
-    
-    # Check if the file exists
-    if os.path.exists(script_path):
-        logging.info(f"Executing script: {script_file}")
-        try:
-            # Execute the script using subprocess
-            result = subprocess.run([sys.executable, script_path], check=True, capture_output=True, text=True)
-            logging.info(f"Finished executing script: {script_file}")
-            logging.info(f"Output: {result.stdout}")
-            if result.stderr:
-                logging.error(f"Error output: {result.stderr}")
-        except subprocess.CalledProcessError as e:
-            logging.error(f"An error occurred while executing the script: {e}")
-            print(f"Error: An error occurred while executing the script: {e}")
-    else:
-        logging.error(f"File not found: {script_path}")
-        print(f"Error: File not found: {script_path}")
 
 def main() -> None:
     while True:
@@ -60,8 +40,10 @@ def main() -> None:
             logging.info("User selected to execute all scripts in order.")
             for key in ['1', '2', '3', '4']:
                 execute_script(file_paths[key])
+                time.sleep(2)  # Add a 2-second delay after each script execution
         elif option in file_paths:
             execute_script(file_paths[option])
+            time.sleep(2)  # Add a 2-second delay after script execution
         else:
             logging.error("Invalid option selected.")
             print("Error: Invalid option selected.")

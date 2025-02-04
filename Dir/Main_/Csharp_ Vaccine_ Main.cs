@@ -18,10 +18,11 @@ namespace VaxxVault_V0002.Dir.Main_
             var startInfo = new ProcessStartInfo
             {
                FileName = "python",
-               Arguments = @"A:\New.New\VaxxVault\VaxxVault_Pi\Python_\VaxxVault_Pi.py",
-               UseShellExecute = true,
-               RedirectStandardOutput = false,
-               CreateNoWindow = false
+               Arguments = @"A:\New.New\VaxxVault\VaxxVault_Pi\Python_\Main_\VaxxVault_Pi.py",
+               UseShellExecute = true,  // Use shell execute to open in a new window
+               RedirectStandardOutput = false,  // Do not redirect output
+               RedirectStandardError = false,  // Do not redirect error
+               CreateNoWindow = false  // Create a new window
             };
 
             using (var process = Process.Start(startInfo))
@@ -52,12 +53,12 @@ namespace VaxxVault_V0002.Dir.Main_
          }
 
          var commands = new Dictionary<string, Func<Task>>
-               {
-                   { "maintenance", () => Task.Run(() => Maintenance.Handle()) },
-                   { "main", () => Task.Run(() => MainRails.HandleAnotherTask()) },
-                   { "python", ExecutePythonScriptAsync },
-                   { "exit", () => Task.Run(() => Console.WriteLine("Exiting application...")) }
-               };
+            {
+                { "maintenance", () => Task.Run(() => Maintenance.Handle()) },
+                { "main", () => Task.Run(() => MainRails.HandleAnotherTask()) },
+                { "python", ExecutePythonScriptAsync },
+                { "exit", () => Task.Run(() => Console.WriteLine("Exiting application...")) }
+            };
 
          while (true)
          {

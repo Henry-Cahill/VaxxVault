@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BcuOlsiptlM=",
+  "dgSpecHash": "KIIrx9DmE6Q=",
   "success": true,
-  "projectFilePath": "A:\\New.New\\VaxxVault\\VaxxVault_V0002.csproj",
+  "projectFilePath": "A:\\New.New\\VaxxVault\\VaxxVault_V0003.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hlcma\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",
     "C:\\Users\\hlcma\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

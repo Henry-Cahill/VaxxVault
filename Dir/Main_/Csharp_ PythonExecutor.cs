@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace VaxxVault_V0002.Dir.Handle
 {
@@ -8,16 +9,16 @@ namespace VaxxVault_V0002.Dir.Handle
    /// </summary>
    public static class PythonExecutor
    {
-      private const string PythonScriptPath = @"A:\New.New\VaxxVault\VaxxVault_Pi\Python_\VaxxVault_Pi.py";
+      private const string PythonScriptPath = @"A:\New.New\VaxxVault\VaxxVault_Pi\Python_\Main_\VaxxVault_Pi.py";
 
       /// <summary>
       /// Executes a Python script from a file.
       /// </summary>
       /// <param name="filePath">The path to the Python script file.</param>
       /// <returns>The output of the Python script.</returns>
-      public static string ExecuteScriptFromFile(string filePath)
+      public static async Task<string> ExecuteScriptFromFileAsync(string filePath)
       {
-         return ExecutePythonCommand($"\"{filePath}\"");
+         return await ExecutePythonCommandAsync($"\"{filePath}\"");
       }
 
       /// <summary>
@@ -25,18 +26,18 @@ namespace VaxxVault_V0002.Dir.Handle
       /// </summary>
       /// <param name="script">The Python script as a string.</param>
       /// <returns>The output of the Python script.</returns>
-      public static string ExecuteScriptFromString(string script)
+      public static async Task<string> ExecuteScriptFromStringAsync(string script)
       {
-         return ExecutePythonCommand($"-c \"{script}\"");
+         return await ExecutePythonCommandAsync($"-c \"{script}\"");
       }
 
       /// <summary>
-      /// Executes the specific Python script located at A:\New.New\VaxxVault\VaxxVault_Pi\Python_\VaxxVault_Pi.py.
+      /// Executes the specific Python script located at A:\New.New\VaxxVault\VaxxVault_Pi\Python_\Main_\VaxxVault_Pi.py.
       /// </summary>
       /// <returns>The output of the Python script.</returns>
-      public static string ExecuteSpecificPythonScript()
+      public static async Task<string> ExecuteSpecificPythonScriptAsync()
       {
-         return ExecuteScriptFromFile(PythonScriptPath);
+         return await ExecuteScriptFromFileAsync(PythonScriptPath);
       }
 
       /// <summary>
@@ -44,7 +45,7 @@ namespace VaxxVault_V0002.Dir.Handle
       /// </summary>
       /// <param name="arguments">The arguments to pass to the Python interpreter.</param>
       /// <returns>The output of the Python command.</returns>
-      private static string ExecutePythonCommand(string arguments)
+      private static async Task<string> ExecutePythonCommandAsync(string arguments)
       {
          try
          {
@@ -59,10 +60,10 @@ namespace VaxxVault_V0002.Dir.Handle
 
                process.Start();
 
-               string output = process.StandardOutput.ReadToEnd();
-               string error = process.StandardError.ReadToEnd();
+               string output = await process.StandardOutput.ReadToEndAsync();
+               string error = await process.StandardError.ReadToEndAsync();
 
-               process.WaitForExit();
+               await process.WaitForExitAsync();
 
                if (!string.IsNullOrEmpty(error))
                {

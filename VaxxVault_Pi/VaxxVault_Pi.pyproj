@@ -4,14 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c64d88b4-2783-4654-a874-9b066be807ee</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Python_\VaxxVault_Pi.py</StartupFile>
+    <StartupFile>Python_\Main_\VaxxVault_Pi.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>VaxxVault_Pi</Name>
     <RootNamespace>VaxxVault_Pi</RootNamespace>
-    <InterpreterId>Global|PythonCore|3.9</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.13</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,25 +22,47 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Python_\Python3_DataFrame.py" />
-    <Compile Include="Python_\Python3_Vaccine_DataHandler.py" />
-    <Compile Include="Python_\Python3_Vaccine_Definition.py" />
-    <Compile Include="Python_\Python3_Vaccine_Select.py" />
-    <Compile Include="Python_\Python3_Vaccine_SQLStore.py" />
-    <Compile Include="Python_\Python3_Validation.py" />
-    <Compile Include="Python_\VaxxVault_Pi.py" />
+    <Compile Include="Python_\Workflow_Alpha_\disclaimer_utils.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Python_\Workflow_Alpha_\data_utils.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Python_\Workflow_Alpha_\logging_config.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Python_\Workflow_Alpha_\user_input_utils.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Python_\Workflow_Alpha_\script_executor.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Python_\Workflow_Alpha_\Python3_DataFrame.py" />
+    <Compile Include="Python_\Workflow_Alpha_\database_utils.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Python_\Workflow_Alpha_\display_utils.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Python_\Workflow_Alpha_\Python3_Vaccine_DataHandler.py" />
+    <Compile Include="Python_\Workflow_Alpha_\Python3_Vaccine_Definition.py" />
+    <Compile Include="Python_\Workflow_Alpha_\Python3_Vaccine_Select.py" />
+    <Compile Include="Python_\Workflow_Alpha_\Python3_Vaccine_SQLStore.py" />
+    <Compile Include="Python_\Workflow_Alpha_\Python3_Validation.py" />
+    <Compile Include="Python_\Main_\VaxxVault_Pi.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Python_\" />
-    <Folder Include="Python_\__pycache__\" />
+    <Folder Include="Python_\Main_\" />
+    <Folder Include="Python_\Workflow_Alpha_\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Python_\data.json" />
-    <Content Include="Python_\__pycache__\Python3_Vaccine_DataHandler.cpython-39.pyc" />
-    <Content Include="Python_\__pycache__\Python3_Vaccine_SQLStore.cpython-39.pyc" />
+    <Content Include="Python_\Main_\Workflow README.txt" />
+    <Content Include="Python_\Workflow_Alpha_\data.json" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="Global|IronPython|3.4" />
+    <InterpreterReference Include="Global|PythonCore|3.13" />
+    <InterpreterReference Include="Global|PythonCore|3.13t" />
     <InterpreterReference Include="Global|PythonCore|3.9" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
