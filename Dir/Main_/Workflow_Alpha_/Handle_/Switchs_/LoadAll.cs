@@ -1,5 +1,33 @@
 using System;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Cholera;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.COVID19;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Dengue;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Diphtheria;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Ebola;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.HepA;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.HepB;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Hib;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.HPV;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Influenza;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.JE;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Measles;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Meningococcal;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.MeningococcalB;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Mumps;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Orthopoxvirus;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pertussis;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pneumococcal;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Polio;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rabies;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rotavirus;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.RSV;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rubella;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.TBE;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Tetanus;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Typhoid;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Varicella;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.YF;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Zoster;
 
 namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Handle_.Switchs_
 {

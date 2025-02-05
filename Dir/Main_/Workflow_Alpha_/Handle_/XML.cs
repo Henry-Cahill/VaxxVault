@@ -36,8 +36,8 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Handle_
                               "  -10. Influenza          -26. Typhoid\n" +
                               "  -11. JE                 -27. Varicella\n" +
                               "  -12. Measles            -28. YF\n" +
-                              "  -13. Meningococcal B    -29. Zoster\n\n");
-            Console.WriteLine("  -30. Exit\n");
+                              "  -13. Meningococcal B    -29. Zoster\n" +
+                              "                          -30. Exit\n");
 
             switch (Console.ReadLine())
             {

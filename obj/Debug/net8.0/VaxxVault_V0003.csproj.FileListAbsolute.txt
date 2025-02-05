@@ -44,3 +44,11 @@ A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.xml
 A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.pdb
 A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.genruntimeconfig.cache
 A:\New.New\VaxxVault\obj\Debug\net8.0\ref\VaxxVault_V0003.dll
+A:\New.New\VaxxVault\bin\Debug\net8.0\ClosedXML.dll
+A:\New.New\VaxxVault\bin\Debug\net8.0\ClosedXML.Parser.dll
+A:\New.New\VaxxVault\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+A:\New.New\VaxxVault\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+A:\New.New\VaxxVault\bin\Debug\net8.0\ExcelNumberFormat.dll
+A:\New.New\VaxxVault\bin\Debug\net8.0\RBush.dll
+A:\New.New\VaxxVault\bin\Debug\net8.0\SixLabors.Fonts.dll
+A:\New.New\VaxxVault\bin\Debug\net8.0\System.IO.Packaging.dll

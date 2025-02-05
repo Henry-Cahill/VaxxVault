@@ -9,12 +9,12 @@
             Handles another task.
             </summary>
         </member>
-        <member name="M:Python3VaccineSQLStore.QueryA">
+        <member name="M:VaccineSQLStore.QueryA">
             <summary>
             Executes QueryA to retrieve vaccine data.
             </summary>
         </member>
-        <member name="M:Python3VaccineSQLStore.QueryB">
+        <member name="M:VaccineSQLStore.QueryB">
             <summary>
             Executes QueryB to retrieve vaccine data.
             </summary>

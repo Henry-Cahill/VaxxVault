@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">	
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
 		<TargetFramework>net8.0</TargetFramework>
@@ -40,6 +39,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="ClosedXML" Version="0.104.2" />
 		<PackageReference Include="EntityFramework" Version="6.5.1" />
 		<PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.4" />
 		<PackageReference Include="Microsoft.NETCore.Targets" Version="5.0.0" />
@@ -56,7 +56,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Dir\Main_\Workflow_Beta_\Route_\" />
 		<Folder Include="Dir\temp\" />
 	</ItemGroup>
 
@@ -79,3 +78,5 @@
 	  </None>
 	</ItemGroup>
 </Project>
+
+
