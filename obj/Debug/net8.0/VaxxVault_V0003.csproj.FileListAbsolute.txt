@@ -1,3 +1,9 @@
+A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.csproj.AssemblyReference.cache
+A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.GeneratedMSBuildEditorConfig.editorconfig
+A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.AssemblyInfoInputs.cache
+A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.AssemblyInfo.cs
+A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.csproj.CoreCompileInputs.cache
+A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.sourcelink.json
 A:\New.New\VaxxVault\bin\Debug\net8.0\VaxxVault_V0003.exe
 A:\New.New\VaxxVault\bin\Debug\net8.0\VaxxVault_V0003.deps.json
 A:\New.New\VaxxVault\bin\Debug\net8.0\VaxxVault_V0003.runtimeconfig.json
@@ -31,12 +37,6 @@ A:\New.New\VaxxVault\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlCli
 A:\New.New\VaxxVault\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 A:\New.New\VaxxVault\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 A:\New.New\VaxxVault\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Windows.Extensions.dll
-A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.csproj.AssemblyReference.cache
-A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.GeneratedMSBuildEditorConfig.editorconfig
-A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.AssemblyInfoInputs.cache
-A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.AssemblyInfo.cs
-A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.csproj.CoreCompileInputs.cache
-A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.sourcelink.json
 A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVaul.2D9D40A1.Up2Date
 A:\New.New\VaxxVault\obj\Debug\net8.0\VaxxVault_V0003.dll
 A:\New.New\VaxxVault\obj\Debug\net8.0\refint\VaxxVault_V0003.dll

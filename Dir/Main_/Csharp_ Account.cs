@@ -16,5 +16,4 @@ namespace VaxxVault_V0002.Dir.Main_
 
       public string username;
    }
-
 }

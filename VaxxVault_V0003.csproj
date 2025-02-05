@@ -56,12 +56,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Dir\Handle_\Switchs_\" />
+		<Folder Include="Dir\Main_\Workflow_Beta_\Route_\" />
 		<Folder Include="Dir\temp\" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="Dir\Review_\Csharp_ Vaccine_ JE.cs" />
+		<None Include="Dir\Main_\Workflow_Alpha_\Review_\Csharp_ Vaccine_ JE.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
