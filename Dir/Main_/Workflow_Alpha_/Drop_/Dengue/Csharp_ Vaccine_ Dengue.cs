@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Cholera;
 
 namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Dengue
 {
@@ -7,26 +8,34 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Dengue
    {
       public static void DeleteXmlDataInDatabase()
       {
-         string version = VersionHelper.GetVersionFromUser();
-         string filePath = FilePathHelper_Dengue.GetFilePath(version);
+         // Read connection string from file
+         string connectionStringFilePath = "A:\\New.New\\VaxxVault\\Dir\\Config_\\connectionString.txt";
+         string connectionString = File.ReadAllText(connectionStringFilePath).Trim();
 
-         if (string.IsNullOrEmpty(filePath))
+         try
          {
-            Console.WriteLine("Invalid version selected.");
-            return;
+            LegalDisclaimerHelper.DisplayLegalDisclaimer();
+            if (!UserAuthorizationHelper.GetUserAuthorization())
+            {
+               Console.WriteLine("Authorization denied. Exiting...");
+               return;
+            }
+
+            // Execute SQL command to drop a row
+            SqlCommandExecutor_Dengue.ExecuteSqlCommandAsync(connectionString, "DELETE FROM VaccineData WHERE Id = @Id;");
+         }
+         catch (IOException ex)
+         {
+            Console.WriteLine($"IO error: {ex.Message}");
+            // Log exception
+         }
+         catch (Exception ex)
+         {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            // Log exception
          }
 
-         string connectionString = "Server=HLC-Laptop\\SQLEXPRESS; Database=CDSi_4.60; Integrated Security=True;";
-         string xmlData = File.ReadAllText(filePath);
-
-         LegalDisclaimerHelper.DisplayLegalDisclaimer();
-         if (!UserAuthorizationHelper.GetUserAuthorization())
-         {
-            Console.WriteLine("Authorization denied. Exiting...");
-            return;
-         }
-
-         SqlCommandExecutor_Dengue.ExecuteSqlCommand(connectionString, xmlData);
+         Console.WriteLine("Reminder: Please load another version of the Dengue XML data before proceeding.");
       }
    }
 }

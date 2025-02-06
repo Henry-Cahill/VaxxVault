@@ -14,6 +14,12 @@
 		<NuGetAuditMode>all</NuGetAuditMode>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<StartupObject></StartupObject>
+	</PropertyGroup>	
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+	</PropertyGroup>	
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -41,6 +47,11 @@
 	<ItemGroup>
 		<PackageReference Include="ClosedXML" Version="0.104.2" />
 		<PackageReference Include="EntityFramework" Version="6.5.1" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.1" />
 		<PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.4" />
 		<PackageReference Include="Microsoft.NETCore.Targets" Version="5.0.0" />
 		<PackageReference Include="Python.Runtime" Version="2.7.9" />
@@ -56,11 +67,27 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Folder Include="Dir\Main_\Workflow_Alpha_\DataBase_ Checker_\" />
 		<Folder Include="Dir\temp\" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="Dir\Main_\Workflow_Alpha_\Review_\Csharp_ Vaccine_ JE.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	</ItemGroup>
 
 	<ItemGroup>

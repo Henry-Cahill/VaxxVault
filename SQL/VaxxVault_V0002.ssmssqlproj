@@ -22,12 +22,6 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="SQLAlter_ AntigenSupportingDataAsync.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HLC-LAPTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>HLC-LAPTOP\SQLEXPRESS</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SQLAlter_ AntigenSupportingDataAsync.sql</FullPath>
-        </FileNode>
         <FileNode Name="SQLQuery_ ConnectionString.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HLC-LAPTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>HLC-LAPTOP\SQLEXPRESS</AssociatedConnSrvName>
@@ -45,6 +39,18 @@
           <AssociatedConnSrvName>HLC-LAPTOP\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>SQLQuery3.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery4.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HLC-LAPTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>HLC-LAPTOP\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery4.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery5.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:HLC-LAPTOP\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>HLC-LAPTOP\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery5.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

@@ -1,0 +1,1 @@
+﻿Server=HLC-Laptop\SQLEXPRESS; Database=CDSi_4.60; Integrated Security=True; TrustServerCertificate=True;

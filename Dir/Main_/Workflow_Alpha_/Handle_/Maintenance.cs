@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Handle_.XML_;
 using VaxxVault_V0003.Dir.Main_.Workflow_Beta_.Route_;
 
 namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Handle_
@@ -20,6 +21,7 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Handle_
             Console.WriteLine("Select One of the Following Options:");
             Console.WriteLine("-------------------------------------");
             Console.WriteLine("   1.A (NATIVE) XML to Database");
+            //need to add the status text to the console to inform the user of the loaded or unload XML files
             Console.WriteLine("   1.B (NATIVE) XLSX to Database");
             Console.WriteLine("   1.C CSV/XLSX review in Console");
             Console.WriteLine("   2. Database content Review and Packaging");
@@ -31,7 +33,7 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Handle_
             switch (Console.ReadLine())
             {
                case "1.A":
-                  XML.Handle();
+                  XML.HandleXMLData();
                   break;
                case "1.B":
                   HandleCSVOrXLSX();

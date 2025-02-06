@@ -1,2 +1,136 @@
 
 
+Date: 2/5/2025 4:54:42 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 5:00:12 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 5:03:10 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 5:04:35 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 5:14:28 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 5:16:48 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/5/2025 5:16:48 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/5/2025 5:16:48 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 7:13:31 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/5/2025 7:13:31 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/5/2025 7:13:31 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 7:15:25 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/5/2025 7:15:25 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/5/2025 7:15:25 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 7:35:45 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/5/2025 7:35:45 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/5/2025 7:35:46 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 7:35:58 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/5/2025 7:35:58 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/5/2025 7:35:58 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 7:54:45 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/5/2025 7:54:45 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/5/2025 7:54:45 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 7:55:50 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/5/2025 7:55:50 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/5/2025 7:55:50 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/5/2025 11:33:32 PM
+SQL Statement: 
+               SET IDENTITY_INSERT VaccineData ON;
+               INSERT INTO VaccineData (Id, XmlData)
+               VALUES (2, @XmlData);
+               SET IDENTITY_INSERT VaccineData OFF;
+--------------------------------------------------
+Date: 2/5/2025 11:33:36 PM
+SQL Statement: 
+                  SET IDENTITY_INSERT VaccineData ON;
+                  INSERT INTO VaccineData (Id, XmlData)
+                  VALUES (3, @XmlData);
+                  SET IDENTITY_INSERT VaccineData OFF;
+--------------------------------------------------
+Date: 2/5/2025 11:33:41 PM
+SQL Statement: 
+                  SET IDENTITY_INSERT VaccineData ON;
+                  INSERT INTO VaccineData (Id, XmlData)
+                  VALUES (4, @XmlData);
+                  SET IDENTITY_INSERT VaccineData OFF;
+--------------------------------------------------
+Date: 2/5/2025 11:33:43 PM
+SQL Statement: 
+                  SET IDENTITY_INSERT VaccineData ON;
+                  INSERT INTO VaccineData (Id, XmlData)
+                  VALUES (5, @XmlData);
+                  SET IDENTITY_INSERT VaccineData OFF;
+--------------------------------------------------
+Date: 2/5/2025 11:33:54 PM
+SQL Statement: 
+                  SET IDENTITY_INSERT VaccineData ON;
+                  INSERT INTO VaccineData (Id, XmlData)
+                  VALUES (6, @XmlData);
+                  SET IDENTITY_INSERT VaccineData OFF;
+--------------------------------------------------
+Date: 2/5/2025 11:33:57 PM
+SQL Statement: 
+                  SET IDENTITY_INSERT VaccineData ON;
+                  INSERT INTO VaccineData (Id, XmlData)
+                  VALUES (7, @XmlData);
+                  SET IDENTITY_INSERT VaccineData OFF;
+--------------------------------------------------

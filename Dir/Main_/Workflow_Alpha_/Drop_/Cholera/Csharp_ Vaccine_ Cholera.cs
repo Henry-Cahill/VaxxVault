@@ -1,37 +1,40 @@
 ﻿using System;
-using System.Data.SqlClient;
-using System.Data;
 using System.IO;
 
 namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Cholera
 {
    internal class Vaccine_CholeraD
    {
-      private const string LogFilePath = "A:\\New.New\\VaxxVault\\Dir\\temp\\sql_log.txt";
-      private const string ErrorLogFilePath = "A:\\New.New\\VaxxVault\\Dir\\temp\\error_log.txt";
-
       public static void DeleteXmlDataInDatabase()
       {
-         string version = VersionHelper.GetVersionFromUser();
-         string filePath = FilePathHelper.GetFilePath(version);
+         // Read connection string from file
+         string connectionStringFilePath = "A:\\New.New\\VaxxVault\\Dir\\Config_\\connectionString.txt";
+         string connectionString = File.ReadAllText(connectionStringFilePath).Trim();
 
-         if (string.IsNullOrEmpty(filePath))
+         try
          {
-            Console.WriteLine("Invalid version selected.");
-            return;
+            LegalDisclaimerHelper.DisplayLegalDisclaimer();
+            if (!UserAuthorizationHelper.GetUserAuthorization())
+            {
+               Console.WriteLine("Authorization denied. Exiting...");
+               return;
+            }
+
+            // Execute SQL command to drop a row
+            SqlCommandExecutor.ExecuteSqlCommandAsync(connectionString, "DELETE FROM VaccineData WHERE Id = @Id;");
+         }
+         catch (IOException ex)
+         {
+            Console.WriteLine($"IO error: {ex.Message}");
+            // Log exception
+         }
+         catch (Exception ex)
+         {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            // Log exception
          }
 
-         string connectionString = "Server=HLC-Laptop\\SQLEXPRESS; Database=CDSi_4.60; Integrated Security=True;";
-         string xmlData = File.ReadAllText(filePath);
-
-         LegalDisclaimerHelper.DisplayLegalDisclaimer();
-         if (!UserAuthorizationHelper.GetUserAuthorization())
-         {
-            Console.WriteLine("Authorization denied. Exiting...");
-            return;
-         }
-
-         SqlCommandExecutor.ExecuteSqlCommand(connectionString, xmlData);
+         Console.WriteLine("Reminder: Please load another version of the Cholera XML data before proceeding.");
       }
    }
 }
