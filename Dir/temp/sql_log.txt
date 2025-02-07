@@ -134,3 +134,10 @@ SQL Statement:
                   VALUES (7, @XmlData);
                   SET IDENTITY_INSERT VaccineData OFF;
 --------------------------------------------------
+Date: 2/6/2025 7:22:16 PM
+SQL Statement: 
+                  SET IDENTITY_INSERT VaccineData ON;
+                  INSERT INTO VaccineData (Id, XmlData)
+                  VALUES (1, @XmlData);
+                  SET IDENTITY_INSERT VaccineData OFF;
+--------------------------------------------------

@@ -8,8 +8,7 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Cholera
 {
    internal class Vaccine_CholeraL
    {
-      private const string LogFilePath = "A:\\New.New\\VaxxVault\\Dir\\temp\\sql_log.txt";
-      private const string ErrorLogFilePath = "A:\\New.New\\VaxxVault\\Dir\\temp\\error_log.txt";
+      private const string ConnectionStringFilePath = "Dir/Config_/connectionString.txt";
 
       public static void InsertXmlDataIntoDatabase()
       {
@@ -21,57 +20,64 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Cholera
             version = "4.60";
          }
 
-         string filePath = version switch
+         try
          {
-            "4.60" => @"A:\New.New\VaxxVault\Import\Version 4.60 - 508\XML\AntigenSupportingData- Cholera-508.xml",
-            "4.59" => @"A:\New.New\VaxxVault\Import\Version 4.59 - 508\XML\AntigenSupportingData- Cholera-508.xml",
-            "4.58" => @"A:\New.New\VaxxVault\Import\Version 4.58 - 508\XML\AntigenSupportingData- Cholera-508.xml",
-            "4.57" => @"A:\New.New\VaxxVault\Import\Version 4.57 - 508\XML\AntigenSupportingData- Cholera-508.xml",
-            _ => null
-         };
+            FilePathHelper.InitializeConfiguration();
+            string filePath = FilePathHelper.GetFilePath(version);
 
-         if (string.IsNullOrEmpty(filePath))
-         {
-            Console.WriteLine("Invalid version selected.");
-            return;
-         }
+            if (string.IsNullOrEmpty(filePath))
+            {
+               Console.WriteLine("Invalid version selected.");
+               return;
+            }
 
-         string connectionString = "Server=HLC-Laptop\\SQLEXPRESS; Database=CDSi_4.60; Integrated Security=True;";
-         string xmlData = File.ReadAllText(filePath);
+            string connectionString = File.ReadAllText(ConnectionStringFilePath);
+            string xmlData = File.ReadAllText(filePath);
 
-         LegalDisclaimerHelper.DisplayLegalDisclaimer();
-         if (!UserAuthorizationHelper.GetUserAuthorization())
-         {
-            Console.WriteLine("Authorization denied. Exiting.");
-            return;
-         }
+            LegalDisclaimerHelper.DisplayLegalDisclaimer();
+            if (!UserAuthorizationHelper.GetUserAuthorization())
+            {
+               Console.WriteLine("Authorization denied. Exiting.");
+               return;
+            }
 
-         using (SqlConnection connection = new SqlConnection(connectionString))
-         {
-            connection.Open();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+               connection.Open();
 
-            string sql = @"
+               string sql = @"
                   SET IDENTITY_INSERT VaccineData ON;
                   INSERT INTO VaccineData (Id, XmlData)
                   VALUES (1, @XmlData);
                   SET IDENTITY_INSERT VaccineData OFF;";
 
-            SqlLogger.LogSqlStatement(sql);
+               SqlLogger.LogSqlStatement(sql);
 
-            using (SqlCommand command = new SqlCommand(sql, connection))
-            {
-               command.Parameters.Add(new SqlParameter("@XmlData", SqlDbType.Xml) { Value = xmlData });
+               using (SqlCommand command = new SqlCommand(sql, connection))
+               {
+                  command.Parameters.Add(new SqlParameter("@XmlData", SqlDbType.Xml) { Value = xmlData });
 
-               try
-               {
-                  command.ExecuteNonQuery();
-               }
-               catch (Exception ex)
-               {
-                  ErrorLogger.LogError(ex);
-                  throw;
+                  try
+                  {
+                     command.ExecuteNonQuery();
+                  }
+                  catch (Exception ex)
+                  {
+                     ErrorLogger.LogError(ex);
+                     throw;
+                  }
                }
             }
+         }
+         catch (FileNotFoundException ex)
+         {
+            Console.WriteLine($"File not found: {ex.Message}");
+            ErrorLogger.LogError(ex);
+         }
+         catch (Exception ex)
+         {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            ErrorLogger.LogError(ex);
          }
       }
    }

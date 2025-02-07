@@ -13,8 +13,6 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Beta_.Route_
          return credentials != null ? new SqlConnection(connectionString, credentials) : new SqlConnection(connectionString);
       }
 
-
-
       public static void ViewingOptions()
       {
          DisplayLegalDisclaimer();

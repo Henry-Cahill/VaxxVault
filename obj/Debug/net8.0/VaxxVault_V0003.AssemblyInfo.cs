@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VaxxVault_V0003")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.3.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.0003+5c74e24669a677b94234990b7b09b0b590320568")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.0.0003+aa71b1bd5fba4cd6ebd077a3d2358265c4dc935b")]
 [assembly: System.Reflection.AssemblyProductAttribute("VaxxVault_V0003")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VaxxVault_V0003")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.0.3.0")]

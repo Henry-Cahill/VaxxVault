@@ -15,6 +15,8 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.XML_
 
          while (keepRunning)
          {
+            VaccineDataStatus.LoadDataStatus();
+
             Console.WriteLine("Select One of the Following Options:");
             Console.WriteLine("------------------------------------------------------------------");
             Console.WriteLine("       Options        |  Loaded  |                      |\n" +
