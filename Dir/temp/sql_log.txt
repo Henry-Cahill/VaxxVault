@@ -141,3 +141,322 @@ SQL Statement:
                   VALUES (1, @XmlData);
                   SET IDENTITY_INSERT VaccineData OFF;
 --------------------------------------------------
+Date: 2/8/2025 8:23:21 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:21 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:21 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:24 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:24 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:24 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:39 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:39 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:39 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:41 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:41 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:41 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:44 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:44 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:44 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:45 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:45 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:45 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:47 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:47 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:47 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:48 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:48 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:48 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:50 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:50 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:50 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:52 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:52 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:52 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:53 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:53 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:53 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:55 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:55 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:55 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:56 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:56 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:56 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:58 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:58 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:58 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:23:59 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:23:59 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:23:59 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:01 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:01 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:01 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:02 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:02 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:02 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:04 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:04 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:04 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:06 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:06 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:06 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:36 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:36 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:36 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:38 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:38 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:38 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:39 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:39 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:39 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:41 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:41 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:41 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:42 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:42 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:42 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:44 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:44 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:44 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:45 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:45 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:45 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:46 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:46 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:46 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:24:48 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:24:48 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:24:48 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
+Date: 2/8/2025 8:25:08 PM
+SQL Statement: Database connection opened.
+--------------------------------------------------
+Date: 2/8/2025 8:25:08 PM
+SQL Statement: 
+                        DELETE FROM VaccineData
+                        WHERE Id = @Id;
+--------------------------------------------------
+Date: 2/8/2025 8:25:08 PM
+SQL Statement: Database connection closed.
+--------------------------------------------------
