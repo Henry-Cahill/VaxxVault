@@ -1,0 +1,4 @@
+A:\Archive\Linux-x64\V0003\FILES\VaxxVault_V0003.pdb
+A:\Archive\Linux-x64\V0003\FILES\SQLite.Interop.dll
+A:\Archive\Linux-x64\V0003\FILES\VaxxVault_V0003.xml
+A:\Archive\Linux-x64\V0003\FILES\VaxxVault_V0003

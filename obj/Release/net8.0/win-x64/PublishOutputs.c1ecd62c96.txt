@@ -1,0 +1,6 @@
+A:\Archive\WIN-x64\V0003\FILES\VaxxVault_V0003.pdb
+A:\Archive\WIN-x64\V0003\FILES\Microsoft.Data.SqlClient.SNI.dll
+A:\Archive\WIN-x64\V0003\FILES\sni.dll
+A:\Archive\WIN-x64\V0003\FILES\SQLite.Interop.dll
+A:\Archive\WIN-x64\V0003\FILES\VaxxVault_V0003.xml
+A:\Archive\WIN-x64\V0003\FILES\VaxxVault_V0003.exe
