@@ -1,16 +1,32 @@
 ﻿using System;
 using System.IO;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Orthopoxvirus;
+using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
 
 namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Orthopoxvirus
 {
    internal class Vaccine_OrthopoxvirusD
    {
-      public static void DeleteXmlDataInDatabase()
+      /// <summary>
+      /// Deletes XML data in the database.
+      /// </summary>
+      /// <returns>A task that represents the asynchronous operation.</returns>
+      public static async Task DeleteXmlDataInDatabase()
       {
          // Read connection string from file
          string connectionStringFilePath = "A:\\New.New\\VaxxVault\\Dir\\Config_\\connectionString.txt";
-         string connectionString = File.ReadAllText(connectionStringFilePath).Trim();
+         string connectionString;
+
+         try
+         {
+            connectionString = await File.ReadAllTextAsync(connectionStringFilePath).ConfigureAwait(false);
+         }
+         catch (IOException ex)
+         {
+            Console.WriteLine($"IO error while reading connection string: {ex.Message}");
+            // Log exception
+            return;
+         }
 
          try
          {
@@ -22,11 +38,11 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Orthopoxvirus
             }
 
             // Execute SQL command to drop a row
-            SqlCommandExecutor_Orthopoxvirus.ExecuteSqlCommandAsync(connectionString, "DELETE FROM VaccineData WHERE Id = @Id;");
+            await ExecuteDeleteCommandAsync(connectionString).ConfigureAwait(false);
          }
-         catch (IOException ex)
+         catch (SqlException ex)
          {
-            Console.WriteLine($"IO error: {ex.Message}");
+            Console.WriteLine($"SQL error: {ex.Message}");
             // Log exception
          }
          catch (Exception ex)
@@ -37,6 +53,25 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Orthopoxvirus
 
          Console.WriteLine("Reminder: Please load another version of the Orthopoxvirus XML data before proceeding.");
       }
+
+      /// <summary>
+      /// Executes the SQL delete command asynchronously.
+      /// </summary>
+      /// <param name="connectionString">The connection string to the database.</param>
+      /// <returns>A task that represents the asynchronous operation.</returns>
+      private static async Task ExecuteDeleteCommandAsync(string connectionString)
+      {
+         const string query = "DELETE FROM VaccineData WHERE Id = @Id;";
+
+         using (var connection = new SqlConnection(connectionString))
+         using (var command = new SqlCommand(query, connection))
+         {
+            command.Parameters.AddWithValue("@Id", 16); // Example parameter value
+
+            await connection.OpenAsync().ConfigureAwait(false);
+            await command.ExecuteNonQueryAsync().ConfigureAwait(false);
+         }
+      }
    }
 }
-//Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023. 
+// Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023.

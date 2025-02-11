@@ -1,69 +1,31 @@
 using System;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Cholera;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.COVID19;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Dengue;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Diphtheria;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Ebola;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.HepA;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.HepB;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Hib;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.HPV;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Influenza;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.JE;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Measles;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Meningococcal;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.MeningococcalB;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Mumps;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Orthopoxvirus;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pertussis;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pneumococcal;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Polio;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rabies;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rotavirus;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.RSV;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rubella;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.TBE;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Tetanus;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Typhoid;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Varicella;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.YF;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Zoster;
+using System.Linq;
+using System.Reflection;
 
 namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
 {
    internal class LoadAll
    {
+      // The Execute method is responsible for finding and invoking the InsertXmlDataIntoDatabase method
+      // in all types within the VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_ namespace that end with 'L'.
       public static void Execute()
       {
-         Vaccine_CholeraL.InsertXmlDataIntoDatabase();
-         Vaccine_Covid19L.InsertXmlDataIntoDatabase();
-         Vaccine_DengueL.InsertXmlDataIntoDatabase();
-         Vaccine_DiphtheriaL.InsertXmlDataIntoDatabase();
-         Vaccine_EbolaL.InsertXmlDataIntoDatabase();
-         Vaccine_HepAL.InsertXmlDataIntoDatabase();
-         Vaccine_HepBL.InsertXmlDataIntoDatabase();
-         Vaccine_HibL.InsertXmlDataIntoDatabase();
-         Vaccine_HPVL.InsertXmlDataIntoDatabase();
-         Vaccine_InfluenzaL.InsertXmlDataIntoDatabase();
-         Vaccine_JEL.InsertXmlDataIntoDatabase();
-         Vaccine_MeaslesL.InsertXmlDataIntoDatabase();
-         Vaccine_MeningococcalBL.InsertXmlDataIntoDatabase();
-         Vaccine_MeningococcalL.InsertXmlDataIntoDatabase();
-         Vaccine_MumpsL.InsertXmlDataIntoDatabase();
-         Vaccine_OrthopoxvirusL.InsertXmlDataIntoDatabase();
-         Vaccine_PertussisL.InsertXmlDataIntoDatabase();
-         Vaccine_PneumococcalL.InsertXmlDataIntoDatabase();
-         Vaccine_PolioL.InsertXmlDataIntoDatabase();
-         Vaccine_RabiesL.InsertXmlDataIntoDatabase();
-         Vaccine_RotavirusL.InsertXmlDataIntoDatabase();
-         Vaccine_RSVL.InsertXmlDataIntoDatabase();
-         Vaccine_RubellaL.InsertXmlDataIntoDatabase();
-         Vaccine_TBEL.InsertXmlDataIntoDatabase();
-         Vaccine_TetanusL.InsertXmlDataIntoDatabase();
-         Vaccine_TyphoidL.InsertXmlDataIntoDatabase();
-         Vaccine_VaricellaL.InsertXmlDataIntoDatabase();
-         Vaccine_YFL.InsertXmlDataIntoDatabase();
-         Vaccine_ZosterL.InsertXmlDataIntoDatabase();
+         // Get all types in the current assembly that belong to the specified namespace and end with 'L'.
+         var vaccineTypes = Assembly.GetExecutingAssembly()
+             .GetTypes()
+             .Where(t => t.Namespace == "VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_" && t.Name.EndsWith("L"))
+             .ToList();
+
+         // Iterate through each type found.
+         foreach (var type in vaccineTypes)
+         {
+            // Get the InsertXmlDataIntoDatabase method from the type, if it exists.
+            var method = type.GetMethod("InsertXmlDataIntoDatabase", BindingFlags.Public | BindingFlags.Static);
+
+            // Invoke the method if it was found.
+            method?.Invoke(null, null);
+         }
       }
    }
 }
+//Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023. 

@@ -1,7 +1,5 @@
 public static class VaccineSQLStore
 {
-   
-
    /// <summary>
    /// Executes QueryA to retrieve vaccine data.
    /// </summary>

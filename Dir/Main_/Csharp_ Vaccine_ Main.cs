@@ -6,32 +6,50 @@ using VaxxVault_V0003.Dir.Main_.Handle_;
 
 namespace VaxxVault_V0002.Dir.Main_
 {
+   /// <summary>
+   /// Main class for handling vaccine-related operations.
+   /// </summary>
    public class Vaccine_Main
    {
+      /// <summary>
+      /// Entry point of the application.
+      /// </summary>
+      /// <param name="args">Command line arguments.</param>
       public static void Main(string[] args)
       {
          var commands = new Dictionary<string, Func<Task>>
-               {
-                   { "maintenance", () => Task.Run(() => Maintenance.Handle()) },
-                   { "main", () => Task.Run(() => MainRails.HandleAnotherTask()) },
-                   { "python", () => Task.Run(() => Console.WriteLine("Python task not implemented.")) },
-                   { "exit", () => Task.Run(() => Console.WriteLine("Exiting application...")) }
-               };
+            {
+                { "maintenance", () => Task.Run(() => Maintenance.HandleAsync()) },
+                { "main", () => Task.Run(() => MainRails.HandleAnotherTask()) },
+                { "python", () => Task.Run(() => Console.WriteLine("Python task not implemented.")) },
+                { "exit", () => Task.Run(() => Console.WriteLine("Exiting application...")) }
+            };
 
          while (true)
          {
             Console.WriteLine("Please enter an argument ('main', 'maintenance', 'python', 'exit'):");
             var input = Console.ReadLine()?.ToLower();
 
-            if (input == "exit")
+            if (string.IsNullOrWhiteSpace(input))
             {
-               commands[input]().Wait();
-               return;
+               Console.WriteLine("Invalid argument. Use 'main', 'maintenance', 'python', or 'exit'.");
+               continue;
             }
 
-            if (commands.ContainsKey(input))
+            if (commands.TryGetValue(input, out var command))
             {
-               commands[input]().Wait();
+               try
+               {
+                  command().Wait();
+                  if (input == "exit")
+                  {
+                     return;
+                  }
+               }
+               catch (Exception ex)
+               {
+                  Console.WriteLine($"An error occurred while executing the command: {ex.Message}");
+               }
             }
             else
             {

@@ -18,18 +18,18 @@ namespace VaxxVault_V0002.Dir.Main_
       public int Year { get; private set; }
 
       // Private instance variables for internal calculations
-      private int maxHeartRate;
-      private double minHighHeartRate;
-      private double minLowHeartRate;
-      private double bmi;
+      private int _maxHeartRate;
+      private double _minHighHeartRate;
+      private double _minLowHeartRate;
+      private double _bmi;
 
       // Constructor to initialize the object
       public Data(string firstName, string lastName, int age, string gender, int currentYear, int heightInInches, int weightInPounds, int month, int day, int year)
       {
-         FirstName = firstName;
-         LastName = lastName;
+         FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName), "First name cannot be null");
+         LastName = lastName ?? throw new ArgumentNullException(nameof(lastName), "Last name cannot be null");
          Age = age > 0 ? age : throw new ArgumentOutOfRangeException(nameof(age), "Age must be greater than 0");
-         Gender = gender;
+         Gender = gender ?? throw new ArgumentNullException(nameof(gender), "Gender cannot be null");
          CurrentYear = currentYear > 0 ? currentYear : throw new ArgumentOutOfRangeException(nameof(currentYear), "Year must be greater than 0");
          HeightInInches = heightInInches > 0 ? heightInInches : throw new ArgumentOutOfRangeException(nameof(heightInInches), "Height must be greater than 0");
          WeightInPounds = weightInPounds > 0 ? weightInPounds : throw new ArgumentOutOfRangeException(nameof(weightInPounds), "Weight must be greater than 0");
@@ -50,9 +50,9 @@ namespace VaxxVault_V0002.Dir.Main_
       {
          if (Age > 0)
          {
-            maxHeartRate = 220 - Age;
-            minHighHeartRate = maxHeartRate * 0.85;
-            minLowHeartRate = maxHeartRate * 0.5;
+            _maxHeartRate = 220 - Age;
+            _minHighHeartRate = _maxHeartRate * 0.85;
+            _minLowHeartRate = _maxHeartRate * 0.5;
          }
       }
 
@@ -61,7 +61,7 @@ namespace VaxxVault_V0002.Dir.Main_
       {
          if (HeightInInches > 0 && WeightInPounds > 0)
          {
-            bmi = WeightInPounds * 703 / Math.Pow(HeightInInches, 2);
+            _bmi = WeightInPounds * 703 / Math.Pow(HeightInInches, 2);
          }
       }
 
@@ -71,12 +71,14 @@ namespace VaxxVault_V0002.Dir.Main_
       // Method to display the calculated heart rate information
       public void DisplayHeartRates()
       {
-         Console.WriteLine($"Max Heart Rate: {maxHeartRate}");
-         Console.WriteLine($"Min High Heart Rate: {minHighHeartRate}");
-         Console.WriteLine($"Min Low Heart Rate: {minLowHeartRate}");
+         Console.WriteLine($"Max Heart Rate: {_maxHeartRate}");
+         Console.WriteLine($"Min High Heart Rate: {_minHighHeartRate}");
+         Console.WriteLine($"Min Low Heart Rate: {_minLowHeartRate}");
       }
 
       // Method to display the calculated BMI value
-      public void DisplayBMI() => Console.WriteLine($"BMI: {bmi:F2}");
-   } //End Class Data
+      public void DisplayBMI() => Console.WriteLine($"BMI: {_bmi:F2}");
+   } // End Class Data
 }
+
+// Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023.

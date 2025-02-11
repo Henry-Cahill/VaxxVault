@@ -1,13 +1,58 @@
-﻿namespace VaxxVault_V0003.Dir.Main_.Handle_.XML_
+﻿using System;
+using System.Xml;
+using System.Xml.Linq;
+
+namespace VaxxVault_V0003.Dir.Main_.Handle_.XML_
 {
-   internal class XML
+   /// <summary>
+   /// Provides methods to handle XML data.
+   /// </summary>
+   internal static class XML
    {
-      // Example method to handle XML data
+      /// <summary>
+      /// Handles XML data by loading and processing it.
+      /// </summary>
       public static void HandleXMLData()
       {
          Console.WriteLine("Handling XML data...");
-         MainMenu.Handle();
-         // Add logic to handle XML data here
+         MainMenu.Handle().Wait();
+
+         string xmlFilePath = "Dir/Config_/data.xml";
+         try
+         {
+            XDocument xmlDoc = XDocument.Load(xmlFilePath);
+            ProcessXMLData(xmlDoc);
+         }
+         catch (Exception ex)
+         {
+            LogError("An error occurred while handling XML data", ex);
+         }
+      }
+
+      /// <summary>
+      /// Processes the XML data.
+      /// </summary>
+      /// <param name="xmlDoc">The XML document to process.</param>
+      private static void ProcessXMLData(XDocument xmlDoc)
+      {
+         // Add logic to process XML data here
+         foreach (XElement element in xmlDoc.Descendants("Vaccine"))
+         {
+            string? name = element.Element("Name")?.Value;
+            string? status = element.Element("Status")?.Value;
+            Console.WriteLine($"Vaccine: {name}, Status: {status}");
+         }
+      }
+
+      /// <summary>
+      /// Logs an error message and exception details.
+      /// </summary>
+      /// <param name="message">The error message.</param>
+      /// <param name="ex">The exception details.</param>
+      private static void LogError(string message, Exception ex)
+      {
+         // Implement a logging mechanism here (e.g., log to a file, event log, etc.)
+         Console.WriteLine($"{message}: {ex.Message}");
       }
    }
 }

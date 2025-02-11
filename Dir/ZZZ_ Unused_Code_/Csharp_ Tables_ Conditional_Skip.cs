@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +10,7 @@ namespace VaxxVault_V0002.Dir.Archive_
 {
    class Conditional_Skip
    {
-      private static SqlConnection GetSqlConnection(string connectionName = "Data Source=HLC-Laptop\\SQLEXPRESS;Initial Catalog=Dev-CDSi;Integrated Security=True;Encrypt=False", SqlCredential credentials = null)
+      private static SqlConnection GetSqlConnection(string connectionName = "Data Source=HLC-Laptop\\SQLEXPRESS;Initial Catalog=Dev-CDSi;Integrated Security=True;Encrypt=False", SqlCredential? credentials = null)
       {
          string connectionString = ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
          return credentials != null ? new SqlConnection(connectionString, credentials) : new SqlConnection(connectionString);
@@ -1661,3 +1661,4 @@ namespace VaxxVault_V0002.Dir.Archive_
       }
    }
 }
+//Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023. 

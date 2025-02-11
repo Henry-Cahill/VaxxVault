@@ -1,69 +1,31 @@
 using System;
-using VaxxVault_V0002.Dir.Review_;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Cholera;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.COVID19;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Dengue;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Diphtheria;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Ebola;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.HepA;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.HepB;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Hib;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.HPV;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Influenza;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Measles;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Meningococcal;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Mumps;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Orthopoxvirus;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Pertussis;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Pneumococcal;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Polio;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rabies;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rotavirus;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.RSV;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rubella;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.TBE;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Tetanus;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Typhoid;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Varicella;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.YF;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Zoster;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Review_;
+using System.Linq;
+using System.Reflection;
 
 namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
 {
    internal class ReviewAll
    {
+      // The Execute method is responsible for finding and invoking the ReviewXml method
+      // in all types within the VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_ namespace that end with 'R'.
       public static void Execute()
       {
-         Vaccine_CholeraR.ReviewXml();
-         Vaccine_Covid19R.ReviewXml();
-         Vaccine_DengueR.ReviewXml();
-         Vaccine_DiphtheriaR.ReviewXml();
-         Vaccine_EbolaR.ReviewXml();
-         Vaccine_HepAR.ReviewXml();
-         Vaccine_HepBR.ReviewXml();
-         Vaccine_HibR.ReviewXml();
-         Vaccine_HPVR.ReviewXml();
-         Vaccine_InfluenzaR.ReviewXml();
-         Vaccine_JER.ReviewXml();
-         Vaccine_MeaslesR.ReviewXml();
-         Vaccine_MeningococcalBR.ReviewXml();
-         Vaccine_MeningococcalR.ReviewXml();
-         Vaccine_MumpsR.ReviewXml();
-         Vaccine_OrthopoxvirusR.ReviewXml();
-         Vaccine_PertussisR.ReviewXml();
-         Vaccine_PneumococcalR.ReviewXml();
-         Vaccine_PolioR.ReviewXml();
-         Vaccine_RabiesR.ReviewXml();
-         Vaccine_RotavirusR.ReviewXml();
-         Vaccine_RSVR.ReviewXml();
-         Vaccine_RubellaR.ReviewXml();
-         Vaccine_TBER.ReviewXml();
-         Vaccine_TetanusR.ReviewXml();
-         Vaccine_TyphoidR.ReviewXml();
-         Vaccine_VaricellaR.ReviewXml();
-         Vaccine_YFR.ReviewXml();
-         Vaccine_ZosterR.ReviewXml();
+         // Get all types in the current assembly that belong to the specified namespace and end with 'R'.
+         var vaccineTypes = Assembly.GetExecutingAssembly()
+             .GetTypes()
+             .Where(t => t.Namespace == "VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_" && t.Name.EndsWith("R"))
+             .ToList();
+
+         // Iterate through each type found.
+         foreach (var type in vaccineTypes)
+         {
+            // Get the ReviewXml method from the type, if it exists.
+            var method = type.GetMethod("ReviewXml", BindingFlags.Public | BindingFlags.Static);
+
+            // Invoke the method if it was found.
+            method?.Invoke(null, null);
+         }
       }
    }
 }
+//Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023. 

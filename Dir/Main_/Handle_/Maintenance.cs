@@ -1,85 +1,123 @@
 ﻿using ClosedXML.Excel;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using VaxxVault_V0003.Dir.Main_.Handle_.XML_;
 using VaxxVault_V0003.Dir.Main_.Workflow_Beta_.Route_;
 
 namespace VaxxVault_V0003.Dir.Main_.Handle_
 {
-   internal class Maintenance
+   /// <summary>
+   /// Provides methods to handle maintenance operations.
+   /// </summary>
+   internal static class Maintenance
    {
-      public static void Handle()
+      private const string ExitOption = "6";
+
+      /// <summary>
+      /// Handles the maintenance operations.
+      /// </summary>
+      public static async Task HandleAsync()
       {
          bool keepRunning = true;
 
          while (keepRunning)
          {
-            Console.WriteLine("Select One of the Following Options:");
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine("   1.A (NATIVE) XML to Database");
-            //need to add the status text to the console to inform the user of the loaded or unload XML files
-            Console.WriteLine("   1.B (NATIVE) XLSX to Database");
-            Console.WriteLine("   1.C CSV/XLSX review in Console");
-            Console.WriteLine("   2. Database content Review and Packaging");
-            Console.WriteLine("   3. Data cleaning and Sending to Database");
-            Console.WriteLine("   4. System");
-            Console.WriteLine("   5. Privacy");
-            Console.WriteLine("   6. Exit");
+            DisplayMenu();
 
-            switch (Console.ReadLine())
+            string? choice = Console.ReadLine()?.Trim();
+            if (string.IsNullOrEmpty(choice))
             {
-               case "1.A":
-                  XML.HandleXMLData();
-                  break;
-               case "1.B":
-                  HandleCSVOrXLSX();
-                  break;
-               case "2":
-                  Vaccine_Connect_.ViewingOptions();
-                  break;
-               case "3":
-                  // Handle Privacy
-                  break;
-               case "4":
-                  // Handle System
-                  break;
-               case "5":
+               Console.WriteLine("Invalid choice. Please select a valid option.");
+               continue;
+            }
 
-                  break;
-               case "6":
-                  Console.WriteLine("Do you really want to close VaxxVault? (yes/no)");
-                  string exitChoice = Console.ReadLine()?.ToLower();
-                  if (exitChoice == "yes")
-                  {
-                     keepRunning = false;
-                     Console.WriteLine("\nExiting the program.\n");
-                  }
-                  break;
-               default:
-                  Console.WriteLine("Invalid choice. Please select a valid option.");
-                  break;
+            if (choice == ExitOption)
+            {
+               if (await ConfirmExitAsync())
+               {
+                  keepRunning = false;
+                  Console.WriteLine("\nExiting the program.\n");
+               }
+            }
+            else
+            {
+               await HandleChoiceAsync(choice);
             }
          }
       }
 
-      private static void HandleCSVOrXLSX()
+      /// <summary>
+      /// Displays the maintenance menu options.
+      /// </summary>
+      private static void DisplayMenu()
+      {
+         Console.WriteLine("Select One of the Following Options:");
+         Console.WriteLine("-------------------------------------");
+         Console.WriteLine("   1.A (NATIVE) XML to Database");
+         Console.WriteLine("   1.B (NATIVE) XLSX to Database");
+         Console.WriteLine("   1.C CSV/XLSX review in Console");
+         Console.WriteLine("   2. Database content Review and Packaging");
+         Console.WriteLine("   3. Data cleaning and Sending to Database");
+         Console.WriteLine("   4. System");
+         Console.WriteLine("   5. Privacy");
+         Console.WriteLine("   6. Exit");
+      }
+
+      /// <summary>
+      /// Handles the user's choice from the menu.
+      /// </summary>
+      /// <param name="choice">The user's choice.</param>
+      private static async Task HandleChoiceAsync(string choice)
+      {
+         switch (choice)
+         {
+            case "1.A":
+               XML.HandleXMLData();
+               break;
+            case "1.B":
+               await HandleCSVOrXLSXAsync();
+               break;
+            case "2":
+               Vaccine_Connect_.ViewingOptions();
+               break;
+            case "3":
+               // Handle Data cleaning and Sending to Database
+               break;
+            case "4":
+               // Handle System
+               break;
+            case "5":
+               // Handle Privacy
+               break;
+            default:
+               Console.WriteLine("Invalid choice. Please select a valid option.");
+               break;
+         }
+      }
+
+      /// <summary>
+      /// Handles the CSV or XLSX file input.
+      /// </summary>
+      private static async Task HandleCSVOrXLSXAsync()
       {
          Console.WriteLine("Enter the path to the CSV or XLSX file:");
-         string filePath = Console.ReadLine();
-
+         string? filePath = Console.ReadLine();
+         if (string.IsNullOrEmpty(filePath))
+         {
+            Console.WriteLine("Invalid file path.");
+            return;
+         }
          if (File.Exists(filePath))
          {
             if (filePath.EndsWith(".csv", StringComparison.OrdinalIgnoreCase))
             {
-               HandleCSV(filePath);
+               await HandleCSVAsync(filePath);
             }
             else if (filePath.EndsWith(".xlsx", StringComparison.OrdinalIgnoreCase))
             {
-               HandleXLSX(filePath);
+               await HandleXLSXAsync(filePath);
             }
             else
             {
@@ -92,32 +130,54 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_
          }
       }
 
-      private static void HandleCSV(string filePath)
+      /// <summary>
+      /// Handles the CSV file input.
+      /// </summary>
+      /// <param name="filePath">The path to the CSV file.</param>
+      private static async Task HandleCSVAsync(string filePath)
       {
          using (var reader = new StreamReader(filePath))
          {
-            string line;
-            while ((line = reader.ReadLine()) != null)
+            string? line;
+            while ((line = await reader.ReadLineAsync()) != null)
             {
                Console.WriteLine(line);
             }
          }
       }
 
-      private static void HandleXLSX(string filePath)
+      /// <summary>
+      /// Handles the XLSX file input.
+      /// </summary>
+      /// <param name="filePath">The path to the XLSX file.</param>
+      private static async Task HandleXLSXAsync(string filePath)
       {
-         using (var workbook = new XLWorkbook(filePath))
+         await Task.Run(() =>
          {
-            var worksheet = workbook.Worksheets.First();
-            foreach (var row in worksheet.RowsUsed())
+            using (var workbook = new XLWorkbook(filePath))
             {
-               foreach (var cell in row.CellsUsed())
+               var worksheet = workbook.Worksheets.First();
+               foreach (var row in worksheet.RowsUsed())
                {
-                  Console.Write($"{cell.Value}\t");
+                  foreach (var cell in row.CellsUsed())
+                  {
+                     Console.Write($"{cell.Value}\t");
+                  }
+                  Console.WriteLine();
                }
-               Console.WriteLine();
             }
-         }
+         });
+      }
+
+      /// <summary>
+      /// Confirms if the user wants to exit the application.
+      /// </summary>
+      /// <returns>A task that represents the asynchronous operation. The task result contains a boolean indicating if the user confirmed the exit.</returns>
+      private static async Task<bool> ConfirmExitAsync()
+      {
+         Console.WriteLine("Do you really want to close VaxxVault? (yes/no)");
+         string? exitChoice = (await Task.Run(() => Console.ReadLine()))?.ToLower();
+         return exitChoice == "yes";
       }
    }
 }

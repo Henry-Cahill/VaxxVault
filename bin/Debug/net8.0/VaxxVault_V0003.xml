@@ -4,10 +4,672 @@
         <name>VaxxVault_V0003</name>
     </assembly>
     <members>
+        <member name="T:VaxxVault_V0002.Dir.Main_.Account">
+            <summary>
+            Represents an account with a name and username.
+            </summary>
+        </member>
+        <member name="P:VaxxVault_V0002.Dir.Main_.Account.Name">
+            <summary>
+            Gets or sets the name of the account.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Thrown when the value is null.</exception>
+        </member>
+        <member name="P:VaxxVault_V0002.Dir.Main_.Account.Username">
+            <summary>
+            Gets or sets the username of the account.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Thrown when the value is null.</exception>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Main_.Account.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:VaxxVault_V0002.Dir.Main_.Account"/> class.
+            </summary>
+            <param name="name">The name of the account.</param>
+            <param name="username">The username of the account.</param>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Main_.Account.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="T:VaxxVault_V0002.Dir.Main_.AccountManager">
+            <summary>
+            Manages account-related processes for VaxxVault.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Main_.AccountManager.ManageAccount(VaxxVault_V0002.Dir.Main_.Account)">
+            <summary>
+            Manages the account process by updating the username of the given account.
+            </summary>
+            <param name="vaxxVaultAccount">The account to be managed.</param>
+        </member>
+        <member name="T:VaxxVault_V0002.Dir.Main_.MainRails">
+            <summary>
+            MainRails class handles the main tasks and operations of the VaxxVault application.
+            </summary>
+        </member>
         <member name="M:VaxxVault_V0002.Dir.Main_.MainRails.HandleAnotherTask">
             <summary>
             Handles another task.
             </summary>
+        </member>
+        <member name="T:VaxxVault_V0002.Dir.Main_.Vaccine_Main">
+            <summary>
+            Main class for handling vaccine-related operations.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Main_.Vaccine_Main.Main(System.String[])">
+            <summary>
+            Entry point of the application.
+            </summary>
+            <param name="args">Command line arguments.</param>
+        </member>
+        <member name="T:VaxxVault_V0002.Dir.Handle.CheckerboardGenerator">
+            <summary>
+            Provides methods to generate a checkerboard pattern.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.CheckerboardGenerator.GenerateCheckerboard">
+            <summary>
+            Generates and prints a checkerboard pattern to the console.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0002.Dir.Handle.Logger">
+            <summary>
+            Provides logging functionalities for the application.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.Logger.LogInfo(System.IO.StreamWriter,System.String)">
+            <summary>
+            Logs an informational message to the specified log file.
+            </summary>
+            <param name="logFile">The StreamWriter to write the log message to.</param>
+            <param name="message">The informational message to log.</param>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.Logger.LogError(System.IO.StreamWriter,System.String)">
+            <summary>
+            Logs an error message to the specified log file.
+            </summary>
+            <param name="logFile">The StreamWriter to write the log message to.</param>
+            <param name="message">The error message to log.</param>
+        </member>
+        <member name="M:VaxxVault_V0002.Dir.Handle.Logger.Log(System.IO.StreamWriter,System.String,System.String)">
+            <summary>
+            Logs a message with the specified log level to the specified log file.
+            </summary>
+            <param name="logFile">The StreamWriter to write the log message to.</param>
+            <param name="level">The log level (e.g., INFO, ERROR).</param>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Handle_.Maintenance">
+            <summary>
+            Provides methods to handle maintenance operations.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.Maintenance.HandleAsync">
+            <summary>
+            Handles the maintenance operations.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.Maintenance.DisplayMenu">
+            <summary>
+            Displays the maintenance menu options.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.Maintenance.HandleChoiceAsync(System.String)">
+            <summary>
+            Handles the user's choice from the menu.
+            </summary>
+            <param name="choice">The user's choice.</param>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.Maintenance.HandleCSVOrXLSXAsync">
+            <summary>
+            Handles the CSV or XLSX file input.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.Maintenance.HandleCSVAsync(System.String)">
+            <summary>
+            Handles the CSV file input.
+            </summary>
+            <param name="filePath">The path to the CSV file.</param>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.Maintenance.HandleXLSXAsync(System.String)">
+            <summary>
+            Handles the XLSX file input.
+            </summary>
+            <param name="filePath">The path to the XLSX file.</param>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.Maintenance.ConfirmExitAsync">
+            <summary>
+            Confirms if the user wants to exit the application.
+            </summary>
+            <returns>A task that represents the asynchronous operation. The task result contains a boolean indicating if the user confirmed the exit.</returns>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Handle_.XML_.DatabaseHelper">
+            <summary>
+            Provides helper methods for database operations.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.DatabaseHelper.ReadConnectionString">
+            <summary>
+            Reads the connection string from a file.
+            </summary>
+            <returns>The connection string.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.DatabaseHelper.CheckDataStatusAsync(System.String)">
+            <summary>
+            Checks the status of data in the database based on the provided query.
+            </summary>
+            <param name="query">The SQL query to execute.</param>
+            <returns>A task that represents the asynchronous operation. The task result contains a boolean indicating the data status.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.DatabaseHelper.LogError(System.String,System.Exception)">
+            <summary>
+            Logs an error message and exception details.
+            </summary>
+            <param name="message">The error message.</param>
+            <param name="ex">The exception details.</param>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Handle_.XML_.MainMenu">
+            <summary>
+            Provides methods to handle the main menu.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.MainMenu.Handle">
+            <summary>
+            Handles the main menu operations.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.MainMenu.DisplayMenu">
+            <summary>
+            Displays the main menu.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.MainMenu.HandleChoiceAsync(System.String)">
+            <summary>
+            Handles the user's choice from the menu.
+            </summary>
+            <param name="choice">The user's choice.</param>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.MainMenu.ConfirmExitAsync">
+            <summary>
+            Confirms if the user wants to exit the application.
+            </summary>
+            <returns>A task that represents the asynchronous operation. The task result contains a boolean indicating if the user confirmed the exit.</returns>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Handle_.XML_.VaccineDataStatus">
+            <summary>
+            Provides methods to handle the vaccine data status.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.VaccineDataStatus.GetVaccineStatus(System.String)">
+            <summary>
+            Gets the status of a specific vaccine.
+            </summary>
+            <param name="vaccineName">The name of the vaccine.</param>
+            <returns>The status of the vaccine.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.VaccineDataStatus.LoadDataStatusAsync">
+            <summary>
+            Loads the data status for all vaccines asynchronously.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Handle_.XML_.XML">
+            <summary>
+            Provides methods to handle XML data.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.XML.HandleXMLData">
+            <summary>
+            Handles XML data by loading and processing it.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.XML.ProcessXMLData(System.Xml.Linq.XDocument)">
+            <summary>
+            Processes the XML data.
+            </summary>
+            <param name="xmlDoc">The XML document to process.</param>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Handle_.XML_.XML.LogError(System.String,System.Exception)">
+            <summary>
+            Logs an error message and exception details.
+            </summary>
+            <param name="message">The error message.</param>
+            <param name="ex">The exception details.</param>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Cholera.Vaccine_CholeraD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Cholera.Vaccine_CholeraD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.COVID19.Vaccine_COVID19D.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.COVID19.Vaccine_COVID19D.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Dengue.Vaccine_DengueD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Dengue.Vaccine_DengueD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Diphtheria.Vaccine_DiphtheriaD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Diphtheria.Vaccine_DiphtheriaD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Ebola.Vaccine_EbolaD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Ebola.Vaccine_EbolaD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.HepA.Vaccine_HepAD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.HepA.Vaccine_HepAD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.HepB.Vaccine_HepBD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.HepB.Vaccine_HepBD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Hib.Vaccine_HibD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Hib.Vaccine_HibD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.HPV.Vaccine_HPVD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.HPV.Vaccine_HPVD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Influenza.Vaccine_InfluenzaD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Influenza.Vaccine_InfluenzaD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.JE.Vaccine_JED.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.JE.Vaccine_JED.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.LegalDisclaimerHelper">
+            <summary>
+            Provides methods to display legal disclaimers.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.LegalDisclaimerHelper.DisplayLegalDisclaimer">
+            <summary>
+            Displays the legal disclaimer to the console.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.LogHelper">
+            <summary>
+            Provides methods to log SQL statements and errors.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.LogHelper.LogSqlStatement(System.String)">
+            <summary>
+            Logs the provided SQL statement to a log file.
+            </summary>
+            <param name="sqlStatement">The SQL statement to log.</param>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.LogHelper.EnsureDirectoryExists(System.String)">
+            <summary>
+            Ensures that the directory for the specified file path exists.
+            </summary>
+            <param name="filePath">The file path for which to ensure the directory exists.</param>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.LogHelper.LogError(System.Exception)">
+            <summary>
+            Logs the provided exception to an error log file.
+            </summary>
+            <param name="ex">The exception to log.</param>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Measles.Vaccine_MeaslesD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Measles.Vaccine_MeaslesD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.MeningococcalB.Vaccine_MeningococcalBD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.MeningococcalB.Vaccine_MeningococcalBD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Meningococcal.Vaccine_MeningococcalD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Meningococcal.Vaccine_MeningococcalD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Mumps.Vaccine_MumpsD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Mumps.Vaccine_MumpsD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Orthopoxvirus.Vaccine_OrthopoxvirusD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Orthopoxvirus.Vaccine_OrthopoxvirusD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Pertussis.Vaccine_PertussisD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Pertussis.Vaccine_PertussisD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Pneumococcal.Vaccine_PneumococcalD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Pneumococcal.Vaccine_PneumococcalD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Polio.Vaccine_PolioD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Polio.Vaccine_PolioD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rabies.Vaccine_RabiesD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rabies.Vaccine_RabiesD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rotavirus.Vaccine_RotavirusD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rotavirus.Vaccine_RotavirusD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.RSV.Vaccine_RSVD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.RSV.Vaccine_RSVD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rubella.Vaccine_RubellaD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rubella.Vaccine_RubellaD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.TBE.Vaccine_TBED.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.TBE.Vaccine_TBED.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Tetanus.Vaccine_TetanusD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Tetanus.Vaccine_TetanusD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Typhoid.Vaccine_TyphoidD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Typhoid.Vaccine_TyphoidD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.UserAuthorizationHelper">
+            <summary>
+            Provides methods to get user authorization.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.UserAuthorizationHelper.GetUserAuthorization">
+            <summary>
+            Prompts the user for authorization and returns the result.
+            </summary>
+            <returns>True if the user authorizes, otherwise false.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Varicella.Vaccine_VaricellaD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Varicella.Vaccine_VaricellaD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.VersionHelper">
+            <summary>
+            Provides methods to get the version from the user.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.VersionHelper.GetVersionFromUser">
+            <summary>
+            Prompts the user to choose a version and returns the selected version.
+            </summary>
+            <returns>The selected version, or the default version if no valid input is provided.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.YF.Vaccine_YFD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.YF.Vaccine_YFD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Zoster.Vaccine_ZosterD.DeleteXmlDataInDatabase">
+            <summary>
+            Deletes XML data in the database.
+            </summary>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Zoster.Vaccine_ZosterD.ExecuteDeleteCommandAsync(System.String)">
+            <summary>
+            Executes the SQL delete command asynchronously.
+            </summary>
+            <param name="connectionString">The connection string to the database.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
         </member>
         <member name="T:VaxxVault_V0003.Properties.Resources">
             <summary>

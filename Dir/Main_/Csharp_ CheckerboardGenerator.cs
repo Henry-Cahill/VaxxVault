@@ -2,8 +2,14 @@ using System;
 
 namespace VaxxVault_V0002.Dir.Handle
 {
+   /// <summary>
+   /// Provides methods to generate a checkerboard pattern.
+   /// </summary>
    public static class CheckerboardGenerator
    {
+      /// <summary>
+      /// Generates and prints a checkerboard pattern to the console.
+      /// </summary>
       public static void GenerateCheckerboard()
       {
          int W = 78;
@@ -74,3 +80,4 @@ namespace VaxxVault_V0002.Dir.Handle
       }
    }
 }
+//Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023. 

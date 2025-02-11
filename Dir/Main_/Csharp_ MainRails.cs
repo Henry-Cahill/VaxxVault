@@ -3,6 +3,9 @@ using VaxxVault_V0002.Dir.Handle;
 
 namespace VaxxVault_V0002.Dir.Main_
 {
+   /// <summary>
+   /// MainRails class handles the main tasks and operations of the VaxxVault application.
+   /// </summary>
    public class MainRails
    {
       /// <summary>
@@ -10,14 +13,12 @@ namespace VaxxVault_V0002.Dir.Main_
       /// </summary>
       public static void HandleAnotherTask()
       {
-
-         // Initialization phase: Initialize variables, create instances, and prompt user for input.  
-         // Generate the checkboard pattern
-
+         // Initialization phase: Initialize variables, create instances, and prompt user for input.
+         // Generate the checkerboard pattern
          CheckerboardGenerator.GenerateCheckerboard();
 
-         Account vaxxVaultAccount = new Account(); // Existing line
-         AccountManager.ManageAccount(vaxxVaultAccount); // Existing line
+         Account vaxxVaultAccount = new Account("DefaultName", "DefaultUsername");
+         AccountManager.ManageAccount(vaxxVaultAccount);
 
          Data vaxxVaultData = new Data("John", "Doe", 30, "Male", 2025, 70, 180, 1, 15, 1995);
 
@@ -44,7 +45,7 @@ namespace VaxxVault_V0002.Dir.Main_
             Console.WriteLine("7. ");
             Console.WriteLine("8. Exit\n");
 
-            string mainChoice = Console.ReadLine();
+            string? mainChoice = Console.ReadLine();
 
             switch (mainChoice)
             {
@@ -52,15 +53,15 @@ namespace VaxxVault_V0002.Dir.Main_
                   break;
 
                case "1":
-                  //HandleSeasonalRecommendation();
+                  // HandleSeasonalRecommendation();
                   break;
 
                case "2":
-                  //HandleRecurringDose();
+                  // HandleRecurringDose();
                   break;
 
                case "3":
-                  //HandleConditionalSkip();
+                  // HandleConditionalSkip();
                   break;
 
                case "4":
@@ -81,7 +82,7 @@ namespace VaxxVault_V0002.Dir.Main_
 
                case "8":
                   Console.WriteLine("Do you really want to close VaxxVault? (yes/no)");
-                  string exitChoice = Console.ReadLine()?.ToLower();
+                  string? exitChoice = Console.ReadLine()?.ToLower();
                   if (exitChoice == "yes")
                   {
                      keepRunning = false;
@@ -94,8 +95,9 @@ namespace VaxxVault_V0002.Dir.Main_
                   break;
             }
          }
-         // Generate the checkboard pattern
+         // Generate the checkerboard pattern
          CheckerboardGenerator.GenerateCheckerboard();
       }
-   } 
+   }
 }
+// Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023.
