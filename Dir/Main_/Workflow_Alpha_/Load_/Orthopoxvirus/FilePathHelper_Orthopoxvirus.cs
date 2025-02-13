@@ -6,16 +6,14 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Orthopoxvirus
 {
    internal static class FilePathHelper_Orthopoxvirus
    {
-      private static IConfiguration _configuration;
-
-      public static void InitializeConfiguration()
-      {
-         _configuration = new ConfigurationBuilder()
-             .AddJsonFile("appsettingsOrthopoxvirus.json")
-             .Build();
-      }
+      private static IConfiguration _configuration = null!;
 
       static FilePathHelper_Orthopoxvirus()
+      {
+         InitializeConfiguration();
+      }
+
+      public static void InitializeConfiguration()
       {
          var builder = new ConfigurationBuilder()
              .SetBasePath(Directory.GetCurrentDirectory())
@@ -25,7 +23,12 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Orthopoxvirus
 
       public static string GetFilePath(string version)
       {
-         string filePath = _configuration[$"FilePaths:Version{version.Replace(".", "")}"];
+         if (string.IsNullOrWhiteSpace(version))
+         {
+            throw new ArgumentException("Version cannot be null or empty.", nameof(version));
+         }
+
+         string? filePath = _configuration[$"FilePaths:Version{version.Replace(".", "")}"];
          if (string.IsNullOrEmpty(filePath))
          {
             throw new ArgumentException("Invalid version specified.");
@@ -34,3 +37,12 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Orthopoxvirus
       }
    }
 }
+
+/* 
+Declaration of Intellectual Property Ownership: 
+I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. 
+Unauthorized use, reproduction, distribution, or modification is strictly prohibited. 
+For inquiries, contact me at henrycahill97@gmail.com. 
+Any infringement will be pursued to the fullest extent of the law. 
+Signed on January 29, 2023.
+*/

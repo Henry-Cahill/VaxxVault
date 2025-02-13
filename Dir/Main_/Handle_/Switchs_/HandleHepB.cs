@@ -42,7 +42,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load Hepatitis B vaccine data.
-                  Vaccine_HepBL.InsertXmlDataIntoDatabase();
+                  VaccineHepBLoader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.

@@ -6,7 +6,7 @@ using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_;
 
 namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.COVID19
 {
-   internal class Vaccine_Covid19L
+   internal class VaccineCovid19Loader
    {
       private const string ConnectionStringFilePath = "Dir/Config_/connectionString.txt";
 
@@ -46,10 +46,10 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.COVID19
                connection.Open();
 
                string sql = @"
-                  SET IDENTITY_INSERT VaccineData ON;
-                  INSERT INTO VaccineData (Id, XmlData)
-                  VALUES (2, @XmlData);
-                  SET IDENTITY_INSERT VaccineData OFF;";
+                        SET IDENTITY_INSERT VaccineData ON;
+                        INSERT INTO VaccineData (Id, XmlData)
+                        VALUES (2, @XmlData);
+                        SET IDENTITY_INSERT VaccineData OFF;";
 
                SqlLogger.LogSqlStatement(sql);
 
@@ -82,4 +82,12 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.COVID19
       }
    }
 }
-//Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023. 
+
+/* 
+Declaration of Intellectual Property Ownership: 
+I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. 
+Unauthorized use, reproduction, distribution, or modification is strictly prohibited. 
+For inquiries, contact me at henrycahill97@gmail.com. 
+Any infringement will be pursued to the fullest extent of the law. 
+Signed on January 29, 2023.
+*/

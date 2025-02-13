@@ -4,28 +4,44 @@ using System.IO;
 
 namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rubella
 {
+   /// <summary>
+   /// Helper class to manage file paths for Rubella workflow.
+   /// </summary>
    internal static class FilePathHelper_Rubella
    {
       private static IConfiguration _configuration;
+      private static readonly object _lock = new object();
 
+      /// <summary>
+      /// Initializes the configuration from the appsettingRubella.json file.
+      /// </summary>
       public static void InitializeConfiguration()
       {
-         _configuration = new ConfigurationBuilder()
-             .AddJsonFile("appsettingRubella.json")
-             .Build();
+         if (_configuration == null)
+         {
+            lock (_lock)
+            {
+               if (_configuration == null)
+               {
+                  _configuration = new ConfigurationBuilder()
+                      .SetBasePath(Directory.GetCurrentDirectory())
+                      .AddJsonFile("appsettingRubella.json", optional: false, reloadOnChange: true)
+                      .Build();
+               }
+            }
+         }
       }
 
-      static FilePathHelper_Rubella()
-      {
-         var builder = new ConfigurationBuilder()
-             .SetBasePath(Directory.GetCurrentDirectory())
-             .AddJsonFile("appsettingRubella.json", optional: false, reloadOnChange: true);
-         _configuration = builder.Build();
-      }
-
+      /// <summary>
+      /// Gets the file path for the specified version.
+      /// </summary>
+      /// <param name="version">The version of the file path to retrieve.</param>
+      /// <returns>The file path corresponding to the specified version.</returns>
+      /// <exception cref="ArgumentException">Thrown when an invalid version is specified.</exception>
       public static string GetFilePath(string version)
       {
-         string filePath = _configuration[$"FilePaths:Version{version.Replace(".", "")}"];
+         InitializeConfiguration();
+         string? filePath = _configuration[$"FilePaths:Version{version.Replace(".", "")}"];
          if (string.IsNullOrEmpty(filePath))
          {
             throw new ArgumentException("Invalid version specified.");
@@ -34,3 +50,12 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rubella
       }
    }
 }
+
+/* 
+Declaration of Intellectual Property Ownership: 
+I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. 
+Unauthorized use, reproduction, distribution, or modification is strictly prohibited. 
+For inquiries, contact me at henrycahill97@gmail.com. 
+Any infringement will be pursued to the fullest extent of the law. 
+Signed on January 29, 2023.
+*/

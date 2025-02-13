@@ -42,7 +42,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load mumps vaccine data.
-                  Vaccine_MumpsL.InsertXmlDataIntoDatabase();
+                  VaccineMumpsLoader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.

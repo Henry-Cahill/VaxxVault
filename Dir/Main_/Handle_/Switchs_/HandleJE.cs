@@ -43,7 +43,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load JE vaccine data.
-                  Vaccine_JEL.InsertXmlDataIntoDatabase();
+                  VaccineJELoader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.

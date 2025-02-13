@@ -42,7 +42,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load COVID-19 vaccine data.
-                  Vaccine_Covid19L.InsertXmlDataIntoDatabase();
+                  VaccineCovid19Loader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.

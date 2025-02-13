@@ -42,7 +42,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load Meningococcal B vaccine data.
-                  Vaccine_MeningococcalBL.InsertXmlDataIntoDatabase();
+                  VaccineMeningococcalBLoader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.

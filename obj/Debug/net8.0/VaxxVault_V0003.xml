@@ -671,6 +671,360 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pertussis.FilePathHelper_Pertussis">
+            <summary>
+            Helper class to manage file paths for Pertussis workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pertussis.FilePathHelper_Pertussis.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingsPertussis.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pertussis.FilePathHelper_Pertussis.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pneumococcal.Vaccine_PneumococcalL">
+            <summary>
+            Class to handle the insertion of Pneumococcal vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pneumococcal.Vaccine_PneumococcalL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pneumococcal.FilePathHelper_Pneumococcal">
+            <summary>
+            Helper class to manage file paths for Pneumococcal workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pneumococcal.FilePathHelper_Pneumococcal.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingPneumococcal.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pneumococcal.FilePathHelper_Pneumococcal.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Polio.Vaccine_PolioL">
+            <summary>
+            Class to handle the insertion of Polio vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Polio.Vaccine_PolioL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Polio.FilePathHelper_Polio">
+            <summary>
+            Helper class to manage file paths for Polio workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Polio.FilePathHelper_Polio.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingPolio.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Polio.FilePathHelper_Polio.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rabies.Vaccine_RabiesL">
+            <summary>
+            Class to handle the insertion of Rabies vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rabies.Vaccine_RabiesL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rabies.FilePathHelper_Rabies">
+            <summary>
+            Helper class to manage file paths for Rabies workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rabies.FilePathHelper_Rabies.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingRabies.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rabies.FilePathHelper_Rabies.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rotavirus.Vaccine_RotavirusL">
+            <summary>
+            Class to handle the insertion of Rotavirus vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rotavirus.Vaccine_RotavirusL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rotavirus.FilePathHelper_Rotavirus">
+            <summary>
+            Helper class to manage file paths for Rotavirus workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rotavirus.FilePathHelper_Rotavirus.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingRotavirus.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rotavirus.FilePathHelper_Rotavirus.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.RSV.Vaccine_RSVL">
+            <summary>
+            Class to handle the insertion of RSV vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.RSV.Vaccine_RSVL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.RSV.FilePathHelper_RSV">
+            <summary>
+            Helper class to manage file paths for RSV workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.RSV.FilePathHelper_RSV.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingRSV.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.RSV.FilePathHelper_RSV.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rubella.Vaccine_RubellaL">
+            <summary>
+            Class to handle the insertion of Rubella vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rubella.Vaccine_RubellaL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rubella.FilePathHelper_Rubella">
+            <summary>
+            Helper class to manage file paths for Rubella workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rubella.FilePathHelper_Rubella.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingRubella.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rubella.FilePathHelper_Rubella.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.TBE.Vaccine_TBEL">
+            <summary>
+            Class to handle the insertion of TBE vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.TBE.Vaccine_TBEL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.TBE.FilePathHelper_TBE">
+            <summary>
+            Helper class to manage file paths for TBE workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.TBE.FilePathHelper_TBE.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingTBE.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.TBE.FilePathHelper_TBE.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Tetanus.Vaccine_TetanusL">
+            <summary>
+            Class to handle the insertion of Tetanus vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Tetanus.Vaccine_TetanusL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Tetanus.FilePathHelper_Tetanus">
+            <summary>
+            Helper class to manage file paths for Tetanus workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Tetanus.FilePathHelper_Tetanus.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingTetanus.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Tetanus.FilePathHelper_Tetanus.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Typhoid.Vaccine_TyphoidL">
+            <summary>
+            Class to handle the insertion of Typhoid vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Typhoid.Vaccine_TyphoidL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Typhoid.FilePathHelper_Typhoid">
+            <summary>
+            Helper class to manage file paths for Typhoid workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Typhoid.FilePathHelper_Typhoid.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingTyphoid.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Typhoid.FilePathHelper_Typhoid.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Varicella.Vaccine_VaricellaL">
+            <summary>
+            Class to handle the insertion of Varicella vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Varicella.Vaccine_VaricellaL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Varicella.FilePathHelper_Varicella">
+            <summary>
+            Helper class to manage file paths for Varicella workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Varicella.FilePathHelper_Varicella.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingVaricella.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Varicella.FilePathHelper_Varicella.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.YF.Vaccine_YFL">
+            <summary>
+            Class to handle the insertion of Yellow Fever vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.YF.Vaccine_YFL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.YF.FilePathHelper_YF">
+            <summary>
+            Helper class to manage file paths for Yellow Fever workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.YF.FilePathHelper_YF.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingYF.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.YF.FilePathHelper_YF.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Zoster.Vaccine_ZosterL">
+            <summary>
+            Class to handle the insertion of Zoster vaccine data into the database.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Zoster.Vaccine_ZosterL.InsertXmlDataIntoDatabase">
+            <summary>
+            Inserts XML data into the database based on the selected version.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Zoster.FilePathHelper_Zoster">
+            <summary>
+            Helper class to manage file paths for Zoster workflow.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Zoster.FilePathHelper_Zoster.InitializeConfiguration">
+            <summary>
+            Initializes the configuration from the appsettingZoster.json file.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Zoster.FilePathHelper_Zoster.GetFilePath(System.String)">
+            <summary>
+            Gets the file path for the specified version.
+            </summary>
+            <param name="version">The version of the file path to retrieve.</param>
+            <returns>The file path corresponding to the specified version.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when an invalid version is specified.</exception>
+        </member>
         <member name="T:VaxxVault_V0003.Properties.Resources">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.

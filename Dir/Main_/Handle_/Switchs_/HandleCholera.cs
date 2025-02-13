@@ -42,7 +42,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load cholera vaccine data.
-                  Vaccine_CholeraL.InsertXmlDataIntoDatabase();
+                  VaccineCholeraLoader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.

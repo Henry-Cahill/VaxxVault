@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F6tGcvZj/KE=",
+  "dgSpecHash": "lEePzbY3bTU=",
   "success": true,
-  "projectFilePath": "A:\\New.New\\VaxxVault\\VaxxVault_V0003.csproj",
+  "projectFilePath": "A:\\New.New\\VaxxVault\\VaxxVault_V0004.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hlcma\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\hlcma\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

@@ -6,10 +6,16 @@ using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_;
 
 namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Polio
 {
+   /// <summary>
+   /// Class to handle the insertion of Polio vaccine data into the database.
+   /// </summary>
    internal class Vaccine_PolioL
    {
       private const string ConnectionStringFilePath = "Dir/Config_/connectionString.txt";
 
+      /// <summary>
+      /// Inserts XML data into the database based on the selected version.
+      /// </summary>
       public static void InsertXmlDataIntoDatabase()
       {
          Console.WriteLine("Please choose a version (4.60, 4.59, 4.58, 4.57) [default is 4.60]:");

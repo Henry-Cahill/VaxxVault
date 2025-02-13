@@ -1,0 +1,48 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "A:\\New.New\\VaxxVault\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0004.csproj|a:\\new.new\\vaxxvault\\vaxxvault_v0004.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0004.csproj|solutionrelative:vaxxvault_v0004.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VaxxVault_V0003",
+              "DocumentMoniker": "A:\\New.New\\VaxxVault\\VaxxVault_V0004.csproj",
+              "RelativeDocumentMoniker": "VaxxVault_V0004.csproj",
+              "ToolTip": "A:\\New.New\\VaxxVault\\VaxxVault_V0004.csproj",
+              "RelativeToolTip": "VaxxVault_V0004.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-13T19:14:15.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

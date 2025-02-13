@@ -5,7 +5,7 @@
   },
   "projects": {
     "A:\\New.New\\VaxxVault\\VaxxVault_V0003.csproj": {
-      "version": "0.0.3",
+      "version": "0.0.4",
       "restore": {
         "projectUniqueName": "A:\\New.New\\VaxxVault\\VaxxVault_V0003.csproj",
         "projectName": "VaxxVault_V0003",
@@ -144,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

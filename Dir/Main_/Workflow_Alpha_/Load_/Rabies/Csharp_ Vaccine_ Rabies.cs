@@ -6,10 +6,16 @@ using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_;
 
 namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rabies
 {
+   /// <summary>
+   /// Class to handle the insertion of Rabies vaccine data into the database.
+   /// </summary>
    internal class Vaccine_RabiesL
    {
       private const string ConnectionStringFilePath = "Dir/Config_/connectionString.txt";
 
+      /// <summary>
+      /// Inserts XML data into the database based on the selected version.
+      /// </summary>
       public static void InsertXmlDataIntoDatabase()
       {
          Console.WriteLine("Please choose a version (4.60, 4.59, 4.58, 4.57) [default is 4.60]:");
@@ -83,4 +89,3 @@ namespace VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rabies
    }
 }
 //Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023.
-
