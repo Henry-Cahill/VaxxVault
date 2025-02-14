@@ -2,18 +2,18 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
+namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
 {
    internal class LoadAll
    {
       // The Execute method is responsible for finding and invoking the InsertXmlDataIntoDatabase method
-      // in all types within the VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_ namespace that end with 'L'.
+      // in all types within the VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Load_ namespace that end with 'Loader'.
       public static void Execute()
       {
-         // Get all types in the current assembly that belong to the specified namespace and end with 'L'.
+         // Get all types in the current assembly that belong to the specified namespace and end with 'Loader'.
          var vaccineTypes = Assembly.GetExecutingAssembly()
              .GetTypes()
-             .Where(t => t.Namespace == "VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_" && t.Name.EndsWith("L"))
+             .Where(t => t.Namespace == "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Load_" && t.Name.EndsWith("Loader"))
              .ToList();
 
          // Iterate through each type found.

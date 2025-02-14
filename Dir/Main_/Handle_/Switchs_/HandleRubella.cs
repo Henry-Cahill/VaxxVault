@@ -1,8 +1,7 @@
 using System;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rubella;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rubella;
+using VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rubella;
 
-namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
+namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
 {
    internal class HandleRubella
    {
@@ -42,7 +41,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load rubella vaccine data.
-                  Vaccine_RubellaL.InsertXmlDataIntoDatabase();
+                  VaccineRubellaLoader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.

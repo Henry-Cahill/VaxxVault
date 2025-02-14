@@ -1,8 +1,7 @@
 using System;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Pneumococcal;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Pneumococcal;
+using VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pneumococcal;
 
-namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
+namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
 {
    internal class HandlePneumococcal
    {
@@ -42,7 +41,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load pneumococcal vaccine data.
-                  Vaccine_PneumococcalL.InsertXmlDataIntoDatabase();
+                  VaccinePneumococcalLoader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.

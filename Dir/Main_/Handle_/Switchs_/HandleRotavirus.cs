@@ -1,8 +1,7 @@
 using System;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rotavirus;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rotavirus;
+using VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rotavirus;
 
-namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
+namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
 {
    internal class HandleRotavirus
    {
@@ -42,7 +41,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load rotavirus vaccine data.
-                  Vaccine_RotavirusL.InsertXmlDataIntoDatabase();
+                  VaccineRotavirusLoader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.

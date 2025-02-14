@@ -2,7 +2,7 @@
 using System.Xml;
 using System.Xml.Linq;
 
-namespace VaxxVault_V0003.Dir.Main_.Handle_.XML_
+namespace VaxxVault_V0004.Dir.Main_.Handle_.XML_
 {
    /// <summary>
    /// Provides methods to handle XML data.

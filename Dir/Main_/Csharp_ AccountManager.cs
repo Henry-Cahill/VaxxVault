@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VaxxVault_V0002.Dir.Main_
+namespace VaxxVault_V0004.Dir.Main_
 {
    /// <summary>
    /// Manages account-related processes for VaxxVault.

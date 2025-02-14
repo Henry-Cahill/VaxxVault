@@ -1,0 +1,43 @@
+Date: 2/13/2025 9:07:10 PM
+Message: The type initializer for 'VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper' threw an exception.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 18
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.VaccineCholeraLoader.InsertXmlDataIntoDatabase() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\VaccineCholeraLoader.cs:line 24
+--------------------------------------------------
+Date: 2/13/2025 9:12:07 PM
+Message: The configuration file 'appsettingsCholera.json' was not found and is not optional. The expected physical path was 'A:\New.New\VaxxVault\appsettingsCholera.json'.
+StackTrace:    at Microsoft.Extensions.Configuration.FileConfigurationProvider.HandleException(ExceptionDispatchInfo info)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load()
+   at Microsoft.Extensions.Configuration.ConfigurationRoot..ctor(IList`1 providers)
+   at Microsoft.Extensions.Configuration.ConfigurationBuilder.Build()
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 33
+--------------------------------------------------
+Date: 2/13/2025 9:12:07 PM
+Message: Failed to initialize configuration.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 38
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper..cctor() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 15
+--------------------------------------------------
+Date: 2/13/2025 9:12:07 PM
+Message: The type initializer for 'VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper' threw an exception.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 26
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.VaccineCholeraLoader.InsertXmlDataIntoDatabase() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\VaccineCholeraLoader.cs:line 24
+--------------------------------------------------
+Date: 2/13/2025 9:17:51 PM
+Message: The configuration file 'Dir/Main_/Workflow_Alpha_/Vaccines_/Cholera/appsettingsCholera.json' was not found and is not optional. The expected physical path was 'A:\New.New\VaxxVault\bin\Debug\net8.0\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\appsettingsCholera.json'.
+StackTrace:    at Microsoft.Extensions.Configuration.FileConfigurationProvider.HandleException(ExceptionDispatchInfo info)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load()
+   at Microsoft.Extensions.Configuration.ConfigurationRoot..ctor(IList`1 providers)
+   at Microsoft.Extensions.Configuration.ConfigurationBuilder.Build()
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 33
+--------------------------------------------------
+Date: 2/13/2025 9:17:51 PM
+Message: Failed to initialize configuration.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 38
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper..cctor() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 15
+--------------------------------------------------
+Date: 2/13/2025 9:17:51 PM
+Message: The type initializer for 'VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper' threw an exception.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 26
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.VaccineCholeraLoader.InsertXmlDataIntoDatabase() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\VaccineCholeraLoader.cs:line 24
+--------------------------------------------------

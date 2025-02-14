@@ -1,10 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_;
-using VaxxVault_V0003.Dir.Main_.Handle_.Switchs_;
+using VaxxVault_V0004.Dir.Main_.Handle_.Switchs_;
 
-namespace VaxxVault_V0003.Dir.Main_.Handle_.XML_
+namespace VaxxVault_V0004.Dir.Main_.Handle_.XML_
 {
    /// <summary>
    /// Provides methods to handle the main menu.

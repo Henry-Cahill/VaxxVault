@@ -1,8 +1,7 @@
 using System;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.COVID19;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.COVID19;
+using VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19;
 
-namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
+namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
 {
    internal class HandleCovid19
    {

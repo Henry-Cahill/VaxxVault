@@ -1,8 +1,7 @@
 using System;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.Rabies;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.Rabies;
+using VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rabies;
 
-namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
+namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
 {
    internal class HandleRabies
    {
@@ -42,7 +41,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load rabies vaccine data.
-                  Vaccine_RabiesL.InsertXmlDataIntoDatabase();
+                  VaccineRabiesLoader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.

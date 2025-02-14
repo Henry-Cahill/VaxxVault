@@ -1,0 +1,21 @@
+Date: 2/13/2025 9:22:26 PM
+SQL Statement: 
+                           SET IDENTITY_INSERT VaccineData ON;
+                           INSERT INTO VaccineData (Id, XmlData)
+                           VALUES (1, @XmlData);
+                           SET IDENTITY_INSERT VaccineData OFF;
+--------------------------------------------------
+Date: 2/13/2025 9:27:45 PM
+SQL Statement: 
+                           SET IDENTITY_INSERT VaccineData ON;
+                           INSERT INTO VaccineData (Id, XmlData)
+                           VALUES (1, @XmlData);
+                           SET IDENTITY_INSERT VaccineData OFF;
+--------------------------------------------------
+Date: 2/13/2025 9:28:58 PM
+SQL Statement: 
+                           SET IDENTITY_INSERT VaccineData ON;
+                           INSERT INTO VaccineData (Id, XmlData)
+                           VALUES (1, @XmlData);
+                           SET IDENTITY_INSERT VaccineData OFF;
+--------------------------------------------------

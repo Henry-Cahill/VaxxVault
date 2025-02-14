@@ -1,8 +1,7 @@
 using System;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_.TBE;
-using VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Load_.TBE;
+using VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.TBE;
 
-namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
+namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
 {
    internal class HandleTBE
    {
@@ -42,7 +41,7 @@ namespace VaxxVault_V0003.Dir.Main_.Handle_.Switchs_
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load TBE vaccine data.
-                  Vaccine_TBEL.InsertXmlDataIntoDatabase();
+                  VaccineTBELoader.InsertXmlDataIntoDatabase();
                   break;
                default:
                   // Handle invalid choices.
