@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review Hib vaccine data.
-                  Vaccine_HibR.ReviewXml();
+                  VaccineHibReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete Hib vaccine data.
-                  await Vaccine_HibD.DeleteXmlDataInDatabase();
+                  await VaccineHibDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load Hib vaccine data.

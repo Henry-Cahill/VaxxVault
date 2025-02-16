@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review pneumococcal vaccine data.
-                  Vaccine_PneumococcalR.ReviewXml();
+                  VaccinePneumococcalReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete pneumococcal vaccine data.
-                  await Vaccine_PneumococcalD.DeleteXmlDataInDatabase();
+                  await VaccinePneumococcalDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load pneumococcal vaccine data.

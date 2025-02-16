@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review HPV vaccine data.
-                  Vaccine_HPVR.ReviewXml();
+                  VaccineHPVReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete HPV vaccine data.
-                  await Vaccine_HPVD.DeleteXmlDataInDatabase();
+                  await VaccineHPVDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load HPV vaccine data.

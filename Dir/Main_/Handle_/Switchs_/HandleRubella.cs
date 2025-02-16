@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review rubella vaccine data.
-                  Vaccine_RubellaR.ReviewXml();
+                  VaccineRubellaReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete rubella vaccine data.
-                  await Vaccine_RubellaD.DeleteXmlDataInDatabase();
+                  await VaccineRubellaDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load rubella vaccine data.

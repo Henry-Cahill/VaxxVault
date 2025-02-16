@@ -41,3 +41,23 @@ Message: The type initializer for 'VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vac
 StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 26
    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.VaccineCholeraLoader.InsertXmlDataIntoDatabase() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\VaccineCholeraLoader.cs:line 24
 --------------------------------------------------
+Date: 2/14/2025 11:07:24 AM
+Message: The type initializer for 'VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.FilePathHelper_COVID19' threw an exception.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.FilePathHelper_COVID19.InitializeConfiguration() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\COVID19\FilePathHelper_COVID19.cs:line 18
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.VaccineCovid19Loader.InsertXmlDataIntoDatabase() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\COVID19\VaccineCovid19Loader.cs:line 24
+--------------------------------------------------
+Date: 2/14/2025 12:25:06 PM
+Message: The type initializer for 'VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.FilePathHelper_COVID19' threw an exception.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.FilePathHelper_COVID19.InitializeConfiguration() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\COVID19\FilePathHelper_COVID19.cs:line 18
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.VaccineCovid19Loader.InsertXmlDataIntoDatabase() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\COVID19\VaccineCovid19Loader.cs:line 24
+--------------------------------------------------
+Date: 2/14/2025 1:48:41 PM
+Message: The type initializer for 'VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.FilePathHelper_COVID19' threw an exception.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.FilePathHelper_COVID19.InitializeConfiguration() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\COVID19\FilePathHelper_COVID19.cs:line 18
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.VaccineCovid19Loader.InsertXmlDataIntoDatabase() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\COVID19\VaccineCovid19Loader.cs:line 24
+--------------------------------------------------
+Date: 2/15/2025 7:19:52 PM
+Message: The type initializer for 'VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.FilePathHelper_COVID19' threw an exception.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.FilePathHelper_COVID19.InitializeConfiguration() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\COVID19\FilePathHelper_COVID19.cs:line 18
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.VaccineCovid19Loader.InsertXmlDataIntoDatabase() in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\COVID19\VaccineCovid19Loader.cs:line 24
+--------------------------------------------------

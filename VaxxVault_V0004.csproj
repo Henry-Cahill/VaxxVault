@@ -13,7 +13,7 @@
 		<PackageProjectUrl>https://github.com/Henry-Cahill/VaxxVault</PackageProjectUrl>
 		<NuGetAuditMode>all</NuGetAuditMode>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<StartupObject></StartupObject>
+		<StartupObject>VaxxVault_V0004.Dir.Main_.Vaccine_Main</StartupObject>
 		<IncludeSymbols>False</IncludeSymbols>
 	</PropertyGroup>	
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -50,22 +50,24 @@
 		<PackageReference Include="ClosedXML" Version="0.104.2" />
 		<PackageReference Include="EntityFramework" Version="6.5.1" />
 		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.1" />
-		<PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.2" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
 		<PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.4" />
 		<PackageReference Include="Microsoft.NETCore.Targets" Version="5.0.0" />
+		<PackageReference Include="Microsoft.TestPlatform" Version="17.13.0" />
+		<PackageReference Include="MSTest.TestFramework" Version="3.0.2" />
 		<PackageReference Include="Python.Runtime" Version="2.7.9" />
 		<PackageReference Include="pythonnet" Version="3.0.5" />
 		<PackageReference Include="runtime.native.System.Data.SqlClient.sni" Version="4.7.0" />
-		<PackageReference Include="System.CodeDom" Version="9.0.1" />
-		<PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.1" />
+		<PackageReference Include="System.CodeDom" Version="9.0.2" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.2" />
 		<PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
 		<PackageReference Include="System.Data.SQLite" Version="1.0.119" />
-		<PackageReference Include="System.Drawing.Common" Version="9.0.1" />
+		<PackageReference Include="System.Drawing.Common" Version="9.0.2" />
 		<PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
-		<PackageReference Include="System.Windows.Extensions" Version="9.0.1" />
+		<PackageReference Include="System.Windows.Extensions" Version="9.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -74,7 +76,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="Dir\Main_\Workflow_Alpha_\Vaccines_\JE\Csharp_ Vaccine_ JER.cs" />
+		<None Include="Dir\Main_\Workflow_Alpha_\Vaccines_\JE\VaccineJEReview.cs" />
 	</ItemGroup>
 
 	<ItemGroup>

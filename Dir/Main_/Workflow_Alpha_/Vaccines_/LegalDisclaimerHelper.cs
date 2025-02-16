@@ -20,8 +20,7 @@ By authorizing the execution of these commands, you acknowledge and agree that:
 2. Executing these commands will modify the database, and you understand the consequences.
 3. You accept full responsibility for any changes made to the database.
 4. The authors of this software are not liable for any damages, data loss, or other issues arising from the execution of these commands.
-5. You have reviewed and understand the commands that will be executed.
-Do you authorize the execution of these commands? (yes/no)";
+5. You have reviewed and understand the commands that will be executed.";
 
       /// <summary>
       /// Displays the legal disclaimer to the console.

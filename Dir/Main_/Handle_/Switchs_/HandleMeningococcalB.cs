@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review Meningococcal B vaccine data.
-                  Vaccine_MeningococcalBR.ReviewXml();
+                  VaccineMeningococcalBReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete Meningococcal B vaccine data.
-                  await Vaccine_MeningococcalBD.DeleteXmlDataInDatabase();
+                  await VaccineMeningococcalBDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load Meningococcal B vaccine data.

@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review varicella vaccine data.
-                  Vaccine_VaricellaR.ReviewXml();
+                  VaccineVaricellaReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete varicella vaccine data.
-                  await Vaccine_VaricellaD.DeleteXmlDataInDatabase();
+                  await VaccineVaricellaDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load varicella vaccine data.

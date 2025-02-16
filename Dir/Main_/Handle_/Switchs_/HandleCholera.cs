@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "review":
                   // Call the ReviewXml method to review cholera vaccine data.
-                  Vaccine_CholeraR.ReviewXml();
+                  VaccineCholeraReview.ReviewXml();
                   break;
                case "drop":
                   // Call the DeleteXmlDataInDatabase method to delete cholera vaccine data.
-                  await Vaccine_CholeraD.DeleteXmlDataInDatabase();
+                  await VaccineCholeraDrop.DeleteXmlDataInDatabase();
                   break;
                case "load":
                   // Call the InsertXmlDataIntoDatabase method to load cholera vaccine data.

@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review Orthopoxvirus vaccine data.
-                  Vaccine_OrthopoxvirusR.ReviewXml();
+                  VaccineOrthopoxvirusReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete Orthopoxvirus vaccine data.
-                  await Vaccine_OrthopoxvirusD.DeleteXmlDataInDatabase();
+                  await VaccineOrthopoxvirusDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load Orthopoxvirus vaccine data.

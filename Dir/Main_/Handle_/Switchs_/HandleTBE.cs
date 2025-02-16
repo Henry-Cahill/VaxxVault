@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review TBE vaccine data.
-                  Vaccine_TBER.ReviewXml();
+                  VaccineTBEReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete TBE vaccine data.
-                  await Vaccine_TBED.DeleteXmlDataInDatabase();
+                  await VaccineTBEDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load TBE vaccine data.

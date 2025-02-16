@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review mumps vaccine data.
-                  Vaccine_MumpsR.ReviewXml();
+                  VaccineMumpsReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete mumps vaccine data.
-                  await Vaccine_MumpsD.DeleteXmlDataInDatabase();
+                  await VaccineMumpsDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load mumps vaccine data.

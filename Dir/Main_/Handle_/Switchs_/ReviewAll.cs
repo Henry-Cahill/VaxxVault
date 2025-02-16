@@ -13,7 +13,7 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
          // Get all types in the current assembly that belong to the specified namespace and end with 'R'.
          var vaccineTypes = Assembly.GetExecutingAssembly()
              .GetTypes()
-             .Where(t => t.Namespace == "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Drop_" && t.Name.EndsWith("R"))
+             .Where(t => t.Namespace == "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_" && t.Name.EndsWith("Review"))
              .ToList();
 
          // Iterate through each type found.

@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review diphtheria vaccine data.
-                  Vaccine_DiphtheriaR.ReviewXml();
+                  VaccineDiphtheriaReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete diphtheria vaccine data.
-                  await Vaccine_DiphtheriaD.DeleteXmlDataInDatabase();
+                  await VaccineDiphtheriaDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load diphtheria vaccine data.

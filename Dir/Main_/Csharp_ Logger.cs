@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace VaxxVault_V0004.Dir.Handle
+namespace VaxxVault_V0004.Dir.Main_
 {
    /// <summary>
    /// Provides logging functionalities for the application.

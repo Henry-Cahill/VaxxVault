@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review JE vaccine data.
-                  Vaccine_JER.ReviewXml();
+                  VaccineJEReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete JE vaccine data.
-                  await Vaccine_JED.DeleteXmlDataInDatabase();
+                  await VaccineJEDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load JE vaccine data.

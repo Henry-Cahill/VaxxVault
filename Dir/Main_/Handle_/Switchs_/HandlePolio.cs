@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review polio vaccine data.
-                  Vaccine_PolioR.ReviewXml();
+                  VaccinePolioReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete polio vaccine data.
-                  await Vaccine_PolioD.DeleteXmlDataInDatabase();
+                  await VaccinePolioDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load polio vaccine data.

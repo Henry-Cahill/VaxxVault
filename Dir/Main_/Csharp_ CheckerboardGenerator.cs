@@ -1,6 +1,6 @@
 using System;
 
-namespace VaxxVault_V0004.Dir.Handle
+namespace VaxxVault_V0004.Dir.Main_
 {
    /// <summary>
    /// Provides methods to generate a checkerboard pattern.

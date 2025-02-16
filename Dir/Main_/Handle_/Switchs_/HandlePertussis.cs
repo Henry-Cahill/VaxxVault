@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review pertussis vaccine data.
-                  Vaccine_PertussisR.ReviewXml();
+                  VaccinePertussisReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete pertussis vaccine data.
-                  await Vaccine_PertussisD.DeleteXmlDataInDatabase();
+                  await VaccinePertussisDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load pertussis vaccine data.

@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review Zoster vaccine data.
-                  Vaccine_ZosterR.ReviewXml();
+                  VaccineZosterReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete Zoster vaccine data.
-                  await Vaccine_ZosterD.DeleteXmlDataInDatabase();
+                  await VaccineZosterDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load Zoster vaccine data.

@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "A:\\New.New\\VaxxVault\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0004.csproj|a:\\new.new\\vaxxvault\\dir\\main_\\handle_\\switchs_\\handlecholera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0004.csproj|solutionrelative:dir\\main_\\handle_\\switchs_\\handlecholera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0004.csproj|a:\\new.new\\vaxxvault\\dir\\main_\\workflow_alpha_\\vaccines_\\cholera\\filepathhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0004.csproj|solutionrelative:dir\\main_\\workflow_alpha_\\vaccines_\\cholera\\filepathhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0004.csproj|a:\\new.new\\vaxxvault\\dir\\main_\\workflow_alpha_\\vaccines_\\cholera\\vaccinecholeraloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0004.csproj|solutionrelative:dir\\main_\\workflow_alpha_\\vaccines_\\cholera\\vaccinecholeraloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0004.csproj|a:\\new.new\\vaxxvault\\dir\\main_\\handle_\\xml_\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1D5AC72-CD82-45AB-B135-A85630CC82C3}|VaxxVault_V0004.csproj|solutionrelative:dir\\main_\\handle_\\xml_\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,56 +20,8 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HandleCholera.cs",
-              "DocumentMoniker": "A:\\New.New\\VaxxVault\\Dir\\Main_\\Handle_\\Switchs_\\HandleCholera.cs",
-              "RelativeDocumentMoniker": "Dir\\Main_\\Handle_\\Switchs_\\HandleCholera.cs",
-              "ToolTip": "A:\\New.New\\VaxxVault\\Dir\\Main_\\Handle_\\Switchs_\\HandleCholera.cs",
-              "RelativeToolTip": "Dir\\Main_\\Handle_\\Switchs_\\HandleCholera.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T03:24:01.453Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FilePathHelper.cs",
-              "DocumentMoniker": "A:\\New.New\\VaxxVault\\Dir\\Main_\\Workflow_Alpha_\\Vaccines_\\Cholera\\FilePathHelper.cs",
-              "RelativeDocumentMoniker": "Dir\\Main_\\Workflow_Alpha_\\Vaccines_\\Cholera\\FilePathHelper.cs",
-              "ToolTip": "A:\\New.New\\VaxxVault\\Dir\\Main_\\Workflow_Alpha_\\Vaccines_\\Cholera\\FilePathHelper.cs",
-              "RelativeToolTip": "Dir\\Main_\\Workflow_Alpha_\\Vaccines_\\Cholera\\FilePathHelper.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAB4AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T03:03:23.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VaccineCholeraLoader.cs",
-              "DocumentMoniker": "A:\\New.New\\VaxxVault\\Dir\\Main_\\Workflow_Alpha_\\Vaccines_\\Cholera\\VaccineCholeraLoader.cs",
-              "RelativeDocumentMoniker": "Dir\\Main_\\Workflow_Alpha_\\Vaccines_\\Cholera\\VaccineCholeraLoader.cs",
-              "ToolTip": "A:\\New.New\\VaxxVault\\Dir\\Main_\\Workflow_Alpha_\\Vaccines_\\Cholera\\VaccineCholeraLoader.cs",
-              "RelativeToolTip": "Dir\\Main_\\Workflow_Alpha_\\Vaccines_\\Cholera\\VaccineCholeraLoader.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T02:46:51.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainMenu.cs",
-              "DocumentMoniker": "A:\\New.New\\VaxxVault\\Dir\\Main_\\Handle_\\XML_\\MainMenu.cs",
-              "RelativeDocumentMoniker": "Dir\\Main_\\Handle_\\XML_\\MainMenu.cs",
-              "ToolTip": "A:\\New.New\\VaxxVault\\Dir\\Main_\\Handle_\\XML_\\MainMenu.cs",
-              "RelativeToolTip": "Dir\\Main_\\Handle_\\XML_\\MainMenu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-14T02:42:11.241Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         }

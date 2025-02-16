@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review dengue vaccine data.
-                  Vaccine_DengueR.ReviewXml();
+                  VaccineDengueReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete dengue vaccine data.
-                  await Vaccine_DengueD.DeleteXmlDataInDatabase();
+                  await VaccineDengueDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load dengue vaccine data.

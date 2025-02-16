@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review Ebola vaccine data.
-                  Vaccine_EbolaR.ReviewXml();
+                  VaccineEbolaReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete Ebola vaccine data.
-                  await Vaccine_EbolaD.DeleteXmlDataInDatabase();
+                  await VaccineEbolaDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load Ebola vaccine data.

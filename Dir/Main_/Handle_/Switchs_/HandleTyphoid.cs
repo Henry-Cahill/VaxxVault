@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review typhoid vaccine data.
-                  Vaccine_TyphoidR.ReviewXml();
+                  VaccineTyphoidReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete typhoid vaccine data.
-                  await Vaccine_TyphoidD.DeleteXmlDataInDatabase();
+                  await VaccineTyphoidDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load typhoid vaccine data.

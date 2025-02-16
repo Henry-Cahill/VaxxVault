@@ -4,7 +4,7 @@ using System.Data;
 using System.Threading.Tasks;
 using VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_;
 
-namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Drop_.Pneumococcal
+namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pneumococcal
 {
    // Define a static class for executing SQL commands related to Pneumococcal
    internal static class SqlCommandExecutor_Pneumococcal

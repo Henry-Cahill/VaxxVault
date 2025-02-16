@@ -26,10 +26,10 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             switch (choice)
             {
                case "Review":
-                  Vaccine_TetanusR.ReviewXml();
+                  VaccineTetanusReview.ReviewXml();
                   break;
                case "Drop":
-                  await Vaccine_TetanusD.DeleteXmlDataInDatabase();
+                  await VaccineTetanusDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   VaccineTetanusLoader.InsertXmlDataIntoDatabase();

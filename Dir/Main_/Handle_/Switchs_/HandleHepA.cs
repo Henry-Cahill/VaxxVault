@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review Hepatitis A vaccine data.
-                  Vaccine_HepAR.ReviewXml();
+                  VaccineHepAReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete Hepatitis A vaccine data.
-                  await Vaccine_HepAD.DeleteXmlDataInDatabase();
+                  await VaccineHepADrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load Hepatitis A vaccine data.

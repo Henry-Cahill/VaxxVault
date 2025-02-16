@@ -59,25 +59,29 @@
               "target": "Package",
               "version": "[6.5.1, )"
             },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[6.0.1, )"
             },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[9.0.1, )"
-            },
             "Microsoft.Extensions.Configuration.FileExtensions": {
               "target": "Package",
-              "version": "[9.0.1, )"
+              "version": "[9.0.2, )"
             },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
-              "version": "[9.0.1, )"
+              "version": "[9.0.2, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[9.0.1, )"
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.13.0, )"
             },
             "Microsoft.NETCore.Platforms": {
               "target": "Package",
@@ -87,17 +91,21 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "Microsoft.TestPlatform": {
+              "target": "Package",
+              "version": "[17.13.0, )"
+            },
             "Python.Runtime": {
               "target": "Package",
               "version": "[2.7.9, )"
             },
             "System.CodeDom": {
               "target": "Package",
-              "version": "[9.0.1, )"
+              "version": "[9.0.2, )"
             },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
-              "version": "[9.0.1, )"
+              "version": "[9.0.2, )"
             },
             "System.Data.SQLite": {
               "target": "Package",
@@ -109,7 +117,7 @@
             },
             "System.Drawing.Common": {
               "target": "Package",
-              "version": "[9.0.1, )"
+              "version": "[9.0.2, )"
             },
             "System.Reflection.Emit": {
               "target": "Package",
@@ -117,7 +125,7 @@
             },
             "System.Windows.Extensions": {
               "target": "Package",
-              "version": "[9.0.1, )"
+              "version": "[9.0.2, )"
             },
             "pythonnet": {
               "target": "Package",

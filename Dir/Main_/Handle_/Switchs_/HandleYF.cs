@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review yellow fever vaccine data.
-                  Vaccine_YFR.ReviewXml();
+                  VaccineYFReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete yellow fever vaccine data.
-                  await Vaccine_YFD.DeleteXmlDataInDatabase();
+                  await VaccineYFDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load yellow fever vaccine data.

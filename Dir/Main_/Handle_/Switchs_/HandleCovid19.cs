@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review COVID-19 vaccine data.
-                  Vaccine_Covid19R.ReviewXml();
+                  VaccineCovid19Review.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete COVID-19 vaccine data.
-                  await Vaccine_COVID19D.DeleteXmlDataInDatabase();
+                  await VaccineCOVID19Drop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load COVID-19 vaccine data.

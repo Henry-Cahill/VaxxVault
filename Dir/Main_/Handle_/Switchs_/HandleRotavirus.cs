@@ -33,11 +33,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             {
                case "Review":
                   // Call the ReviewXml method to review rotavirus vaccine data.
-                  Vaccine_RotavirusR.ReviewXml();
+                  VaccineRotavirusReview.ReviewXml();
                   break;
                case "Drop":
                   // Call the DeleteXmlDataInDatabase method to delete rotavirus vaccine data.
-                  await Vaccine_RotavirusD.DeleteXmlDataInDatabase();
+                  await VaccineRotavirusDrop.DeleteXmlDataInDatabase();
                   break;
                case "Load":
                   // Call the InsertXmlDataIntoDatabase method to load rotavirus vaccine data.

@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "VaxxVault_V0002": {
+    "VaxxVault_V0004": {
       "commandName": "Project",
       "workingDirectory": "A:\\New.New\\VaxxVault",
       "sqlDebugging": true,
