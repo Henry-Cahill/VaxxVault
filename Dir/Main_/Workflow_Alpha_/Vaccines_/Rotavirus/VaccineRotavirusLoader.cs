@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rotavirus
 
          try
          {
-            FilePathHelper_Rotavirus.InitializeConfiguration();
+            FilePathHelper_Rotavirus.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Rotavirus.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace VaxxVault_V0004.Dir.Main_
 {
@@ -11,27 +12,35 @@ namespace VaxxVault_V0004.Dir.Main_
       /// Manages the account process by updating the username of the given account.
       /// </summary>
       /// <param name="vaxxVaultAccount">The account to be managed.</param>
-      public static void ManageAccount(Account vaxxVaultAccount)
+      /// <param name="newUsername">The new username to be set.</param>
+      public static void ManageAccount(Account vaxxVaultAccount, string newUsername)
       {
          if (vaxxVaultAccount == null)
          {
             throw new ArgumentNullException(nameof(vaxxVaultAccount), "Account cannot be null");
          }
 
-         Console.WriteLine($"Initial Username is: {vaxxVaultAccount.Username}");
-
-         Console.Write("Enter the Username: ");
-         string? newUsername = Console.ReadLine();
-
          if (string.IsNullOrWhiteSpace(newUsername))
          {
-            Console.WriteLine("Username cannot be null or whitespace.");
+            throw new ArgumentException("Username cannot be null or whitespace.", nameof(newUsername));
          }
-         else
-         {
-            vaxxVaultAccount.Username = newUsername;
-            Console.WriteLine($"Updated Username is: {vaxxVaultAccount.Username}\n");
-         }
+
+         Console.WriteLine($"Initial Username is: {vaxxVaultAccount.Username}");
+
+         vaxxVaultAccount.Username = newUsername;
+
+         Console.WriteLine($"Updated Username is: {vaxxVaultAccount.Username}\n");
+      }
+
+      /// <summary>
+      /// Gets the new username from the user.
+      /// </summary>
+      /// <returns>The new username entered by the user.</returns>
+      public static string GetNewUsername()
+      {
+         Console.Write("Enter the Username: ");
+         string? input = Console.ReadLine();
+         return input ?? string.Empty;
       }
    }
 }

@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pneumococcal
 
          try
          {
-            FilePathHelper_Pneumococcal.InitializeConfiguration();
+            FilePathHelper_Pneumococcal.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Pneumococcal.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

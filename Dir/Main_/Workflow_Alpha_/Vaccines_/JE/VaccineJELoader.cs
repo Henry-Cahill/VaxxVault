@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.JE
 
          try
          {
-            FilePathHelper_JE.InitializeConfiguration();
+            FilePathHelper_JE.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_JE.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

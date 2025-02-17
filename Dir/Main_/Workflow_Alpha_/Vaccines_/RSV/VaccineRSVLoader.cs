@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.RSV
 
          try
          {
-            FilePathHelper_RSV.InitializeConfiguration();
+            FilePathHelper_RSV.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_RSV.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

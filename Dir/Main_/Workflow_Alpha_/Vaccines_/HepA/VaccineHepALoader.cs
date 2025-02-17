@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HepA
 
          try
          {
-            FilePathHelper_HepA.InitializeConfiguration();
+            FilePathHelper_HepA.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_HepA.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

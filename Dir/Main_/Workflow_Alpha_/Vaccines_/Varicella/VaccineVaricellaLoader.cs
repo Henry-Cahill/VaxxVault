@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Varicella
 
          try
          {
-            FilePathHelper_Varicella.InitializeConfiguration();
+            FilePathHelper_Varicella.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Varicella.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

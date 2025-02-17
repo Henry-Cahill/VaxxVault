@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Dengue
 
          try
          {
-            FilePathHelper_Dengue.InitializeConfiguration();
+            FilePathHelper_Dengue.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Dengue.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

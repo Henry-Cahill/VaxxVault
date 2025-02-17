@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Data;
-using Microsoft.Data.SqlClient;
 using System.IO;
+using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
 
 namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19
 {
@@ -9,7 +10,46 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19
    {
       private const string ConnectionStringFilePath = "Dir/Config_/connectionString.txt";
 
-      public static void InsertXmlDataIntoDatabase()
+      public static async Task InsertXmlDataIntoDatabaseAsync()
+      {
+         string version = GetVersionFromUser();
+
+         try
+         {
+            FilePathHelper_COVID19.EnsureConfigurationInitialized();
+            string filePath = FilePathHelper_COVID19.GetFilePath(version);
+
+            if (string.IsNullOrEmpty(filePath))
+            {
+               Console.WriteLine("Invalid version selected.");
+               return;
+            }
+
+            string connectionString = await File.ReadAllTextAsync(ConnectionStringFilePath);
+            string xmlData = await File.ReadAllTextAsync(filePath);
+
+            LegalDisclaimerHelper.DisplayLegalDisclaimer();
+            if (!UserAuthorizationHelper.GetUserAuthorization())
+            {
+               Console.WriteLine("Authorization denied. Exiting.");
+               return;
+            }
+
+            await InsertDataIntoDatabaseAsync(connectionString, xmlData);
+         }
+         catch (FileNotFoundException ex)
+         {
+            Console.WriteLine($"File not found: {ex.Message}");
+            ErrorLogger.LogError(ex);
+         }
+         catch (Exception ex)
+         {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            ErrorLogger.LogError(ex);
+         }
+      }
+
+      private static string GetVersionFromUser()
       {
          Console.WriteLine("Please choose a version (4.60, 4.59, 4.58, 4.57) [default is 4.60]:");
          string? version = Console.ReadLine();
@@ -19,30 +59,16 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19
             version = "4.60";
          }
 
+         return version;
+      }
+
+      private static async Task InsertDataIntoDatabaseAsync(string connectionString, string xmlData)
+      {
          try
          {
-            FilePathHelper_COVID19.InitializeConfiguration();
-            string filePath = FilePathHelper_COVID19.GetFilePath(version);
-
-            if (string.IsNullOrEmpty(filePath))
-            {
-               Console.WriteLine("Invalid version selected.");
-               return;
-            }
-
-            string connectionString = File.ReadAllText(ConnectionStringFilePath);
-            string xmlData = File.ReadAllText(filePath);
-
-            LegalDisclaimerHelper.DisplayLegalDisclaimer();
-            if (!UserAuthorizationHelper.GetUserAuthorization())
-            {
-               Console.WriteLine("Authorization denied. Exiting.");
-               return;
-            }
-
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-               connection.Open();
+               await connection.OpenAsync();
 
                string sql = @"
                         SET IDENTITY_INSERT VaccineData ON;
@@ -58,30 +84,26 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19
 
                   try
                   {
-                     command.ExecuteNonQuery();
+                     await command.ExecuteNonQueryAsync();
                   }
-                  catch (Exception ex)
+                  catch (SqlException ex)
                   {
+                     Console.WriteLine($"SQL error occurred: {ex.Message}");
                      ErrorLogger.LogError(ex);
                      throw;
                   }
                }
             }
          }
-         catch (FileNotFoundException ex)
+         catch (SqlException ex)
          {
-            Console.WriteLine($"File not found: {ex.Message}");
+            Console.WriteLine($"Database connection error: {ex.Message}");
             ErrorLogger.LogError(ex);
-         }
-         catch (Exception ex)
-         {
-            Console.WriteLine($"An error occurred: {ex.Message}");
-            ErrorLogger.LogError(ex);
+            throw;
          }
       }
    }
 }
-
 /* 
 Declaration of Intellectual Property Ownership: 
 I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. 

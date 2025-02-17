@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Mumps
 
          try
          {
-            FilePathHelper_Mumps.InitializeConfiguration();
+            FilePathHelper_Mumps.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Mumps.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

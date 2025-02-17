@@ -72,6 +72,32 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_
             Console.WriteLine($"Failed to log error: {logEx.Message}");
          }
       }
+
+      /// <summary>
+      /// Logs the provided FileNotFoundException to an error log file.
+      /// </summary>
+      /// <param name="ex">The FileNotFoundException to log.</param>
+      public static void LogError(FileNotFoundException ex)
+      {
+         EnsureDirectoryExists(ErrorLogFilePath);
+         try
+         {
+            using (StreamWriter writer = new StreamWriter(ErrorLogFilePath, true))
+            {
+               writer.WriteLine($"Date: {DateTime.Now}");
+               writer.WriteLine($"Message: {ex.Message}");
+               writer.WriteLine($"FileName: {ex.FileName}");
+               writer.WriteLine($"StackTrace: {ex.StackTrace}");
+               writer.WriteLine("--------------------------------------------------");
+            }
+            Console.WriteLine($"Error logged: {ex.Message}");
+         }
+         catch (Exception logEx)
+         {
+            Console.WriteLine($"Failed to log error: {logEx.Message}");
+         }
+      }
    }
 }
+
 // Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023.

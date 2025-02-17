@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Influenza
 
          try
          {
-            FilePathHelper_Influenza.InitializeConfiguration();
+            FilePathHelper_Influenza.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Influenza.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Hib
 
          try
          {
-            FilePathHelper_Hib.InitializeConfiguration();
+            FilePathHelper_Hib.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Hib.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

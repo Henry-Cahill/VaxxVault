@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Diphtheria
 
          try
          {
-            FilePathHelper_Diphtheria.InitializeConfiguration();
+            FilePathHelper_Diphtheria.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Diphtheria.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Tetanus
 
          try
          {
-            FilePathHelper_Tetanus.InitializeConfiguration();
+            FilePathHelper_Tetanus.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Tetanus.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

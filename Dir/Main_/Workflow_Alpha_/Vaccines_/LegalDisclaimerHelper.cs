@@ -8,12 +8,9 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_
    /// <remarks>
    /// The legal disclaimer outlines the responsibilities and liabilities of the user when executing commands.
    /// </remarks>
-   /// <summary>
-   /// Provides methods to display legal disclaimers.
-   /// </summary>
    internal static class LegalDisclaimerHelper
    {
-      private const string LegalDisclaimer = @"
+      private static readonly string LegalDisclaimer = $@"
 LEGAL DISCLAIMER:
 By authorizing the execution of these commands, you acknowledge and agree that:
 1. You have the necessary permissions and authority to execute these commands.
@@ -31,4 +28,5 @@ By authorizing the execution of these commands, you acknowledge and agree that:
       }
    }
 }
+
 // Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023.

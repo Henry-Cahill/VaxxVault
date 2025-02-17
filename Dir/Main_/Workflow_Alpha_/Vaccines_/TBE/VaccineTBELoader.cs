@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.TBE
 
          try
          {
-            FilePathHelper_TBE.InitializeConfiguration();
+            FilePathHelper_TBE.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_TBE.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

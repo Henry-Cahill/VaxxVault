@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Measles
 
          try
          {
-            FilePathHelper_Measles.InitializeConfiguration();
+            FilePathHelper_Measles.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Measles.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

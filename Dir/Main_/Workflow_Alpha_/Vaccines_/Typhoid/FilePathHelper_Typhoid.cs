@@ -4,44 +4,52 @@ using System.IO;
 
 namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Typhoid
 {
-   /// <summary>
-   /// Helper class to manage file paths for Typhoid workflow.
-   /// </summary>
    internal static class FilePathHelper_Typhoid
    {
-      private static IConfiguration _configuration;
-      private static readonly object _lock = new object();
+      private static IConfiguration? _configuration;
 
-      /// <summary>
-      /// Initializes the configuration from the appsettingTyphoid.json file.
-      /// </summary>
-      public static void InitializeConfiguration()
+      static FilePathHelper_Typhoid()
+      {
+         try
+         {
+            EnsureConfigurationInitialized();
+         }
+         catch (Exception ex)
+         {
+            ErrorLogger.LogError(ex);
+            throw new TypeInitializationException(typeof(FilePathHelper_Typhoid).FullName, ex);
+         }
+      }
+
+      public static void EnsureConfigurationInitialized()
       {
          if (_configuration == null)
          {
-            lock (_lock)
+            try
             {
-               if (_configuration == null)
-               {
-                  _configuration = new ConfigurationBuilder()
-                      .SetBasePath(Directory.GetCurrentDirectory())
-                      .AddJsonFile("appsettingTyphoid.json", optional: false, reloadOnChange: true)
-                      .Build();
-               }
+               var builder = new ConfigurationBuilder()
+                   .SetBasePath("A:\\New.New\\VaxxVault\\Dir\\Main_\\Workflow_Alpha_\\")
+                   .AddJsonFile("Vaccines_\\Typhoid\\appsettingTyphoid.json", optional: false, reloadOnChange: true);
+               _configuration = builder.Build();
+            }
+            catch (Exception ex)
+            {
+               ErrorLogger.LogError(ex);
+               throw new InvalidOperationException("Failed to initialize configuration.", ex);
             }
          }
       }
 
-      /// <summary>
-      /// Gets the file path for the specified version.
-      /// </summary>
-      /// <param name="version">The version of the file path to retrieve.</param>
-      /// <returns>The file path corresponding to the specified version.</returns>
-      /// <exception cref="ArgumentException">Thrown when an invalid version is specified.</exception>
       public static string GetFilePath(string version)
       {
-         InitializeConfiguration();
-         string? filePath = _configuration[$"FilePaths:Version{version.Replace(".", "")}"];
+         if (string.IsNullOrWhiteSpace(version))
+         {
+            throw new ArgumentException("Version cannot be null or empty.", nameof(version));
+         }
+
+         EnsureConfigurationInitialized(); // Ensure _configuration is initialized before use
+
+         string? filePath = _configuration?[$"FilePaths:Version{version.Replace(".", "")}"];
          if (string.IsNullOrEmpty(filePath))
          {
             throw new ArgumentException("Invalid version specified.");
@@ -50,7 +58,6 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Typhoid
       }
    }
 }
-
 /* 
 Declaration of Intellectual Property Ownership: 
 I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. 

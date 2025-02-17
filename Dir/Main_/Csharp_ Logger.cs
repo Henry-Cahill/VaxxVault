@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace VaxxVault_V0004.Dir.Main_
 {
@@ -9,38 +10,87 @@ namespace VaxxVault_V0004.Dir.Main_
    public static class Logger
    {
       private static readonly object _lock = new object();
+      private static string _logFilePath = "log.txt";
+      private static LogLevel _logLevel = LogLevel.Info;
 
       /// <summary>
-      /// Logs an informational message to the specified log file.
+      /// Specifies the log level for logging.
       /// </summary>
-      /// <param name="logFile">The StreamWriter to write the log message to.</param>
+      public enum LogLevel
+      {
+         /// <summary>
+         /// Informational messages.
+         /// </summary>
+         Info,
+         /// <summary>
+         /// Error messages.
+         /// </summary>
+         Error
+      }
+
+      /// <summary>
+      /// Sets the log file path.
+      /// </summary>
+      /// <param name="logFilePath">The path to the log file.</param>
+      public static void SetLogFilePath(string logFilePath)
+      {
+         _logFilePath = logFilePath;
+      }
+
+      /// <summary>
+      /// Sets the log level.
+      /// </summary>
+      /// <param name="logLevel">The log level.</param>
+      public static void SetLogLevel(LogLevel logLevel)
+      {
+         _logLevel = logLevel;
+      }
+
+      /// <summary>
+      /// Logs an informational message.
+      /// </summary>
       /// <param name="message">The informational message to log.</param>
-      public static void LogInfo(StreamWriter logFile, string message)
+      public static async Task LogInfoAsync(string message)
       {
-         Log(logFile, "INFO", message);
+         if (_logLevel <= LogLevel.Info)
+         {
+            await LogAsync("INFO", message);
+         }
       }
 
       /// <summary>
-      /// Logs an error message to the specified log file.
+      /// Logs an error message.
       /// </summary>
-      /// <param name="logFile">The StreamWriter to write the log message to.</param>
       /// <param name="message">The error message to log.</param>
-      public static void LogError(StreamWriter logFile, string message)
+      public static async Task LogErrorAsync(string message)
       {
-         Log(logFile, "ERROR", message);
+         if (_logLevel <= LogLevel.Error)
+         {
+            await LogAsync("ERROR", message);
+         }
       }
 
       /// <summary>
-      /// Logs a message with the specified log level to the specified log file.
+      /// Logs a message with the specified log level.
       /// </summary>
-      /// <param name="logFile">The StreamWriter to write the log message to.</param>
       /// <param name="level">The log level (e.g., INFO, ERROR).</param>
       /// <param name="message">The message to log.</param>
-      private static void Log(StreamWriter logFile, string level, string message)
+      private static async Task LogAsync(string level, string message)
       {
-         lock (_lock)
+         try
          {
-            logFile.WriteLine($"{DateTime.Now} - {level} - {message}");
+            lock (_lock)
+            {
+               using (StreamWriter logFile = new StreamWriter(_logFilePath, true))
+               {
+                  logFile.WriteLine($"{DateTime.Now} - {level} - {message}");
+               }
+            }
+         }
+         catch (Exception ex)
+         {
+            // Handle logging exceptions (e.g., write to a fallback log, notify the user, etc.)
+            Console.Error.WriteLine($"Logging failed: {ex.Message}");
          }
       }
    }

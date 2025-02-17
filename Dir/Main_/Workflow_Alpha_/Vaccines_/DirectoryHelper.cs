@@ -7,8 +7,8 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_
    {
       public static void EnsureDirectoryExists(string filePath)
       {
-         string directoryPath = Path.GetDirectoryName(filePath);
-         if (!Directory.Exists(directoryPath))
+         string? directoryPath = Path.GetDirectoryName(filePath);
+         if (directoryPath != null && !Directory.Exists(directoryPath))
          {
             Directory.CreateDirectory(directoryPath);
             Console.WriteLine("Created directory: " + directoryPath);

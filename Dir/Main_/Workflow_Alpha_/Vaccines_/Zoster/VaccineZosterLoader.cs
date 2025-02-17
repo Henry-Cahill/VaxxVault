@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster
 
          try
          {
-            FilePathHelper_Zoster.InitializeConfiguration();
+            FilePathHelper_Zoster.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Zoster.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

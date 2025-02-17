@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Typhoid
 
          try
          {
-            FilePathHelper_Typhoid.InitializeConfiguration();
+            FilePathHelper_Typhoid.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Typhoid.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

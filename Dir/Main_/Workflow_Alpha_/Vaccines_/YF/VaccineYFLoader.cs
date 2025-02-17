@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.YF
 
          try
          {
-            FilePathHelper_YF.InitializeConfiguration();
+            FilePathHelper_YF.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_YF.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

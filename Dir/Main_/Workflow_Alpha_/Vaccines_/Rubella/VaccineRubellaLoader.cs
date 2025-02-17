@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rubella
 
          try
          {
-            FilePathHelper_Rubella.InitializeConfiguration();
+            FilePathHelper_Rubella.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Rubella.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

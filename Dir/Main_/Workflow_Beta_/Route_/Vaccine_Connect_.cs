@@ -7,7 +7,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Beta_.Route_
 {
    internal class Vaccine_Connect_
    {
-      private static SqlConnection GetSqlConnection(SqlCredential credentials = null)
+      private static SqlConnection GetSqlConnection(SqlCredential? credentials = null)
       {
          string connectionString = "Data Source=HLC-Laptop\\SQLEXPRESS;Initial Catalog=CDSi_4.60;Integrated Security=True;Encrypt=False";
          return credentials != null ? new SqlConnection(connectionString, credentials) : new SqlConnection(connectionString);
@@ -41,7 +41,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Beta_.Route_
 
       private static bool UserAgreedToTerms()
       {
-         string input = Console.ReadLine();
+         string? input = Console.ReadLine();
          return input?.ToLower() == "yes";
       }
 
@@ -59,7 +59,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Beta_.Route_
 
       private static void HandleUserSelection()
       {
-         string input = Console.ReadLine();
+         string? input = Console.ReadLine();
          switch (input)
          {
             case "1":

@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Polio
 
          try
          {
-            FilePathHelper_Polio.InitializeConfiguration();
+            FilePathHelper_Polio.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Polio.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

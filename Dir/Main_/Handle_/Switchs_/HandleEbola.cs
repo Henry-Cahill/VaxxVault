@@ -17,7 +17,7 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
          Console.WriteLine("  - Load");
 
          // Read the user's choice from the console.
-         var choice = Console.ReadLine()?.Trim();
+         var choice = Console.ReadLine()?.Trim()?.ToLower();
 
          // Check if the choice is valid.
          if (string.IsNullOrEmpty(choice))
@@ -31,15 +31,15 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
             // Execute the corresponding method based on the user's choice.
             switch (choice)
             {
-               case "Review":
+               case "review":
                   // Call the ReviewXml method to review Ebola vaccine data.
                   VaccineEbolaReview.ReviewXml();
                   break;
-               case "Drop":
+               case "drop":
                   // Call the DeleteXmlDataInDatabase method to delete Ebola vaccine data.
                   await VaccineEbolaDrop.DeleteXmlDataInDatabase();
                   break;
-               case "Load":
+               case "load":
                   // Call the InsertXmlDataIntoDatabase method to load Ebola vaccine data.
                   VaccineEbolaLoader.InsertXmlDataIntoDatabase();
                   break;

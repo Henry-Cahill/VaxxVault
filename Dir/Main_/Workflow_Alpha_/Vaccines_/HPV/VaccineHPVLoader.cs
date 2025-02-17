@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HPV
 
          try
          {
-            FilePathHelper_HPV.InitializeConfiguration();
+            FilePathHelper_HPV.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_HPV.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

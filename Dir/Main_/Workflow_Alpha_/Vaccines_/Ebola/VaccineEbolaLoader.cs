@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Ebola
 
          try
          {
-            FilePathHelper_Ebola.InitializeConfiguration();
+            FilePathHelper_Ebola.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Ebola.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

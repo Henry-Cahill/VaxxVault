@@ -6,19 +6,38 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Hib
 {
    internal static class FilePathHelper_Hib
    {
-      private static IConfiguration _configuration = null!;
+      private static IConfiguration? _configuration;
 
       static FilePathHelper_Hib()
       {
-         InitializeConfiguration();
+         try
+         {
+            EnsureConfigurationInitialized();
+         }
+         catch (Exception ex)
+         {
+            ErrorLogger.LogError(ex);
+            throw new TypeInitializationException(typeof(FilePathHelper_Hib).FullName, ex);
+         }
       }
 
-      public static void InitializeConfiguration()
+      public static void EnsureConfigurationInitialized()
       {
-         var builder = new ConfigurationBuilder()
-             .SetBasePath(Directory.GetCurrentDirectory())
-             .AddJsonFile("appsettingsHib.json", optional: false, reloadOnChange: true);
-         _configuration = builder.Build();
+         if (_configuration == null)
+         {
+            try
+            {
+               var builder = new ConfigurationBuilder()
+                   .SetBasePath("A:\\New.New\\VaxxVault\\Dir\\Main_\\Workflow_Alpha_\\")
+                   .AddJsonFile("Vaccines_\\Hib\\appsettingHib.json", optional: false, reloadOnChange: true);
+               _configuration = builder.Build();
+            }
+            catch (Exception ex)
+            {
+               ErrorLogger.LogError(ex);
+               throw new InvalidOperationException("Failed to initialize configuration.", ex);
+            }
+         }
       }
 
       public static string GetFilePath(string version)
@@ -28,7 +47,9 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Hib
             throw new ArgumentException("Version cannot be null or empty.", nameof(version));
          }
 
-         string? filePath = _configuration[$"FilePaths:Version{version.Replace(".", "")}"];
+         EnsureConfigurationInitialized(); // Ensure _configuration is initialized before use
+
+         string? filePath = _configuration?[$"FilePaths:Version{version.Replace(".", "")}"];
          if (string.IsNullOrEmpty(filePath))
          {
             throw new ArgumentException("Invalid version specified.");

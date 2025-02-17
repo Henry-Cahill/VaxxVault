@@ -59,9 +59,13 @@
               "target": "Package",
               "version": "[6.5.1, )"
             },
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
             "MSTest.TestFramework": {
               "target": "Package",
-              "version": "[3.0.2, )"
+              "version": "[3.8.0, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -134,6 +138,16 @@
             "runtime.native.System.Data.SqlClient.sni": {
               "target": "Package",
               "version": "[4.7.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.2, )"
             }
           },
           "imports": [

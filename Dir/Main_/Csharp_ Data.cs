@@ -2,7 +2,9 @@
 
 namespace VaxxVault_V0004.Dir.Main_
 {
-   // Define a class to store and manage health-related data
+   /// <summary>
+   /// Defines a class to store and manage health-related data.
+   /// </summary>
    internal class Data
    {
       // Public properties for visibility outside the class
@@ -23,29 +25,35 @@ namespace VaxxVault_V0004.Dir.Main_
       private double _minLowHeartRate;
       private double _bmi;
 
-      // Constructor to initialize the object
+      /// <summary>
+      /// Constructor to initialize the object.
+      /// </summary>
       public Data(string firstName, string lastName, int age, string gender, int currentYear, int heightInInches, int weightInPounds, int month, int day, int year)
       {
-         FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName), "First name cannot be null");
-         LastName = lastName ?? throw new ArgumentNullException(nameof(lastName), "Last name cannot be null");
-         Age = age > 0 ? age : throw new ArgumentOutOfRangeException(nameof(age), "Age must be greater than 0");
-         Gender = gender ?? throw new ArgumentNullException(nameof(gender), "Gender cannot be null");
-         CurrentYear = currentYear > 0 ? currentYear : throw new ArgumentOutOfRangeException(nameof(currentYear), "Year must be greater than 0");
-         HeightInInches = heightInInches > 0 ? heightInInches : throw new ArgumentOutOfRangeException(nameof(heightInInches), "Height must be greater than 0");
-         WeightInPounds = weightInPounds > 0 ? weightInPounds : throw new ArgumentOutOfRangeException(nameof(weightInPounds), "Weight must be greater than 0");
-         Month = month is >= 1 and <= 12 ? month : throw new ArgumentOutOfRangeException(nameof(month), "Month must be between 1 and 12");
-         Day = day is >= 1 and <= 31 ? day : throw new ArgumentOutOfRangeException(nameof(day), "Day must be between 1 and 31");
-         Year = year > 0 ? year : throw new ArgumentOutOfRangeException(nameof(year), "Year must be greater than 0");
+         FirstName = ValidateString(firstName, nameof(firstName));
+         LastName = ValidateString(lastName, nameof(lastName));
+         Age = ValidatePositiveInt(age, nameof(age));
+         Gender = ValidateString(gender, nameof(gender));
+         CurrentYear = ValidatePositiveInt(currentYear, nameof(currentYear));
+         HeightInInches = ValidatePositiveInt(heightInInches, nameof(heightInInches));
+         WeightInPounds = ValidatePositiveInt(weightInPounds, nameof(weightInPounds));
+         Month = ValidateMonth(month);
+         Day = ValidateDay(day);
+         Year = ValidatePositiveInt(year, nameof(year));
 
          CalculateAge();
          CalculateHeartRates();
          CalculateBMI();
       }
 
-      // Method to calculate the age based on current year and year of birth
+      /// <summary>
+      /// Method to calculate the age based on current year and year of birth.
+      /// </summary>
       private void CalculateAge() => Age = CurrentYear - Year;
 
-      // Method to calculate heart rate-related values
+      /// <summary>
+      /// Method to calculate heart rate-related values.
+      /// </summary>
       private void CalculateHeartRates()
       {
          if (Age > 0)
@@ -56,7 +64,9 @@ namespace VaxxVault_V0004.Dir.Main_
          }
       }
 
-      // Method to calculate the BMI (Body Mass Index)
+      /// <summary>
+      /// Method to calculate the BMI (Body Mass Index).
+      /// </summary>
       private void CalculateBMI()
       {
          if (HeightInInches > 0 && WeightInPounds > 0)
@@ -65,10 +75,14 @@ namespace VaxxVault_V0004.Dir.Main_
          }
       }
 
-      // Method to display the date in MM/DD/YYYY format
+      /// <summary>
+      /// Method to display the date in MM/DD/YYYY format.
+      /// </summary>
       public void DisplayDate() => Console.WriteLine($"{Month:D2}/{Day:D2}/{Year}");
 
-      // Method to display the calculated heart rate information
+      /// <summary>
+      /// Method to display the calculated heart rate information.
+      /// </summary>
       public void DisplayHeartRates()
       {
          Console.WriteLine($"Max Heart Rate: {_maxHeartRate}");
@@ -76,9 +90,42 @@ namespace VaxxVault_V0004.Dir.Main_
          Console.WriteLine($"Min Low Heart Rate: {_minLowHeartRate}");
       }
 
-      // Method to display the calculated BMI value
+      /// <summary>
+      /// Method to display the calculated BMI value.
+      /// </summary>
       public void DisplayBMI() => Console.WriteLine($"BMI: {_bmi:F2}");
-   } // End Class Data
-}
 
+      /// <summary>
+      /// Validates that a string is not null or empty.
+      /// </summary>
+      private static string ValidateString(string value, string paramName)
+      {
+         return value ?? throw new ArgumentNullException(paramName, $"{paramName} cannot be null");
+      }
+
+      /// <summary>
+      /// Validates that an integer is positive.
+      /// </summary>
+      private static int ValidatePositiveInt(int value, string paramName)
+      {
+         return value > 0 ? value : throw new ArgumentOutOfRangeException(paramName, $"{paramName} must be greater than 0");
+      }
+
+      /// <summary>
+      /// Validates that the month is between 1 and 12.
+      /// </summary>
+      private static int ValidateMonth(int month)
+      {
+         return month is >= 1 and <= 12 ? month : throw new ArgumentOutOfRangeException(nameof(month), "Month must be between 1 and 12");
+      }
+
+      /// <summary>
+      /// Validates that the day is between 1 and 31.
+      /// </summary>
+      private static int ValidateDay(int day)
+      {
+         return day is >= 1 and <= 31 ? day : throw new ArgumentOutOfRangeException(nameof(day), "Day must be between 1 and 31");
+      }
+   }
+}
 // Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023.

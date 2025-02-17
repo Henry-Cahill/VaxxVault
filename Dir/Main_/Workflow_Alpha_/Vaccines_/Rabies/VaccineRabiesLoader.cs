@@ -27,7 +27,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rabies
 
          try
          {
-            FilePathHelper_Rabies.InitializeConfiguration();
+            FilePathHelper_Rabies.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Rabies.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

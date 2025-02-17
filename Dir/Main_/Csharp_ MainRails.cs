@@ -7,95 +7,134 @@ namespace VaxxVault_V0004.Dir.Main_
    /// </summary>
    public class MainRails
    {
+      private enum MenuOption
+      {
+         Placeholder0,
+         SeasonalRecommendation,
+         RecurringDose,
+         ConditionalSkip,
+         Placeholder4,
+         ViewAge,
+         CalculationsAndResults,
+         Exit = 8
+      }
+
       /// <summary>
       /// Handles another task.
       /// </summary>
       public static void HandleAnotherTask()
       {
-         // Initialization phase: Initialize variables, create instances, and prompt user for input.
-         // Generate the checkerboard pattern
+         Initialize();
+
+         bool keepRunning = true;
+         while (keepRunning)
+         {
+            DisplayMenu();
+            string? mainChoice = Console.ReadLine();
+            keepRunning = HandleMenuChoice(mainChoice);
+         }
+      }
+
+      private static void Initialize()
+      {
          CheckerboardGenerator.GenerateCheckerboard();
 
          Account vaxxVaultAccount = new Account("DefaultName", "DefaultUsername");
-         AccountManager.ManageAccount(vaxxVaultAccount);
+         string newUsername = AccountManager.GetNewUsername();
+         AccountManager.ManageAccount(vaxxVaultAccount, newUsername);
 
          Data vaxxVaultData = new Data("John", "Doe", 30, "Male", 2025, 70, 180, 1, 15, 1995);
-
-         // Processing phase: Perform calculations and display results.
          vaxxVaultData.DisplayDate();
          vaxxVaultData.DisplayHeartRates();
          vaxxVaultData.DisplayBMI();
+      }
 
-         // Termination phase: Provide options to view additional information or exit the program.
-         bool keepRunning = true;
+      private static void DisplayMenu()
+      {
+         Console.WriteLine("\nSelect one of the Following Options:\n" +
+                           "-------------------------------------\n" +
+                           "0. \n" +
+                           "1. View Seasonal Recommendation\n" +
+                           "2. View Recurring Dose\n" +
+                           "3. View Conditional Skip\n" +
+                           "4. \n" +
+                           "5. View Age\n" +
+                           "\nAdditional Selections:\n" +
+                           "6. Calculations and Results\n" +
+                           "7. \n" +
+                           "8. Exit\n");
+      }
 
-         while (keepRunning)
+      private static bool HandleMenuChoice(string? mainChoice)
+      {
+         if (Enum.TryParse(mainChoice, out MenuOption option))
          {
-            Console.WriteLine("\nSelect one of the Following Options:");
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine("0. ");
-            Console.WriteLine("1. View Seasonal Recommendation");
-            Console.WriteLine("2. View Recurring Dose");
-            Console.WriteLine("3. View Conditional Skip");
-            Console.WriteLine("4. ");
-            Console.WriteLine("5. View Age");
-            Console.WriteLine("\nAdditional Selections:");
-            Console.WriteLine("6. Calculations and Results");
-            Console.WriteLine("7. ");
-            Console.WriteLine("8. Exit\n");
-
-            string? mainChoice = Console.ReadLine();
-
-            switch (mainChoice)
+            switch (option)
             {
-               case "0":
+               case MenuOption.Placeholder0:
+               case MenuOption.Placeholder4:
+                  Console.WriteLine("\nDisplaying Placeholder\nPlaceholder for future functionality");
                   break;
 
-               case "1":
+               case MenuOption.SeasonalRecommendation:
+                  Console.WriteLine("\nDisplaying Seasonal Recommendation\nPlaceholder for future functionality");
                   // HandleSeasonalRecommendation();
                   break;
 
-               case "2":
+               case MenuOption.RecurringDose:
+                  Console.WriteLine("\nDisplaying Recurring Dose\nPlaceholder for future functionality");
                   // HandleRecurringDose();
                   break;
 
-               case "3":
+               case MenuOption.ConditionalSkip:
+                  Console.WriteLine("\nDisplaying Conditional Skip\nPlaceholder for future functionality");
                   // HandleConditionalSkip();
                   break;
 
-               case "4":
-                  // Placeholder for future functionality
-                  break;
-
-               case "5":
-                  Console.WriteLine("\nDisplaying Age Table");
+               case MenuOption.ViewAge:
+                  Console.WriteLine("\nDisplaying Age Table\nPlaceholder for future functionality");
                   // Age.Select_All();
                   break;
 
-               case "6":
-                  Console.WriteLine();
-                  vaxxVaultData.DisplayDate();
-                  vaxxVaultData.DisplayHeartRates();
-                  vaxxVaultData.DisplayBMI();
+               case MenuOption.CalculationsAndResults:
+                  DisplayCalculationsAndResults();
                   break;
 
-               case "8":
-                  Console.WriteLine("Do you really want to close VaxxVault? (yes/no)");
-                  string? exitChoice = Console.ReadLine()?.ToLower();
-                  if (exitChoice == "yes")
-                  {
-                     keepRunning = false;
-                     Console.WriteLine("\nExiting the program.\n");
-                  }
-                  break;
+               case MenuOption.Exit:
+                  return ConfirmExit();
 
                default:
                   Console.WriteLine("Invalid choice. Please select a valid option.");
                   break;
             }
          }
-         // Generate the checkerboard pattern
-         CheckerboardGenerator.GenerateCheckerboard();
+         else
+         {
+            Console.WriteLine("Invalid choice. Please select a valid option.");
+         }
+
+         return true;
+      }
+
+      private static void DisplayCalculationsAndResults()
+      {
+         Data vaxxVaultData = new Data("John", "Doe", 30, "Male", 2025, 70, 180, 1, 15, 1995);
+         vaxxVaultData.DisplayDate();
+         vaxxVaultData.DisplayHeartRates();
+         vaxxVaultData.DisplayBMI();
+      }
+
+      private static bool ConfirmExit()
+      {
+         Console.WriteLine("Do you really want to close VaxxVault? (yes/no)");
+         string? exitChoice = Console.ReadLine()?.ToLower();
+         if (exitChoice == "yes")
+         {
+            Console.WriteLine("\nExiting the program.\n");
+            return false;
+         }
+
+         return true;
       }
    }
 }

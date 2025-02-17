@@ -13,7 +13,7 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
          Console.WriteLine("  - Drop");
          Console.WriteLine("  - Load");
 
-         var choice = Console.ReadLine()?.Trim();
+         var choice = Console.ReadLine()?.Trim()?.ToLower();
 
          if (string.IsNullOrEmpty(choice))
          {
@@ -25,13 +25,13 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
          {
             switch (choice)
             {
-               case "Review":
+               case "review":
                   VaccineTetanusReview.ReviewXml();
                   break;
-               case "Drop":
+               case "drop":
                   await VaccineTetanusDrop.DeleteXmlDataInDatabase();
                   break;
-               case "Load":
+               case "load":
                   VaccineTetanusLoader.InsertXmlDataIntoDatabase();
                   break;
                default:

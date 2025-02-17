@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Orthopoxvirus
 
          try
          {
-            FilePathHelper_Orthopoxvirus.InitializeConfiguration();
+            FilePathHelper_Orthopoxvirus.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_Orthopoxvirus.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))

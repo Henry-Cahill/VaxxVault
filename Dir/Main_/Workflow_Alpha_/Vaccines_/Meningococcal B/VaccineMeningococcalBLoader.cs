@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.MeningococcalB
 
          try
          {
-            FilePathHelper_MeningococcalB.InitializeConfiguration();
+            FilePathHelper_MeningococcalB.EnsureConfigurationInitialized();
             string filePath = FilePathHelper_MeningococcalB.GetFilePath(version);
 
             if (string.IsNullOrEmpty(filePath))
