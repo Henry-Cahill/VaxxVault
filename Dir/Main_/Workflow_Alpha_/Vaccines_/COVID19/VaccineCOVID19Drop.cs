@@ -2,6 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
+using VaxxVault_V0004.Dir.Main_.Handle_.Switchs_;
 
 namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19
 {
@@ -11,7 +12,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19
       /// Deletes XML data in the database.
       /// </summary>
       /// <returns>A task that represents the asynchronous operation.</returns>
-      public static async Task DeleteXmlDataInDatabase()
+      public static async Task DeleteXmlDataInDatabase(bool isDropAll = false)
       {
          // Read connection string from file
          string connectionStringFilePath = "A:\\New.New\\VaxxVault\\Dir\\Config_\\connectionString.txt";
@@ -30,11 +31,14 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19
 
          try
          {
-            LegalDisclaimerHelper.DisplayLegalDisclaimer();
-            if (!UserAuthorizationHelper.GetUserAuthorization())
+            if (!isDropAll)
             {
-               Console.WriteLine("Authorization denied. Exiting...");
-               return;
+               LegalDisclaimerHelper.DisplayLegalDisclaimer();
+               if (!UserAuthorizationHelper.GetUserAuthorization())
+               {
+                  Console.WriteLine("Authorization denied. Exiting...");
+                  return;
+               }
             }
 
             // Execute SQL command to drop a row
@@ -74,5 +78,4 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19
       }
    }
 }
-
 // Declaration of Intellectual Property Ownership: I, Henry Lawrence Cahill, declare exclusive rights and ownership of all intellectual property associated with VaxxVault. Unauthorized use, reproduction, distribution, or modification is strictly prohibited. For inquiries, contact me at henrycahill97@gmail.com. Any infringement will be pursued to the fullest extent of the law. Signed on January 29, 2023.

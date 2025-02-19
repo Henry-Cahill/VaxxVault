@@ -1,29 +1,72 @@
 using System;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
 {
    internal class DropAll
    {
-      // The Execute method is responsible for finding and invoking the DeleteXmlDataInDatabase method
-      // in all types within the VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Drop_ namespace that end with 'D'.
+      private static readonly string[] namespaces = new[]
+      {
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.YF",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Varicella",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Typhoid",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Tetanus",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.TBE",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rubella",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.RSV",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rotavirus",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rabies",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Polio",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pneumococcal",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pertussis",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Orthopoxvirus",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Mumps",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.MeningococcalB",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Meningococcal",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Measles",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.JE",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Influenza",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HPV",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Hib",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HepB",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HepA",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Ebola",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Diphtheria",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Dengue",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19",
+            "VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera"
+        };
+
       public static void Execute()
       {
-         // Get all types in the current assembly that belong to the specified namespace and end with 'D'.
-         var vaccineTypes = Assembly.GetExecutingAssembly()
-             .GetTypes()
-             .Where(t => t.Namespace == "VaxxVault_V0003.Dir.Main_.Workflow_Alpha_.Vaccines_" && t.Name.EndsWith("Drop"))
-             .ToList();
-
-         // Iterate through each type found.
-         foreach (var type in vaccineTypes)
+         try
          {
-            // Get the DeleteXmlDataInDatabase method from the type, if it exists.
-            var method = type.GetMethod("DeleteXmlDataInDatabase", BindingFlags.Public | BindingFlags.Static);
+            var vaccineTypes = Assembly.GetExecutingAssembly()
+                .GetTypes()
+                .Where(t => namespaces.Contains(t.Namespace) && t.Name.EndsWith("Drop"))
+                .ToList();
 
-            // Invoke the method if it was found.
-            method?.Invoke(null, null);
+            Parallel.ForEach(vaccineTypes, type =>
+            {
+               var method = type.GetMethod("DeleteXmlDataInDatabase", BindingFlags.Public | BindingFlags.Static);
+               if (method != null)
+               {
+                  method.Invoke(null, new object[] { true });
+                  Console.WriteLine($"Successfully invoked DeleteXmlDataInDatabase on {type.FullName}");
+               }
+               else
+               {
+                  Console.WriteLine($"No DeleteXmlDataInDatabase method found on {type.FullName}");
+               }
+            });
+         }
+         catch (Exception ex)
+         {
+            Console.WriteLine($"An error occurred: {ex.Message}");
+            Console.WriteLine($"Stack Trace: {ex.StackTrace}");
          }
       }
    }

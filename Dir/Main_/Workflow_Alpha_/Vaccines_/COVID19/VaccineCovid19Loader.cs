@@ -10,7 +10,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19
    {
       private const string ConnectionStringFilePath = "Dir/Config_/connectionString.txt";
 
-      public static async Task InsertXmlDataIntoDatabaseAsync()
+      public static async Task InsertXmlDataIntoDatabaseAsync(bool isLoadAll = false)
       {
          string version = GetVersionFromUser();
 
@@ -28,11 +28,14 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19
             string connectionString = await File.ReadAllTextAsync(ConnectionStringFilePath);
             string xmlData = await File.ReadAllTextAsync(filePath);
 
-            LegalDisclaimerHelper.DisplayLegalDisclaimer();
-            if (!UserAuthorizationHelper.GetUserAuthorization())
+            if (!isLoadAll)
             {
-               Console.WriteLine("Authorization denied. Exiting.");
-               return;
+               LegalDisclaimerHelper.DisplayLegalDisclaimer();
+               if (!UserAuthorizationHelper.GetUserAuthorization())
+               {
+                  Console.WriteLine("Authorization denied. Exiting...");
+                  return;
+               }
             }
 
             await InsertDataIntoDatabaseAsync(connectionString, xmlData);

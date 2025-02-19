@@ -15,16 +15,8 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster
       /// <summary>
       /// Inserts XML data into the database based on the selected version.
       /// </summary>
-      public static void InsertXmlDataIntoDatabase()
+      public static void InsertXmlDataIntoDatabase(string version)
       {
-         Console.WriteLine("Please choose a version (4.60, 4.59, 4.58, 4.57) [default is 4.60]:");
-         string? version = Console.ReadLine();
-
-         if (string.IsNullOrEmpty(version))
-         {
-            version = "4.60";
-         }
-
          try
          {
             FilePathHelper_Zoster.EnsureConfigurationInitialized();
@@ -42,7 +34,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster
             LegalDisclaimerHelper.DisplayLegalDisclaimer();
             if (!UserAuthorizationHelper.GetUserAuthorization())
             {
-               Console.WriteLine("Authorization denied. Exiting.");
+               Console.WriteLine("Authorization denied. Exiting...");
                return;
             }
 

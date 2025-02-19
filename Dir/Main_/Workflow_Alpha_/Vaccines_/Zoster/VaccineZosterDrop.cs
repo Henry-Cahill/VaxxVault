@@ -11,7 +11,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster
       /// Deletes XML data in the database.
       /// </summary>
       /// <returns>A task that represents the asynchronous operation.</returns>
-      public static async Task DeleteXmlDataInDatabase()
+      public static async Task DeleteXmlDataInDatabase(bool isDropAll = false)
       {
          // Read connection string from file
          string connectionStringFilePath = "A:\\New.New\\VaxxVault\\Dir\\Config_\\connectionString.txt";
@@ -30,11 +30,14 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster
 
          try
          {
-            LegalDisclaimerHelper.DisplayLegalDisclaimer();
-            if (!UserAuthorizationHelper.GetUserAuthorization())
+            if (!isDropAll)
             {
-               Console.WriteLine("Authorization denied. Exiting...");
-               return;
+               LegalDisclaimerHelper.DisplayLegalDisclaimer();
+               if (!UserAuthorizationHelper.GetUserAuthorization())
+               {
+                  Console.WriteLine("Authorization denied. Exiting...");
+                  return;
+               }
             }
 
             // Execute SQL command to drop a row

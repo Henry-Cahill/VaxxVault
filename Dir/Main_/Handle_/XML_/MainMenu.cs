@@ -53,9 +53,9 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.XML_
       {
          Console.WriteLine("       Options        |  Loaded  |                      |\n" +
                         "------------------------------------------------------------------\n" +
-                       $" -A.  Review ALL      |   N/A    | -14. Meningococcal   |  {VaccineDataStatus.GetVaccineStatus("Meningococcal")}\n" +
-                       $" -B.  Drop ALL        |   N/A    | -15. Mumps           |  {VaccineDataStatus.GetVaccineStatus("Mumps")}\n" +
-                       $" -C.  Load ALL        |   N/A    | -16. Orthopoxvirus   |  {VaccineDataStatus.GetVaccineStatus("Orthopoxvirus")}\n" +
+                       $" -a.  Review ALL      |   N/A    | -14. Meningococcal   |  {VaccineDataStatus.GetVaccineStatus("Meningococcal")}\n" +
+                       $" -b.  Drop ALL        |   N/A    | -15. Mumps           |  {VaccineDataStatus.GetVaccineStatus("Mumps")}\n" +
+                       $" -c.  Load ALL        |   N/A    | -16. Orthopoxvirus   |  {VaccineDataStatus.GetVaccineStatus("Orthopoxvirus")}\n" +
                        $" -1.  Cholera         |   {VaccineDataStatus.GetVaccineStatus("Cholera")}   | -17. Pertussis       |  {VaccineDataStatus.GetVaccineStatus("Pertussis")}\n" +
                        $" -2.  Covid19         |   {VaccineDataStatus.GetVaccineStatus("Covid19")}   | -18. Pneumococcal    |  {VaccineDataStatus.GetVaccineStatus("Pneumococcal")}\n" +
                        $" -3.  Dengue          |   {VaccineDataStatus.GetVaccineStatus("Dengue")}   | -19. Polio           |  {VaccineDataStatus.GetVaccineStatus("Polio")}\n" +
@@ -80,13 +80,13 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.XML_
       {
          switch (choice)
          {
-            case "A":
+            case "a":
                await Task.Run(() => ReviewAll.Execute());
                break;
-            case "B":
+            case "b":
                await Task.Run(() => DropAll.Execute());
                break;
-            case "C":
+            case "c":
                await Task.Run(() => LoadAll.Execute());
                break;
             case "1":

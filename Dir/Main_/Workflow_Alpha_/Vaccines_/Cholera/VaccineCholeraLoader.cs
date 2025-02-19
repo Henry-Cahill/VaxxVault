@@ -2,6 +2,7 @@
 using System.Data;
 using Microsoft.Data.SqlClient;
 using System.IO;
+using VaxxVault_V0004.Dir.Main_.Handle_.Switchs_;
 
 namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera
 {
@@ -9,7 +10,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera
    {
       private const string ConnectionStringFilePath = "Dir/Config_/connectionString.txt";
 
-      public static void InsertXmlDataIntoDatabase()
+      public static void InsertXmlDataIntoDatabase(bool isLoadAll = false)
       {
          Console.WriteLine("Please choose a version (4.60, 4.59, 4.58, 4.57) [default is 4.60]:");
          string? version = Console.ReadLine()?.Trim();
@@ -33,11 +34,14 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera
             string connectionString = File.ReadAllText(ConnectionStringFilePath);
             string xmlData = File.ReadAllText(filePath);
 
-            LegalDisclaimerHelper.DisplayLegalDisclaimer();
-            if (!UserAuthorizationHelper.GetUserAuthorization())
+            if (!isLoadAll)
             {
-               Console.WriteLine("Authorization denied. Exiting.");
-               return;
+               LegalDisclaimerHelper.DisplayLegalDisclaimer();
+               if (!UserAuthorizationHelper.GetUserAuthorization())
+               {
+                  Console.WriteLine("Authorization denied. Exiting...");
+                  return;
+               }
             }
 
             using (SqlConnection connection = new SqlConnection(connectionString))

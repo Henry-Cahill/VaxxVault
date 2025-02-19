@@ -41,7 +41,7 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.Switchs_
                   break;
                case "load":
                   // Call the InsertXmlDataIntoDatabase method to load Zoster vaccine data.
-                  VaccineZosterLoader.InsertXmlDataIntoDatabase();
+                  VaccineZosterLoader.InsertXmlDataIntoDatabase(string.Empty);
                   break;
                default:
                   // Handle invalid choices.

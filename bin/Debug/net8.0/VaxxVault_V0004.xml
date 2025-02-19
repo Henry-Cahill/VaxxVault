@@ -357,7 +357,7 @@
             <param name="message">The error message.</param>
             <param name="ex">The exception details.</param>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.VaccineCholeraDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.VaccineCholeraDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -370,7 +370,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.VaccineCOVID19Drop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.COVID19.VaccineCOVID19Drop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -383,7 +383,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Dengue.VaccineDengueDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Dengue.VaccineDengueDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -396,7 +396,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Diphtheria.VaccineDiphtheriaDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Diphtheria.VaccineDiphtheriaDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -409,7 +409,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Ebola.VaccineEbolaDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Ebola.VaccineEbolaDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -422,7 +422,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HepA.VaccineHepADrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HepA.VaccineHepADrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -435,7 +435,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HepB.VaccineHepBDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HepB.VaccineHepBDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -448,7 +448,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Hib.VaccineHibDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Hib.VaccineHibDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -461,7 +461,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HPV.VaccineHPVDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.HPV.VaccineHPVDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -474,7 +474,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Influenza.VaccineInfluenzaDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Influenza.VaccineInfluenzaDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -487,7 +487,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.JE.VaccineJEDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.JE.VaccineJEDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -542,7 +542,7 @@
             </summary>
             <param name="ex">The FileNotFoundException to log.</param>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Measles.VaccineMeaslesDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Measles.VaccineMeaslesDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -555,7 +555,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.MeningococcalB.VaccineMeningococcalBDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.MeningococcalB.VaccineMeningococcalBDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -568,7 +568,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Meningococcal.VaccineMeningococcalDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Meningococcal.VaccineMeningococcalDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -581,7 +581,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Mumps.VaccineMumpsDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Mumps.VaccineMumpsDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -594,7 +594,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Orthopoxvirus.VaccineOrthopoxvirusDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Orthopoxvirus.VaccineOrthopoxvirusDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -607,7 +607,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pertussis.VaccinePertussisDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pertussis.VaccinePertussisDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -620,7 +620,7 @@
             <param name="connectionString">The connection string to the database.</param>
             <returns>A task that represents the asynchronous operation.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pneumococcal.VaccinePneumococcalDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pneumococcal.VaccinePneumococcalDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -638,12 +638,12 @@
             Class to handle the insertion of Pneumococcal vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pneumococcal.VaccinePneumococcalLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Pneumococcal.VaccinePneumococcalLoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Polio.VaccinePolioDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Polio.VaccinePolioDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -661,12 +661,12 @@
             Class to handle the insertion of Polio vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Polio.VaccinePolioLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Polio.VaccinePolioLoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rabies.VaccineRabiesDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rabies.VaccineRabiesDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -684,12 +684,12 @@
             Class to handle the insertion of Rabies vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rabies.VaccineRabiesLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rabies.VaccineRabiesLoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rotavirus.VaccineRotavirusDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rotavirus.VaccineRotavirusDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -707,12 +707,12 @@
             Class to handle the insertion of Rotavirus vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rotavirus.VaccineRotavirusLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rotavirus.VaccineRotavirusLoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.RSV.VaccineRSVDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.RSV.VaccineRSVDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -730,12 +730,12 @@
             Class to handle the insertion of RSV vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.RSV.VaccineRSVLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.RSV.VaccineRSVLoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rubella.VaccineRubellaDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rubella.VaccineRubellaDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -753,12 +753,12 @@
             Class to handle the insertion of Rubella vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rubella.VaccineRubellaLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Rubella.VaccineRubellaLoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.TBE.VaccineTBEDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.TBE.VaccineTBEDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -776,12 +776,12 @@
             Class to handle the insertion of TBE vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.TBE.VaccineTBELoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.TBE.VaccineTBELoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Tetanus.VaccineTetanusDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Tetanus.VaccineTetanusDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -799,12 +799,12 @@
             Class to handle the insertion of Tetanus vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Tetanus.VaccineTetanusLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Tetanus.VaccineTetanusLoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Typhoid.VaccineTyphoidDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Typhoid.VaccineTyphoidDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -822,7 +822,7 @@
             Class to handle the insertion of Typhoid vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Typhoid.VaccineTyphoidLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Typhoid.VaccineTyphoidLoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
@@ -844,7 +844,7 @@
             </summary>
             <returns>True if the user authorizes, otherwise false.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Varicella.VaccineVaricellaDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Varicella.VaccineVaricellaDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -862,7 +862,7 @@
             Class to handle the insertion of Varicella vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Varicella.VaccineVaricellaLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Varicella.VaccineVaricellaLoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
@@ -878,7 +878,7 @@
             </summary>
             <returns>The selected version, or the default version if no valid input is provided.</returns>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.YF.VaccineYFDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.YF.VaccineYFDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -896,12 +896,12 @@
             Class to handle the insertion of Yellow Fever vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.YF.VaccineYFLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.YF.VaccineYFLoader.InsertXmlDataIntoDatabase(System.Boolean)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster.VaccineZosterDrop.DeleteXmlDataInDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster.VaccineZosterDrop.DeleteXmlDataInDatabase(System.Boolean)">
             <summary>
             Deletes XML data in the database.
             </summary>
@@ -919,7 +919,7 @@
             Class to handle the insertion of Zoster vaccine data into the database.
             </summary>
         </member>
-        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster.VaccineZosterLoader.InsertXmlDataIntoDatabase">
+        <member name="M:VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster.VaccineZosterLoader.InsertXmlDataIntoDatabase(System.String)">
             <summary>
             Inserts XML data into the database based on the selected version.
             </summary>
