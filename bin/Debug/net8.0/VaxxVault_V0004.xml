@@ -87,6 +87,56 @@
             Defines a class to store and manage health-related data.
             </summary>
         </member>
+        <member name="P:VaxxVault_V0004.Dir.Main_.Data.FirstName">
+            <summary>
+            Gets the first name of the individual.
+            </summary>
+        </member>
+        <member name="P:VaxxVault_V0004.Dir.Main_.Data.LastName">
+            <summary>
+            Gets the last name of the individual.
+            </summary>
+        </member>
+        <member name="P:VaxxVault_V0004.Dir.Main_.Data.Gender">
+            <summary>
+            Gets the gender of the individual.
+            </summary>
+        </member>
+        <member name="P:VaxxVault_V0004.Dir.Main_.Data.Age">
+            <summary>
+            Gets the age of the individual.
+            </summary>
+        </member>
+        <member name="P:VaxxVault_V0004.Dir.Main_.Data.CurrentYear">
+            <summary>
+            Gets the current year.
+            </summary>
+        </member>
+        <member name="P:VaxxVault_V0004.Dir.Main_.Data.HeightInInches">
+            <summary>
+            Gets the height of the individual in inches.
+            </summary>
+        </member>
+        <member name="P:VaxxVault_V0004.Dir.Main_.Data.WeightInPounds">
+            <summary>
+            Gets the weight of the individual in pounds.
+            </summary>
+        </member>
+        <member name="P:VaxxVault_V0004.Dir.Main_.Data.Month">
+            <summary>
+            Gets the month of birth of the individual.
+            </summary>
+        </member>
+        <member name="P:VaxxVault_V0004.Dir.Main_.Data.Day">
+            <summary>
+            Gets the day of birth of the individual.
+            </summary>
+        </member>
+        <member name="P:VaxxVault_V0004.Dir.Main_.Data.Year">
+            <summary>
+            Gets the year of birth of the individual.
+            </summary>
+        </member>
         <member name="M:VaxxVault_V0004.Dir.Main_.Data.#ctor(System.String,System.String,System.Int32,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             Constructor to initialize the object.
@@ -940,6 +990,65 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="T:VaxxVault_V0004.Tests.DataTests">
+            <summary>
+            Contains unit tests for the Data class.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0004.Tests.DataTests.Constructor_ValidParameters_ShouldInitializeProperties">
+            <summary>
+            Tests that the constructor initializes properties correctly with valid parameters.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0004.Tests.DataTests.CalculateAge_ShouldCalculateCorrectAge">
+            <summary>
+            Tests that CalculateAge method calculates the correct age.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0004.Tests.DataTests.CalculateHeartRates_ShouldCalculateCorrectHeartRates">
+            <summary>
+            Tests that CalculateHeartRates method calculates the correct heart rates.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0004.Tests.DataTests.CalculateBMI_ShouldCalculateCorrectBMI">
+            <summary>
+            Tests that CalculateBMI method calculates the correct BMI.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0004.Tests.DataTests.DisplayDate_ShouldDisplayCorrectDate">
+            <summary>
+            Tests that DisplayDate method displays the correct date.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0004.Tests.DataTests.DisplayHeartRates_ShouldDisplayCorrectHeartRates">
+            <summary>
+            Tests that DisplayHeartRates method displays the correct heart rates.
+            </summary>
+        </member>
+        <member name="T:VaxxVault_V0004.Tests.MainRailsTests">
+            <summary>
+            Contains tests for the MainRails class.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0004.Tests.MainRailsTests.HandleMenuChoice_ShouldReturnExpectedResult(System.String,System.Boolean)">
+            <summary>
+            Tests the HandleMenuChoice method of the MainRails class.
+            </summary>
+            <param name="mainChoice">The menu choice to handle.</param>
+            <param name="expected">The expected result.</param>
+        </member>
+        <member name="M:VaxxVault_V0004.Tests.MainRailsTests.DisplayCalculationsAndResults_ShouldRunWithoutExceptions">
+            <summary>
+            Tests the DisplayCalculationsAndResults method of the MainRails class.
+            </summary>
+        </member>
+        <member name="M:VaxxVault_V0004.Tests.MainRailsTests.ConfirmExit_ShouldReturnExpectedResult(System.String,System.Boolean)">
+            <summary>
+            Tests the ConfirmExit method of the MainRails class.
+            </summary>
+            <param name="exitChoice">The exit choice to confirm.</param>
+            <param name="expected">The expected result.</param>
+        </member>
         <member name="T:VaxxVault_V0004.Tests.Vaccine_Main_Tests">
             <summary>
             Contains unit tests for the Vaccine_Main class.
@@ -957,6 +1066,11 @@
             Tests that HandleCommand does not throw an exception for given input.
             </summary>
             <param name="input">The command input string.</param>
+        </member>
+        <member name="P:VaxxVault_V0004.Tests.Vaccine_Main_Tests.HandleCommandTestData">
+            <summary>
+            Provides test data for HandleCommand_ShouldNotThrowException.
+            </summary>
         </member>
         <member name="M:VaxxVault_V0004.Tests.Vaccine_Main_Tests.HandleCommand_ShouldHandleInvalidInput">
             <summary>

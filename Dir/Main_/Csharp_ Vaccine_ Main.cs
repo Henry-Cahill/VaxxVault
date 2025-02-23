@@ -12,17 +12,17 @@ namespace VaxxVault_V0004.Dir.Main_
    {
       private static readonly Dictionary<string, Func<Task>> commands = new Dictionary<string, Func<Task>>
       {
-         { "maintenance", () => Task.Run(() => Maintenance.HandleAsync()) },
-         { "main", () => Task.Run(() => MainRails.HandleAnotherTask()) },
-         { "python", () => Task.Run(() => Console.WriteLine("Python task not implemented.")) },
-         { "exit", () => Task.Run(() => Console.WriteLine("Exiting application...")) }
+         { "maintenance", async () => await Maintenance.HandleAsync() },
+         { "main", () => { MainRails.HandleAnotherTask(); return Task.CompletedTask; } },
+         { "python", async () => await Task.Run(() => Console.WriteLine("Python task not implemented.")) },
+         { "exit", async () => await Task.Run(() => Console.WriteLine("Exiting application...")) }
       };
 
       /// <summary>
       /// Entry point of the application.
       /// </summary>
       /// <param name="args">Command line arguments.</param>
-      public static void Main(string[] args)
+      public static async Task Main(string[] args)
       {
          while (true)
          {
@@ -63,6 +63,13 @@ namespace VaxxVault_V0004.Dir.Main_
                if (input == "exit")
                {
                   return true;
+               }
+            }
+            catch (AggregateException aggEx)
+            {
+               foreach (var ex in aggEx.InnerExceptions)
+               {
+                  Console.WriteLine($"An error occurred while executing the command: {ex.Message}");
                }
             }
             catch (Exception ex)

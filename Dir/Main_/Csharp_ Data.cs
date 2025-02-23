@@ -5,18 +5,56 @@ namespace VaxxVault_V0004.Dir.Main_
    /// <summary>
    /// Defines a class to store and manage health-related data.
    /// </summary>
-   internal class Data
+   public class Data
    {
-      // Public properties for visibility outside the class
+      /// <summary>
+      /// Gets the first name of the individual.
+      /// </summary>
       public string FirstName { get; private set; }
+
+      /// <summary>
+      /// Gets the last name of the individual.
+      /// </summary>
       public string LastName { get; private set; }
+
+      /// <summary>
+      /// Gets the gender of the individual.
+      /// </summary>
       public string Gender { get; private set; }
+
+      /// <summary>
+      /// Gets the age of the individual.
+      /// </summary>
       public int Age { get; private set; }
+
+      /// <summary>
+      /// Gets the current year.
+      /// </summary>
       public int CurrentYear { get; private set; }
+
+      /// <summary>
+      /// Gets the height of the individual in inches.
+      /// </summary>
       public int HeightInInches { get; private set; }
+
+      /// <summary>
+      /// Gets the weight of the individual in pounds.
+      /// </summary>
       public int WeightInPounds { get; private set; }
+
+      /// <summary>
+      /// Gets the month of birth of the individual.
+      /// </summary>
       public int Month { get; private set; }
+
+      /// <summary>
+      /// Gets the day of birth of the individual.
+      /// </summary>
       public int Day { get; private set; }
+
+      /// <summary>
+      /// Gets the year of birth of the individual.
+      /// </summary>
       public int Year { get; private set; }
 
       // Private instance variables for internal calculations
@@ -49,12 +87,12 @@ namespace VaxxVault_V0004.Dir.Main_
       /// <summary>
       /// Method to calculate the age based on current year and year of birth.
       /// </summary>
-      private void CalculateAge() => Age = CurrentYear - Year;
+      public void CalculateAge() => Age = CurrentYear - Year;
 
       /// <summary>
       /// Method to calculate heart rate-related values.
       /// </summary>
-      private void CalculateHeartRates()
+      public void CalculateHeartRates()
       {
          if (Age > 0)
          {
@@ -67,13 +105,14 @@ namespace VaxxVault_V0004.Dir.Main_
       /// <summary>
       /// Method to calculate the BMI (Body Mass Index).
       /// </summary>
-      private void CalculateBMI()
+      public void CalculateBMI()
       {
          if (HeightInInches > 0 && WeightInPounds > 0)
          {
             _bmi = WeightInPounds * 703 / Math.Pow(HeightInInches, 2);
          }
       }
+
 
       /// <summary>
       /// Method to display the date in MM/DD/YYYY format.
@@ -93,12 +132,23 @@ namespace VaxxVault_V0004.Dir.Main_
       /// <summary>
       /// Method to display the calculated BMI value.
       /// </summary>
-      public void DisplayBMI() => Console.WriteLine($"BMI: {_bmi:F2}");
+      public void DisplayBMI()
+      {
+         if (_bmi > 0)
+         {
+            Console.WriteLine($"BMI: {_bmi:F2}");
+         }
+         else
+         {
+            Console.WriteLine("BMI is not calculated.");
+         }
+      }
+
 
       /// <summary>
       /// Validates that a string is not null or empty.
       /// </summary>
-      private static string ValidateString(string value, string paramName)
+      public static string ValidateString(string value, string paramName)
       {
          return value ?? throw new ArgumentNullException(paramName, $"{paramName} cannot be null");
       }
@@ -106,7 +156,7 @@ namespace VaxxVault_V0004.Dir.Main_
       /// <summary>
       /// Validates that an integer is positive.
       /// </summary>
-      private static int ValidatePositiveInt(int value, string paramName)
+      public static int ValidatePositiveInt(int value, string paramName)
       {
          return value > 0 ? value : throw new ArgumentOutOfRangeException(paramName, $"{paramName} must be greater than 0");
       }
@@ -114,7 +164,7 @@ namespace VaxxVault_V0004.Dir.Main_
       /// <summary>
       /// Validates that the month is between 1 and 12.
       /// </summary>
-      private static int ValidateMonth(int month)
+      public static int ValidateMonth(int month)
       {
          return month is >= 1 and <= 12 ? month : throw new ArgumentOutOfRangeException(nameof(month), "Month must be between 1 and 12");
       }
@@ -122,7 +172,7 @@ namespace VaxxVault_V0004.Dir.Main_
       /// <summary>
       /// Validates that the day is between 1 and 31.
       /// </summary>
-      private static int ValidateDay(int day)
+      public static int ValidateDay(int day)
       {
          return day is >= 1 and <= 31 ? day : throw new ArgumentOutOfRangeException(nameof(day), "Day must be between 1 and 31");
       }

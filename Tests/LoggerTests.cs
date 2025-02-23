@@ -21,7 +21,7 @@ namespace VaxxVault_V0004.Tests
         public void SetLogFilePath_ShouldUpdateLogFilePath()
         {
             // Arrange
-            string newLogFilePath = "new_log.txt";
+            string newLogFilePath = "test_log.txt";
 
             // Act
             Logger.SetLogFilePath(newLogFilePath);

@@ -35,16 +35,24 @@ namespace VaxxVault_V0004.Tests
       /// </summary>
       /// <param name="input">The command input string.</param>
       [Theory]
-      [InlineData("main")]
-      [InlineData("maintenance")]
-      [InlineData("python")]
-      [InlineData("exit")]
+      [MemberData(nameof(HandleCommandTestData))]
       public void HandleCommand_ShouldNotThrowException(string input)
       {
          // Act & Assert
          var exception = Record.Exception(() => Vaccine_Main.HandleCommand(input));
          Assert.Null(exception);
       }
+
+      /// <summary>
+      /// Provides test data for HandleCommand_ShouldNotThrowException.
+      /// </summary>
+      public static TheoryData<string> HandleCommandTestData => new TheoryData<string>
+      {
+         "main",
+         "maintenance",
+         "python",
+         "exit"
+      };
 
       /// <summary>
       /// Tests that HandleCommand handles invalid input correctly.

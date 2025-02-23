@@ -75,7 +75,7 @@ namespace VaxxVault_V0004.Dir.Main_
             {
                Console.Write(" *");
             }
-            Console.WriteLine();
+            Console.WriteLine("\n");
          }
       }
    }
