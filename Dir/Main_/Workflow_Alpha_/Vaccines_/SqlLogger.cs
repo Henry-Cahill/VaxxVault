@@ -5,7 +5,7 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_
 {
    internal static class SqlLogger
    {
-      private const string LogFilePath = "A:\\New.New\\VaxxVault\\Dir\\temp\\sql_log.txt";
+      private const string LogFilePath = "A:\\VaxxVault\\Dir\\temp\\sql_log.txt";
 
       public static void LogSqlStatement(string sqlStatement)
       {

@@ -23,7 +23,7 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.XML_
       /// <returns>The connection string.</returns>
       private static string ReadConnectionString()
       {
-         const string path = "Dir/Config_/connectionString.txt";
+         const string path = "A:\\VaxxVault\\Dir\\Config_\\connectionString.txt";
          try
          {
             return File.ReadAllText(path).Trim();

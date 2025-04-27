@@ -1,1 +1,1 @@
-﻿Server=HLC-Laptop\SQLEXPRESS; Database=CDSi_4.60; Integrated Security=True; TrustServerCertificate=True;
+﻿Server=10.0.0.42;Database=CDSi_4.61;User ID=hlcmailval2021;Password=hlcmailval2021;TrustServerCertificate=True;

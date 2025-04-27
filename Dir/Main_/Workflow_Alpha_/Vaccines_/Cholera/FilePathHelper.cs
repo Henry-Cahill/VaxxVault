@@ -27,9 +27,23 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera
          {
             try
             {
+               var basePath = "Dir/Main_/Workflow_Alpha_/Vaccines_/Cholera/";
+               var jsonFileName = "appsettingsCholera.json";
+
+               if (!Directory.Exists(basePath))
+               {
+                  throw new DirectoryNotFoundException($"The base path '{basePath}' does not exist.");
+               }
+
+               var jsonFilePath = Path.Combine(basePath, jsonFileName);
+               if (!File.Exists(jsonFilePath))
+               {
+                  throw new FileNotFoundException($"The configuration file '{jsonFileName}' was not found at '{basePath}'.");
+               }
+
                var builder = new ConfigurationBuilder()
-                   .SetBasePath("A:/New.New/VaxxVault/")
-                   .AddJsonFile("Dir/Main_/Workflow_Alpha_/Vaccines_/Cholera/appsettingsCholera.json", optional: false, reloadOnChange: true);
+                   .SetBasePath(basePath)
+                   .AddJsonFile(jsonFileName, optional: false, reloadOnChange: true);
                _configuration = builder.Build();
             }
             catch (Exception ex)

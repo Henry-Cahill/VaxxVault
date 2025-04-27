@@ -8,8 +8,8 @@ namespace VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_
    /// </summary>
    internal static class LogHelper
    {
-      private const string LogFilePath = "A:\\New.New\\VaxxVault\\Dir\\temp\\sql_log.txt";
-      private const string ErrorLogFilePath = "A:\\New.New\\VaxxVault\\Dir\\temp\\error_log.txt";
+      private const string LogFilePath = "A:\\VaxxVault\\Dir\\temp\\sql_log.txt";
+      private const string ErrorLogFilePath = "A:\\VaxxVault\\Dir\\temp\\error_log.txt";
 
       /// <summary>
       /// Logs the provided SQL statement to a log file.

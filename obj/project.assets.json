@@ -6020,11 +6020,11 @@
   "project": {
     "version": "0.0.4",
     "restore": {
-      "projectUniqueName": "A:\\New.New\\VaxxVault\\VaxxVault_V0004.csproj",
+      "projectUniqueName": "A:\\VaxxVault\\VaxxVault_V0004.csproj",
       "projectName": "VaxxVault_V0004",
-      "projectPath": "A:\\New.New\\VaxxVault\\VaxxVault_V0004.csproj",
+      "projectPath": "A:\\VaxxVault\\VaxxVault_V0004.csproj",
       "packagesPath": "C:\\Users\\hlcma\\.nuget\\packages\\",
-      "outputPath": "A:\\New.New\\VaxxVault\\obj\\",
+      "outputPath": "A:\\VaxxVault\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6039,7 +6039,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6179,7 +6178,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -807,3 +807,37 @@ StackTrace:    at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException ex
    at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.VaccineCholeraLoader.InsertXmlDataIntoDatabase(Boolean isLoadAll) in A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\VaccineCholeraLoader.cs:line 65
 --------------------------------------------------
+Date: 4/26/2025 8:37:00 PM
+Message: A:\New.New\VaxxVault\Dir\Main_\Workflow_Alpha_\
+StackTrace:    at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root)
+   at Microsoft.Extensions.Configuration.FileConfigurationExtensions.SetBasePath(IConfigurationBuilder builder, String basePath)
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster.FilePathHelper_Zoster.EnsureConfigurationInitialized() in A:\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Zoster\FilePathHelper_Zoster.cs:line 30
+--------------------------------------------------
+Date: 4/26/2025 8:37:00 PM
+Message: Failed to initialize configuration.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster.FilePathHelper_Zoster.EnsureConfigurationInitialized() in A:\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Zoster\FilePathHelper_Zoster.cs:line 38
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster.FilePathHelper_Zoster..cctor() in A:\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Zoster\FilePathHelper_Zoster.cs:line 15
+--------------------------------------------------
+Date: 4/26/2025 8:37:00 PM
+Message: The type initializer for 'VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster.FilePathHelper_Zoster' threw an exception.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster.FilePathHelper_Zoster.EnsureConfigurationInitialized() in A:\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Zoster\FilePathHelper_Zoster.cs:line 26
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Zoster.VaccineZosterLoader.InsertXmlDataIntoDatabase(String version) in A:\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Zoster\VaccineZosterLoader.cs:line 22
+--------------------------------------------------
+Date: 4/26/2025 8:54:31 PM
+Message: A:\New.New\VaxxVault\
+StackTrace:    at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root, ExclusionFilters filters)
+   at Microsoft.Extensions.FileProviders.PhysicalFileProvider..ctor(String root)
+   at Microsoft.Extensions.Configuration.FileConfigurationExtensions.SetBasePath(IConfigurationBuilder builder, String basePath)
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 30
+--------------------------------------------------
+Date: 4/26/2025 8:54:31 PM
+Message: Failed to initialize configuration.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 38
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper..cctor() in A:\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 15
+--------------------------------------------------
+Date: 4/26/2025 8:54:31 PM
+Message: The type initializer for 'VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper' threw an exception.
+StackTrace:    at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.FilePathHelper.EnsureConfigurationInitialized() in A:\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\FilePathHelper.cs:line 26
+   at VaxxVault_V0004.Dir.Main_.Workflow_Alpha_.Vaccines_.Cholera.VaccineCholeraLoader.InsertXmlDataIntoDatabase(Boolean isLoadAll) in A:\VaxxVault\Dir\Main_\Workflow_Alpha_\Vaccines_\Cholera\VaccineCholeraLoader.cs:line 25
+--------------------------------------------------

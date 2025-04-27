@@ -17,7 +17,7 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.XML_
          Console.WriteLine("Handling XML data...");
          MainMenu.Handle().Wait();
 
-         string xmlFilePath = "Dir/Config_/data.xml";
+         string xmlFilePath = "A:\\VaxxVault\\Dir\\Config_\\data.xml";
          try
          {
             XDocument xmlDoc = XDocument.Load(xmlFilePath);

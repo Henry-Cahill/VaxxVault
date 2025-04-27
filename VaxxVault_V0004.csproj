@@ -16,34 +16,42 @@
 		<StartupObject>VaxxVault_V0004.Dir.Main_.Vaccine_Main</StartupObject>
 		<IncludeSymbols>False</IncludeSymbols>
 		<Platforms>AnyCPU;x64</Platforms>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
 	</PropertyGroup>	
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 	  <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
 	  <Optimize>True</Optimize>
+	  <WarningLevel>8</WarningLevel>
 	</PropertyGroup>	
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
 	  <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
 	  <Optimize>True</Optimize>
+	  <WarningLevel>7</WarningLevel>
 	</PropertyGroup>	
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
 	  <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+	  <WarningLevel>3</WarningLevel>
 	</PropertyGroup>	
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
 	  <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+	  <WarningLevel>3</WarningLevel>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<Compile Remove="Dir\FixedStatements\**" />
+		<Compile Remove="Dir\Main_\Workflow_Alpha_\DataBase_ Checker_\**" />
 		<Compile Remove="Import\supporting-data-4.57-508\**" />
 		<Compile Remove="Import\supporting-data-4.58-508\**" />
 		<Compile Remove="Import\supporting-data-4.59-508\**" />
 		<Compile Remove="Import\supporting-data-4.60-508\**" />
 		<EmbeddedResource Remove="Dir\FixedStatements\**" />
+		<EmbeddedResource Remove="Dir\Main_\Workflow_Alpha_\DataBase_ Checker_\**" />
 		<EmbeddedResource Remove="Import\supporting-data-4.57-508\**" />
 		<EmbeddedResource Remove="Import\supporting-data-4.58-508\**" />
 		<EmbeddedResource Remove="Import\supporting-data-4.59-508\**" />
 		<EmbeddedResource Remove="Import\supporting-data-4.60-508\**" />
 		<None Remove="Dir\FixedStatements\**" />
+		<None Remove="Dir\Main_\Workflow_Alpha_\DataBase_ Checker_\**" />
 		<None Remove="Import\supporting-data-4.57-508\**" />
 		<None Remove="Import\supporting-data-4.58-508\**" />
 		<None Remove="Import\supporting-data-4.59-508\**" />
@@ -85,7 +93,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Dir\Main_\Workflow_Alpha_\DataBase_ Checker_\" />
 		<Folder Include="Dir\temp\" />
 	</ItemGroup>
 

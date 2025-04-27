@@ -2,6 +2,7 @@
 
 SELECT 
     @@SERVERNAME AS 'ServerName', 
+	@@SERVICENAME AS 'ServiceName',
     DB_NAME() AS 'DatabaseName',
     SESSIONPROPERTY('net_transport') AS 'NetTransport',
     SESSIONPROPERTY('protocol_type') AS 'ProtocolType',
@@ -9,4 +10,4 @@ SELECT
 
 
 SELECT 
-    'Server=' + @@SERVERNAME + '; Database=' + DB_NAME() + ';' AS ConnectionString
+    'Server=' + @@SERVERNAME + '\' + @@SERVICENAME + '; Database=' + DB_NAME() + ';' AS ConnectionString

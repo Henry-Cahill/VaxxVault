@@ -49,6 +49,11 @@ namespace VaxxVault_V0004.Dir.Main_.Handle_.XML_
       /// <returns>The status of the vaccine.</returns>
       public static bool GetVaccineStatus(string vaccineName)
       {
+         if (vaccineName is not string)
+         {
+            throw new ArgumentException("vaccineName must be a string.", nameof(vaccineName));
+         }
+
          return vaccineStatuses.TryGetValue(vaccineName, out bool status) && status;
       }
 
